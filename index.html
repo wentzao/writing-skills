@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教作文，先交心 ── 七堂寫作課</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#03492d;      /* 主色 深綠 */
+  --green2:#2e6b4a;     /* 中綠 */
+  --leaf:#5a9e6f;       /* 嫩綠 */
+  --gold:#c79a3e;       /* 金 */
+  --gold2:#e6c878;
+  --ink:#26302a;
+  --paper:#faf7ef;
+  --soft:#eef3ec;       /* 淡綠紙 */
+  --cream:#f5f1e6;
+}
+.reveal{
+  font-family:"Noto Sans TC","PingFang TC",sans-serif;
+  color:var(--ink);
+  font-size:30px;
+}
+.reveal *, .reveal *::before, .reveal *::after{ box-sizing:border-box; }
+.reveal .slides section{ box-sizing:border-box; }
+.reveal .slides{ text-align:left; }
+.reveal h1,.reveal h2,.reveal h3,.reveal h4{
+  font-family:"Noto Serif TC",serif;
+  color:var(--green);
+  text-transform:none; letter-spacing:.02em; line-height:1.25;
+}
+.reveal section{ padding:8px 26px; }
+.reveal p,.reveal li{ line-height:1.55; }
+.reveal em{ color:var(--gold); font-style:normal; font-weight:700; }
+.reveal strong{ color:var(--green); }
+.reveal a{ color:var(--green2); }
+
+/* 固定品牌 Logo 左下角 */
+.brand{
+  position:fixed; left:18px; bottom:16px; z-index:50;
+  background:#fff; border-radius:34px; padding:8px 20px 8px 16px;
+  box-shadow:0 3px 12px rgba(0,0,0,.18); display:flex; align-items:center;
+}
+.brand img{ height:50px; display:block; }
+
+/* 封面：flex 放在內層 div，避免 reveal 控制 section 顯示時蓋掉排版 */
+.coverrow{ display:flex; align-items:center; justify-content:center; gap:42px; width:100%; }
+.cover .bookwrap{ flex:0 0 auto; }
+.cover .bookwrap img{
+  height:470px; border-radius:8px;
+  box-shadow:0 18px 40px rgba(3,73,45,.28);
+}
+.cover .ctxt{ flex:1; }
+.cover .brush{
+  font-family:"Noto Serif TC",serif;
+  font-size:2.1em; font-weight:900; color:var(--green); line-height:1.2; letter-spacing:.04em;
+}
+.cover .sub{ font-size:.8em; color:#5a6b60; margin-top:.55em; }
+.cover .quote-c{ font-size:.62em; color:#8a958c; margin-top:1.3em; }
+.cover .meta{ font-size:.5em; color:#9aa69c; margin-top:.5em; letter-spacing:.05em; }
+
+/* 段落分隔頁 */
+.divider{ text-align:center; }
+.divider .num{
+  font-family:"Noto Serif TC",serif; font-weight:900; color:var(--gold2);
+  font-size:1em; letter-spacing:.14em;
+}
+.divider h2{ font-size:1.7em; margin:.1em 0 .3em; }
+.divider .tag{
+  display:inline-block; background:#fff; color:var(--green);
+  padding:.18em .9em; border-radius:30px; font-size:.5em; font-weight:700;
+}
+
+.lead{
+  border-left:8px solid var(--green); background:var(--soft);
+  padding:.55em .95em; border-radius:0 12px 12px 0; margin:.25em 0 .55em;
+  font-size:.95em;
+}
+.quote{
+  font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+  font-size:1.12em; color:var(--green); text-align:left; line-height:1.5; margin:.3em 0;
+}
+.cite{ text-align:left; color:#7d8a80; font-size:.58em; margin-top:.2em; }
+
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:.7em; }
+.grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:.6em; }
+.card{
+  background:#fff; border:1px solid #dfe7dc; border-radius:14px;
+  padding:.55em .72em; box-shadow:0 4px 14px rgba(3,73,45,.06);
+}
+.card h4{ margin:.05em 0 .25em; font-size:.78em; color:var(--green2); }
+.card p,.card li{ font-size:.66em; color:#3f4a42; line-height:1.45; }
+.chip{
+  display:inline-block; background:var(--green); color:#fff;
+  border-radius:8px; font-size:.55em; font-weight:700; padding:.12em .6em; margin-bottom:.3em;
+}
+.chip.g{ background:var(--gold); }
+.chip.l{ background:var(--leaf); }
+
+.reveal ul.steps{ counter-reset:s; list-style:none; margin:0; padding:0; }
+.steps li{ display:flex; align-items:flex-start; gap:.55em; font-size:.82em; margin:.2em 0; }
+.steps li::before{
+  counter-increment:s; content:counter(s);
+  flex:0 0 auto; width:1.5em; height:1.5em; line-height:1.5em; text-align:center;
+  background:var(--green); color:#fff; border-radius:50%; font-size:.78em; font-weight:700;
+  font-family:"Noto Sans TC","PingFang TC",sans-serif; margin-top:.12em;
+}
+.task{
+  border:2px dashed var(--gold); border-radius:14px; background:#fffdf4;
+  padding:.5em .9em; margin-top:.25em;
+}
+.task .chip{ background:var(--gold); }
+.small{ font-size:.62em; color:#7d8a80; }
+.reveal ul{ margin-left:1em; }
+
+/* 便條紙小祕訣（右下角，最後出現） */
+.note-paper{
+  position:absolute; right:40px; bottom:34px; width:310px; z-index:6;
+  background:#fff7c4; color:#5b4a1c; font-size:.6em; line-height:1.55;
+  padding:16px 20px 18px; border-radius:3px;
+  box-shadow:0 12px 26px rgba(80,60,10,.22);
+  transform:rotate(2.5deg); border:1px solid #efe095;
+  cursor:grab; user-select:none;
+}
+.note-paper.dragging{ cursor:grabbing; transform:rotate(0deg); box-shadow:0 18px 36px rgba(80,60,10,.3); }
+.note-paper::before{
+  content:"📌"; position:absolute; top:-15px; right:16px; font-size:22px;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));
+}
+.note-paper strong{ color:#a06a08; }
+.note-paper em{ color:#a06a08; font-style:normal; font-weight:700; }
+.note-paper .nt{ display:block; font-weight:700; color:#8a6a12; margin-bottom:3px; }
+
+.reveal .progress{ color:var(--green); height:5px; }
+.reveal .controls{ color:var(--green); }
+.reveal .slide-number{ background:transparent; color:#a9b4a8; }
+.foot{ display:none; }
+
+.outline-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:.5em; font-size:.62em; }
+.outline-grid .o{
+  display:flex; gap:.5em; align-items:flex-start;
+  background:#fff; border:1px solid #dfe7dc; border-radius:10px; padding:.35em .6em;
+}
+.outline-grid .o b{ color:var(--green); font-family:"Noto Serif TC",serif; }
+.outline-grid .o .n{
+  flex:0 0 auto; width:1.8em; height:1.8em; line-height:1.8em; text-align:center;
+  background:var(--green); color:#fff; border-radius:8px; font-weight:700;
+}
+
+/* 故事卷 / 範例文 稿紙風 */
+.story{
+  background:#fffdf6; border:1px solid #e7dec6; border-radius:14px;
+  padding:.6em 1em; box-shadow:0 6px 18px rgba(3,73,45,.07);
+  font-family:"Noto Serif TC",serif; line-height:1.62; font-size:.6em; color:#34403a;
+  column-count:2; column-gap:1.6em; column-rule:1px solid #ece3cf;
+}
+.story p{ margin:.18em 0; text-indent:1.6em; }
+.story p.t{ text-indent:0; }
+.essay{
+  background:#fffdf6; border:1px solid #e7dec6; border-radius:14px;
+  padding:.7em 1.3em; box-shadow:0 6px 18px rgba(3,73,45,.07);
+  font-family:"LXGW WenKai TC","Noto Serif TC",serif; line-height:1.85; font-size:.66em; color:#34403a;
+}
+.essay:not(.two){ max-width:80%; margin-left:auto; margin-right:auto; font-size:.78em; line-height:2; }
+.essay p{ margin:.28em 0; text-indent:1.6em; }
+.essay .ttl{
+  text-indent:0; text-align:center; font-weight:700; color:var(--green);
+  font-size:1.25em; margin-bottom:.3em; font-family:"Noto Serif TC",serif;
+}
+.essay.two{ column-count:2; column-gap:1.5em; }
+.essay.two .ttl{ column-span:all; }
+.ann{ font-size:.58em; color:var(--green2); margin-top:.35em; }
+.ann b{ color:var(--gold); }
+.byline{ text-align:center; font-size:.52em; color:#9aa69c; margin-top:.2em; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<!-- 固定 Logo -->
+<div class="brand"><img src="wentzao_logo.png" alt="文藻美語補習班"></div>
+
+<div class="slides">
+
+<!-- ============ 封面 ============ -->
+<section class="cover" data-background-color="#faf7ef">
+  <div class="coverrow">
+    <div class="bookwrap"><img src="bookcover.jpg" alt="教作文，先交心"></div>
+    <div class="ctxt">
+      <div class="brush">教作文，先交心</div>
+      <div class="sub">陪你找回寫作的熱情與自信</div>
+      <div class="quote-c">「為什麼要寫作？因為我有話要說。」</div>
+      <div class="meta">七堂寫作課　給準備升國中的你</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 課程大綱 ============ -->
+<!-- ============ 開場理念 ============ -->
+<!-- 開場理念 A：拋出問題 -->
+<section data-background-color="#faf7ef">
+  <h2>先問你一個問題</h2>
+    <aside class="notes">⏱約5分鐘開場。先別說答案，真的請幾位學生回答『打電動時會問有什麼用嗎』。引導他們發現：通常是討厭一件事，才會質疑它的用處。按→帶出回答。</aside>
+  <div class="quote fragment" style="font-size:1.45em;margin-top:.8em;">你打電動、打球的時候，<br>會不會停下來問「這有什麼用」？</div>
+  <div class="lead fragment" style="margin-top:1.4em;font-size:1.05em;">應該不會吧！因為你<strong>喜歡</strong>它。<br>寫作其實也一樣 ── 當你有話想說，寫作就會變成你的好幫手，而不是討厭的作業。</div>
+</section>
+
+<!-- 開場理念 B：寫作能做三件事 -->
+<section data-background-color="#faf7ef">
+  <h2>寫作，能為你做三件事</h2>
+    <aside class="notes">⏱3分鐘。三張卡片一張一張點出，每張請一位學生舉例（例如：你有沒有寫得出來、卻說不出口的話？）。</aside>
+  <div class="grid3" style="margin-top:.8em;">
+    <div class="card fragment"><h4>寫作是說話</h4><p>有些話你說不出口，卻寫得出來。寫作，是把心裡的話好好說清楚。</p></div>
+    <div class="card fragment"><h4>寫作是力量</h4><p>會表達的人，將來更容易說服別人、被別人聽見 ── 這是 AI 也搶不走的能力。</p></div>
+    <div class="card fragment"><h4>寫作是認識自己</h4><p>寫著寫著，你會更清楚自己喜歡什麼、害怕什麼、想成為誰。</p></div>
+  </div>
+  <p class="small fragment" style="margin-top:1.2em;">接下來七堂課，我們一起把寫作變成一件「有話想說」的事。</p>
+</section>
+
+<!-- ============ 課程大綱 ============ -->
+<section data-background-color="#faf7ef">
+  <h2>我們的七堂課地圖</h2>
+    <aside class="notes">⏱2分鐘。快速帶過七堂課流程即可，強調每堂都會自己寫一篇、而且有範例文可參考。不必深講。</aside>
+  <p class="small" style="margin:.1em 0 .5em;">這七堂課，我們會先學會「把心打開」，再一步一步把「話寫清楚」。每一堂都會自己寫一篇文章！</p>
+  <div class="outline-grid">
+    <div class="o"><span class="n">1</span><div><b>因為我有話要說</b><br>寫作的開始 ・ 介紹我自己</div></div>
+    <div class="o"><span class="n">2</span><div><b>反派有話要說</b><br>壞人真的全壞嗎？替反派平反</div></div>
+    <div class="o"><span class="n">3</span><div><b>把話寫清楚</b><br>不靠成語，也能寫得很好</div></div>
+    <div class="o"><span class="n">4</span><div><b>寫出畫面感</b><br>用五感，把讀者拉進現場</div></div>
+    <div class="o"><span class="n">5</span><div><b>文章的骨架</b><br>先擺地攤再挑貨 ・ 訂小標</div></div>
+    <div class="o"><span class="n">6</span><div><b>抓住讀者</b><br>三種讓人想看下去的開頭</div></div>
+    <div class="o"><span class="n">7</span><div><b>說服與修改</b><br>寫一份能說服大人的企劃書</div></div>
+    <div class="o" style="background:#eef3ec;border-style:dashed;"><span class="n" style="background:var(--gold)">★</span><div><b>每堂都有範例文＋寫作任務</b><br>看別人怎麼寫，再寫自己的</div></div>
+  </div>
+</section>
+
+<!-- ===================================================== 第 1 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#2e6b4a)">
+    <div class="num">第 一 堂</div>
+    <h2 style="color:#fff">因為我有話要說</h2>
+    <span class="tag">寫作的開始 ・ 介紹我自己</span>
+  </section>
+
+  <section>
+    <span class="chip">這堂課在學什麼</span>
+    <h3>「寫作文有什麼用？」其實是假議題</h3>
+    <aside class="notes">⏱5分鐘。呼應開場：孩子質疑寫作沒用，多半是還沒愛上它。重點不是回答「有什麼用」，而是讓他先在生活裡用得到字的地方動筆。引用林語堂「因為我有話要說」。</aside>
+    <div class="quote fragment">「為什麼要寫作？因為我有話要說。」<span style="font-size:.55em;color:#7d8a80;">── 林語堂</span></div>
+    <div class="lead fragment">寫作不是只為了考試。它是你<strong>表達自己</strong>、也是別人<strong>認識你</strong>的一扇窗。這堂課，我們先從最簡單的「記錄生活」開始動筆。</div>
+    <div class="note-paper fragment"><span class="nt">💡 小提示</span>你打電動不會問「這有什麼用」── 等你愛上寫作，它就不再是討厭的作業了。</div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">方法一</span>
+    <h3>寫作，從「記錄」開始</h3>
+    <aside class="notes">⏱6分鐘。核心觀念（練習20）：感受力越強，文章越生動；而感受力來自「察覺變化」。很多變化太慢、察覺不到，所以要用記錄抓住它。記錄不必上山下海，在家、從自己身上就能做。請學生說一個自己最近的小變化。</aside>
+    <div class="lead fragment">文章生不生動，看的是<strong>感受力</strong>；而感受力來自<em>察覺變化</em>。有些變化很慢、慢到你以為它沒變 ── 所以我們用「記錄」把變化抓出來。</div>
+    <div class="grid3">
+      <div class="card fragment"><h4>記錄身體</h4><p>每天固定量身高、體重，記下睡了幾小時、睡得好不好。</p></div>
+      <div class="card fragment"><h4>記錄時間</h4><p>寫作業花多久？上學通勤多久？滑手機多久？</p></div>
+      <div class="card fragment"><h4>記錄花費</h4><p>今天的零用錢花在哪？一週下來看得出習慣。</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>一天只要一分鐘，記下一個數字就好 ── 重點是「持續」。</div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">記錄的三個魔法</span>
+    <h3>小小的記錄，藏著大用處</h3>
+    <aside class="notes">⏱6分鐘（練習20）。三個好處：①察覺變化、提早發現問題 ②用數字把抽象變具體、更有說服力 ③察覺變化後，感受自然冒出來。對比兩句「我好像變胖了」vs 有記錄的版本。最後說明：這些記錄就是現成的作文題材，會考題目也用得上。</aside>
+    <ul class="steps">
+      <li class="fragment"><strong>看見變化</strong>：胖了兩公斤、作業越寫越慢 ── 早點發現、早點調整。</li>
+      <li class="fragment"><strong>變得具體</strong>：用數字說話，比「好像」更有說服力。</li>
+      <li class="fragment"><strong>長出感受</strong>：察覺了變化，心情和想法就跟著冒出來。</li>
+    </ul>
+    <div class="grid2 fragment" style="margin-top:.5em;">
+      <div class="card"><h4>沒記錄</h4><p>「最近我好像越來越胖了。」</p></div>
+      <div class="card"><h4>有記錄</h4><p>「這兩個月身高沒長，體重卻多了 1.6 公斤，可能是每週少運動了一個半小時。」</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">📌 會考連結</span>這些記錄就是現成的作文題材，像〈那一次，我自己做決定〉就能寫「看了健康記錄後決定減肥」。</div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">方法二</span>
+    <h3>從記錄，走到「認識自己」</h3>
+    <aside class="notes">⏱5分鐘（練習13）。寫作也是認識自己的工具。帶學生盤點三件事：讓我驕傲的成就、我最喜歡的科目／才藝、我的短期與長期目標。這份盤點正好是下一步自我介紹的材料。</aside>
+    <div class="lead fragment">寫作還能幫你<strong>認識自己</strong>。動筆前，先盤點三件事，自我介紹的材料就有了。</div>
+    <div class="grid3">
+      <div class="card fragment"><h4>我的成就</h4><p>讓我最驕傲的一件事（校內、校外、家裡都算）。</p></div>
+      <div class="card fragment"><h4>我的興趣</h4><p>最喜歡的科目或才藝，挑一個「最」喜歡的。</p></div>
+      <div class="card fragment"><h4>我的目標</h4><p>這學期想達成什麼？兩年後想成為怎樣的人？</p></div>
+    </div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">怎麼寫</span>
+    <h3>一分鐘自我介紹的五步驟</h3>
+    <aside class="notes">⏱5分鐘（練習14）。核心是「區別化」── 一開口就講出一個與眾不同的特質，最重要、最花心思。架構五步，控制在約400字、60秒。舉例只要兩個，別超過三個，否則失焦。</aside>
+    <ul class="steps">
+      <li class="fragment"><strong>我是個怎樣的人</strong>：一開口就講「一個與眾不同的特質」。</li>
+      <li class="fragment"><strong>舉例一</strong>：一個小故事，證明這個特質。</li>
+      <li class="fragment"><strong>舉例二</strong>：再一個例子就好，別超過三個。</li>
+      <li class="fragment"><strong>展望</strong>：這個特質，未來想怎麼發揮？</li>
+      <li class="fragment"><strong>結語</strong>：一句話收尾，讓人記得你。</li>
+    </ul>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>全部約 400 字、講 60 秒。最重要的是「第一句」── 一開口就要與眾不同。</div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">〈這就是我〉</h3>
+    <aside class="notes">⏱5分鐘。朗讀範例文，帶學生對照五步驟：①特質（慢熱）②例子一（開學坐角落）③例子二（熟了很好笑）④展望（主動打招呼）⑤結語。請學生找出最有畫面、最打動人的一句，點出「真實＋具體」的力量。</aside>
+    <div class="essay">
+      <p class="t">我叫林文藻。如果要用一句話形容自己，我會說：我是個「慢熱」的人。</p>
+      <p>開學第一天，全班都忙著互相認識、交朋友，我卻一個人坐在角落，假裝低頭看課本，其實偷偷在觀察大家。直到第三天，隔壁同學跟我借橡皮擦，我們才講上第一句話。</p>
+      <p>可是只要熟了，我就完全變一個人。上學期班遊，一路上的笑話幾乎都被我包了，連最安靜的同學都被我逗笑。媽媽常說：「你在家吵得要命，怎麼一出門就像換了個人？」</p>
+      <p>升上國中，我想給自己一個小目標 ── 不要每次都等別人先開口。我打算第一天就主動跟鄰座說一聲「你好」。</p>
+      <p>我是林文藻，一個慢熱、但熟了之後很好笑的人。請給我一點時間，我相信我們會變成好朋友。</p>
+    </div>
+    <div class="byline">── 範例文 ・ 約 300 字</div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：〈這就是我〉＋上台說</h3>
+    <aside class="notes">⏱25–30分鐘寫作＋上台。發下稿紙工作本第1課。先寫講稿，再實際上台講。書中規則：講50–70秒算合格；老師依內容問台下3個問題，若有一題沒人答得出，代表講得不夠清楚，要重講。巡堂時用五步驟引導卡住的學生。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">翻開「作文稿紙工作本」第 1 課，用五步驟寫一篇屬於你的自我介紹，再上台說給大家聽。</p>
+      <ul class="steps">
+        <li class="fragment">先想好「一個與眾不同的特質」，再配兩個真實的小故事。</li>
+        <li class="fragment">寫成約 400 字的講稿，自己先讀一遍、抓時間。</li>
+        <li class="fragment">上台講 50～70 秒；老師會問台下三個問題，考考你講清楚了沒。</li>
+      </ul>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>講得好不好，不是看用多少成語，而是看別人記不記得住你。</div>
+    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 2 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#2e6b4a)">
+    <div class="num">第 二 堂</div>
+    <h2 style="color:#fff">反派有話要說</h2>
+    <span class="tag">壞人真的全壞嗎？替反派平反</span>
+  </section>
+
+  <section>
+    <span class="chip">這堂課在學什麼</span>
+    <h3>同樣一件事，背後的「為什麼」可能差很多</h3>
+    <aside class="notes">⏱5分鐘。核心：做法 vs 動機。用『把菜倒掉』的例子問學生：他可能在怕什麼？帶出『正面意圖』。</aside>
+    <div class="lead fragment">一個人做了「壞事」，不代表他就是「壞人」。把菜偷偷倒掉的小孩，也許只是<strong>怕被罵</strong>；故事裡的壞蛋，也可能有他的<em>苦衷</em>。</div>
+    <p style="font-size:.85em;">學會看見別人的「為什麼」，你不但更懂人，文章也會更有深度、更動人。這一課，我們先讀一個你很熟的故事 ──</p>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <!-- 完整童話故事 -->
+  <section>
+    <span class="chip l">先讀一個故事</span>
+    <h3 style="font-size:.95em;margin-bottom:.15em;">《灰姑娘》（完整版）</h3>
+    <aside class="notes">⏱5分鐘。朗讀或請學生輪讀整篇故事喚起記憶。讀完先別評論，直接進下一張的三個問題。</aside>
+    <div class="story">
+      <p class="t">很久以前，有一個善良的女孩。她的媽媽很早就過世了，爸爸娶了一位帶著兩個女兒的後母。</p>
+      <p>後母和兩個姊姊都不喜歡她。她們把所有粗重的家事都丟給她做：生火、煮飯、洗衣、掃地。她每天忙到全身髒兮兮，睡在冰冷的灰燼旁邊，所以大家叫她「灰姑娘」。</p>
+      <p>有一天，王子要舉辦舞會，邀請全國的女孩參加。兩個姊姊高興得不得了，逼灰姑娘幫她們梳頭、繫緊衣裙。灰姑娘也好想去，後母卻冷冷地說：「像妳這樣髒兮兮的，也配去舞會？」說完就帶著女兒們走了，留下哭泣的灰姑娘。</p>
+      <p>這時，仙女出現了。她揮一揮魔杖，把南瓜變成馬車，把灰姑娘的破衣裳變成閃亮的禮服，還給她一雙水晶鞋。仙女叮嚀：「魔法只到午夜十二點，鐘聲一響，一切都會變回原樣。」</p>
+      <p>灰姑娘來到舞會，美得讓全場驚豔，王子整晚只和她跳舞。可是當鐘聲敲響十二點，她急忙逃走，慌亂中掉了一隻水晶鞋。</p>
+      <p>王子撿起水晶鞋，發誓要娶能穿上它的女孩。他命人挨家挨戶尋找。兩個姊姊用力把腳塞進鞋裡，卻怎麼也穿不下。輪到灰姑娘，水晶鞋剛好合腳。最後，王子帶著灰姑娘回到城堡，從此過著幸福的日子。</p>
+    </div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">換個角度想</span>
+    <h3>替「後母」問三個問題</h3>
+    <aside class="notes">⏱8分鐘分組討論。三個問題逐一拋出，鼓勵天馬行空。關鍵引導：那個年代女性沒有經濟能力 → 後母的恐懼。</aside>
+    <ul class="steps">
+      <li class="fragment">她其實沒那麼壞？至少她沒做出更過分的事？</li>
+      <li class="fragment">她為什麼會變這麼壞？是不是有什麼苦衷或難處？</li>
+      <li class="fragment">如果你是她，怎麼做能不傷害任何人、又顧到自己的女兒？</li>
+    </ul>
+    <div class="note-paper fragment"><span class="nt">🤔 想一想</span>在那個女人不能工作、沒有錢的年代，後母帶著兩個女兒，她在「怕」什麼呢？</div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">〈後母的日記〉</h3>
+    <aside class="notes">⏱5分鐘。讀範例文，請學生指出作者『沒有改掉壞事，只補上動機』——這就是平反的關鍵。</aside>
+    <div class="essay two">
+      <p class="ttl">後母的日記</p>
+      <p class="t">沒有人問過我，為什麼。</p>
+      <p>我嫁進這個家的時候，已經帶著兩個女兒。孩子的爸爸答應會照顧我們，可是他成天在外面，家裡的一切都落在我身上。</p>
+      <p>灰姑娘長得漂亮又溫柔，村子裡的人都疼她。可是我心裡很慌 ── 在這個女人不能工作、沒有錢的年代，如果我的兩個女兒嫁不出去，將來我們三個只能流落街頭。</p>
+      <p>我承認，我對灰姑娘太嚴厲了。我不讓她去舞會，不是因為我恨她，而是因為我怕。我怕我的女兒比不過她，怕我們的明天沒有著落。</p>
+      <p>如果可以重來，我會把灰姑娘也當成自己的女兒，帶著三個孩子一起去舞會。也許這樣，我就不會變成童話裡那個人人討厭的壞後母了。</p>
+    </div>
+    <div class="ann"><b>看出來了嗎？</b>作者沒有改掉後母做的事，只是替她說出背後的「害怕」與「想保護女兒」的心 ── 這就是替反派平反。</div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：〈反派有話要說〉</h3>
+    <aside class="notes">⏱25–30分鐘。工作本第2課。提醒：先照原版說壞事，再補苦衷。挑戰：能讓同學同情你的反派。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">選一個你熟悉的反派（後母、大野狼、虎姑婆、巫婆…），幫他寫一段自白。</p>
+      <ul class="steps">
+        <li class="fragment">他做了什麼「壞事」？（先照原版說一遍）</li>
+        <li class="fragment">他的苦衷／正面意圖是什麼？（替他說出心裡話）</li>
+        <li class="fragment">給他一個更好的做法，翻轉結局。</li>
+      </ul>
+      <p class="small">挑戰：能不能讓同學讀完後，反而「同情」你的反派？→ 工作本第 2 課。</p>
+    </div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 3 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#2e6b4a,#5a9e6f)">
+    <div class="num">第 三 堂</div>
+    <h2 style="color:#fff">把話寫清楚</h2>
+    <span class="tag">不靠成語，也能寫得很好</span>
+  </section>
+
+  <section>
+    <span class="chip l">這堂課在學什麼</span>
+    <h3>「我媽說要多用成語……」</h3>
+    <aside class="notes">⏱5分鐘。把『同事一直挑語病』的情境演一遍，讓學生體會被糾正到不敢開口的感覺。結論：先寫清楚。</aside>
+    <div class="lead fragment">想像有人一直挑你說話的毛病：「這句要用成語」「那句不夠美」── 你還想開口嗎？<strong>太在意成語，反而會讓你不敢下筆</strong>。</div>
+    <p style="font-size:.85em;">寫作真正的重點，是<em>把你想說的事，清清楚楚地傳給讀者</em>。成語可以有，但永遠排在「寫清楚」後面。</p>
+    <div class="foot">第 3 堂 ・ 把話寫清楚</div>
+  </section>
+
+  <section>
+    <span class="chip l">深度的祕密</span>
+    <h3>讓文章變深的，是「連接詞」</h3>
+    <aside class="notes">⏱5分鐘。三類連接詞各帶造一句。順帶示範逆向思維：覺得題目無聊就反過來問『為什麼有人覺得重要』。</aside>
+    <p style="font-size:.82em;">一句一句之間，用對連接詞，想法就有了層次 ── 這比硬塞成語有用多了：</p>
+    <div class="grid3">
+      <div class="card fragment"><h4>因果</h4><p>因為…所以…<br>之所以…是因為…</p></div>
+      <div class="card fragment"><h4>轉折</h4><p>雖然…但是…<br>本來…沒想到…</p></div>
+      <div class="card fragment"><h4>遞進</h4><p>不但…而且…<br>甚至…更…</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>題目覺得無聊？試試<strong>反過來問</strong>：「為什麼有人覺得它很重要？」常常會挖到新角度。</div>
+    <div class="foot">第 3 堂 ・ 把話寫清楚</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">〈一把傘〉</h3>
+    <aside class="notes">⏱4分鐘。讀範例文，請學生圈出三種連接詞，確認全篇沒有成語也很好看。</aside>
+    <div class="essay">
+      <p class="t">那天放學突然下大雨，我沒帶傘，只能站在騎樓下等。</p>
+      <p>因為雨越下越大，所以我開始擔心媽媽會在校門口等很久。就在這時候，隔壁班一個我幾乎沒講過話的同學走過來，把傘遞給我，說他家就在附近。雖然我們不熟，但是他什麼都沒多問，就把傘塞到我手上。</p>
+      <p>我撐著那把藍色的傘走回家，傘面被雨打得啪啪響。我本來以為這只是一件小事，後來卻一直記得。原來幫助別人不一定要認識很久，有時候只是剛好你有傘，而對方正淋著雨而已。</p>
+    </div>
+    <div class="ann">全篇<b>沒有用任何成語</b>，但用上了「因為…所以…」「雖然…但是…」「本來…後來…」三種連接詞，照樣清楚又有感情。</div>
+    <div class="foot">第 3 堂 ・ 把話寫清楚</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：〈一件讓我有感覺的小事〉</h3>
+    <aside class="notes">⏱25分鐘。工作本第3課。規則：禁用成語、至少用3種連接詞。互改時圈出對方的連接詞。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">這篇規則特別：<strong>不准用成語</strong>，但至少用上 3 種連接詞。</p>
+      <ul class="steps">
+        <li class="fragment">發生了什麼？把時間、地點、人交代清楚。</li>
+        <li class="fragment">我為什麼有感覺？用「因為…所以…」說明。</li>
+        <li class="fragment">「雖然…但是…」：寫一個轉折或意外。</li>
+      </ul>
+      <p class="small">寫完和同學互相圈出對方用得好的連接詞。→ 工作本第 3 課。</p>
+    </div>
+    <div class="foot">第 3 堂 ・ 把話寫清楚</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 4 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#2e6b4a,#5a9e6f)">
+    <div class="num">第 四 堂</div>
+    <h2 style="color:#fff">寫出畫面感</h2>
+    <span class="tag">用五感，把讀者拉進現場</span>
+  </section>
+
+  <section>
+    <span class="chip l">這堂課在學什麼</span>
+    <h3>畫面感，不是靠華麗的詞</h3>
+    <aside class="notes">⏱5分鐘。讀恐蟑症引述，問學生『為什麼你也覺得可怕』→ 因為感官寫得細。</aside>
+    <div class="lead fragment">人在<strong>害怕</strong>的時候，眼睛、耳朵會變得特別靈。把那一刻的「看、聽、聞、摸」寫細，讀者就會跟你一起緊張 ── 這就是畫面感。</div>
+    <div class="quote fragment" style="font-size:.92em;">「我聽到牆壁傳來『滋滋』聲，<br>一轉頭便嚇得目瞪口呆 ── 那是一隻蟑螂爬行的聲音。」</div>
+    <div class="cite">── 書裡一位學生寫的〈我的恐蟑症〉</div>
+    <div class="foot">第 4 堂 ・ 寫出畫面感</div>
+  </section>
+
+  <section>
+    <span class="chip l">工具箱</span>
+    <h3>五感 ＋ 身體反應</h3>
+    <aside class="notes">⏱5分鐘。逐一點出六格，請學生現場用一種感官形容『現在的教室』。</aside>
+    <div class="grid3">
+      <div class="card fragment"><h4>👁 看到</h4><p>巨大、跟茶杯一樣大、閃爍的紅燈…</p></div>
+      <div class="card fragment"><h4>👂 聽到</h4><p>滋滋、啪啪、自己的心跳…</p></div>
+      <div class="card fragment"><h4>✋ 摸到</h4><p>冰冷的金屬、黏黏的汗…</p></div>
+      <div class="card fragment"><h4>👃 聞到</h4><p>霉味、雨後的泥土味…</p></div>
+      <div class="card fragment"><h4>👅 嚐到</h4><p>嘴裡發乾、苦苦的…</p></div>
+      <div class="card fragment"><h4>💓 身體</h4><p>腿軟、起雞皮疙瘩、發抖…</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>不用全部寫，挑<strong>最強烈的兩三種</strong>感官放大就夠了。</div>
+    <div class="foot">第 4 堂 ・ 寫出畫面感</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">〈電梯停電那一分鐘〉</h3>
+    <aside class="notes">⏱5分鐘。讀範例文，請學生標出視覺／聽覺／觸覺／身體反應各一處。</aside>
+    <div class="essay two">
+      <p class="ttl">電梯停電那一分鐘</p>
+      <p class="t">我最怕黑。那天我一個人搭電梯回家，電梯到一半，燈突然全暗了。</p>
+      <p>我看不見任何東西，只看到樓層數字停在一個閃爍的紅色「4」。我聽到電梯裡「嗡」的一聲，接著就是我自己越來越大聲的心跳。我伸手去摸牆壁，金屬板冰冰涼涼的，黏著我手心的汗。我想喊救命，喉嚨卻乾得發不出聲音。</p>
+      <p>那一分鐘，像一個小時那麼長。後來燈亮了，電梯慢慢往下移動，門打開的瞬間，我衝出去，腿軟得差點跪下來。</p>
+      <p>現在我每次搭電梯，手都會偷偷按著牆壁 ── 好像這樣，黑暗就不會再突然把我吞掉。</p>
+    </div>
+    <div class="ann">用了<b>視覺</b>（閃爍的紅4）、<b>聽覺</b>（嗡、心跳）、<b>觸覺</b>（冰涼的金屬、手心的汗）和<b>身體反應</b>（腿軟），畫面立刻活了起來。</div>
+    <div class="foot">第 4 堂 ・ 寫出畫面感</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：〈我的恐懼〉</h3>
+    <aside class="notes">⏱25–30分鐘。工作本第4課。提醒挑最強烈的2–3種感官放大。挑戰：讓讀者不敢往下看。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">寫一次你真正害怕的經驗（怕蟲、怕黑、怕上台、怕被罵…）。</p>
+      <ul class="steps">
+        <li class="fragment">那一刻我看到／聽到／摸到什麼？（至少兩種感官）</li>
+        <li class="fragment">我的身體有什麼反應？</li>
+        <li class="fragment">後來怎麼結束？現在回想還會怎樣？</li>
+      </ul>
+      <p class="small">挑戰：讓讀者讀到一半，緊張到不敢往下看。→ 工作本第 4 課。</p>
+    </div>
+    <div class="foot">第 4 堂 ・ 寫出畫面感</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 5 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#c79a3e)">
+    <div class="num">第 五 堂</div>
+    <h2 style="color:#fff">文章的骨架</h2>
+    <span class="tag">先擺地攤再挑貨 ・ 訂小標</span>
+  </section>
+
+  <section>
+    <span class="chip g">這堂課在學什麼</span>
+    <h3>先別管「到底要寫幾段」</h3>
+    <aside class="notes">⏱5分鐘。核心：擺地攤→挑貨，破除起承轉合迷思。段落=一個重點一段。</aside>
+    <div class="lead fragment">寫文章不用一開始就排「起承轉合」。先把腦中所有想說的<strong>全部倒出來（擺地攤）</strong>，再<strong>挑出最好的（挑貨）</strong>，最後才排順序。</div>
+    <div class="grid2">
+      <div class="card fragment"><h4>段落怎麼分？</h4><p>不是規定幾段，而是「一個重點一段」。重點換了，就換段。</p></div>
+      <div class="card fragment"><h4>用 3W 抓主旨</h4><p>寫什麼、為什麼寫、想讓讀者覺得怎樣 ── 抓住它，就不會離題。</p></div>
+    </div>
+    <div class="foot">第 5 堂 ・ 文章的骨架</div>
+  </section>
+
+  <section>
+    <span class="chip g">小技巧</span>
+    <h3>替每一段「訂一個小標」</h3>
+    <aside class="notes">⏱5分鐘。示範〈我的校園〉小標，帶遊記五步驟。強調：開頭最後寫、最好寫。</aside>
+    <p style="font-size:.82em;">下一個有趣的小標題，主題立刻清楚，讀者也更想看。以〈我的校園〉為例：</p>
+    <div class="grid2">
+      <div class="card fragment"><p>一、會漏水的天才走廊<br>二、最兇也最好笑的教官<br>三、永遠搶不到的福利社布丁</p></div>
+      <div class="card fragment"><h4>寫遊記也一樣</h4><p>① 列出印象深的行程 ② 挑幾個寫成小段 ③ 各下一個小標 ④ 排順序 ⑤ 最後補開頭</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>骨架先搭好，開頭反而<strong>最後寫、最好寫</strong>。</div>
+    <div class="foot">第 5 堂 ・ 文章的骨架</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">〈我的學校，怪怪的可愛〉</h3>
+    <aside class="notes">⏱4分鐘。讀範例文，請學生看三個小標如何讓主題變清楚。</aside>
+    <div class="essay two">
+      <p class="ttl">我的學校，怪怪的可愛</p>
+      <p class="t">我的學校不大，但每個角落都有故事。</p>
+      <p><strong>一、會漏水的天才走廊</strong><br>每到下雨天，三樓走廊一定積水，我們都叫它「游泳池」。老師放了三個水桶接水，滴滴答答，像在打節拍。</p>
+      <p><strong>二、最兇也最好笑的教官</strong><br>教官講話超大聲，但他每天都偷偷在校門口幫遲到的同學擋雨，自己卻淋得一身濕。</p>
+      <p><strong>三、永遠搶不到的福利社布丁</strong><br>福利社的布丁每天只有二十個，下課鐘一響，全校像賽跑一樣衝過去。我到現在只搶到過一次。</p>
+      <p>這就是我的學校，怪怪的，卻是我每天都想回去的地方。</p>
+    </div>
+    <div class="ann">三個小標各管一段，主題清楚；最後一句把全文收在一起。這就是<b>分小節、訂小標</b>的力量。</div>
+    <div class="foot">第 5 堂 ・ 文章的骨架</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：〈我的校園／一次出遊〉</h3>
+    <aside class="notes">⏱30分鐘。工作本第5課有地攤框。先列點、再圈、再下小標，最後展開內容。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">用「擺地攤 → 挑貨 → 訂小標」組出一篇有 3～4 個小段的文章。</p>
+      <ul class="steps">
+        <li class="fragment">地攤：把想到的點子先全部寫在框框裡。</li>
+        <li class="fragment">挑貨：圈出最精彩的 3～4 個。</li>
+        <li class="fragment">小標：替每段下一個有趣的標題，再展開。</li>
+      </ul>
+      <p class="small">→ 工作本第 5 課（有「擺地攤」框 + 小標欄）。</p>
+    </div>
+    <div class="foot">第 5 堂 ・ 文章的骨架</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 6 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#c79a3e)">
+    <div class="num">第 六 堂</div>
+    <h2 style="color:#fff">抓住讀者</h2>
+    <span class="tag">三種讓人想看下去的開頭</span>
+  </section>
+
+  <section>
+    <span class="chip g">這堂課在學什麼</span>
+    <h3>開頭，決定別人要不要看下去</h3>
+    <aside class="notes">⏱3分鐘。手機一滑就跳過 → 開頭決定去留。提醒骨架做好了，開頭最好寫。</aside>
+    <div class="lead fragment">手機一滑，文章一秒就被跳過。一個<strong>勾住好奇心的開頭</strong>，是讓讀者願意停下來的第一關。</div>
+    <p style="font-size:.82em;">好消息是：第 5 堂把骨架搭好之後，開頭其實最好寫 ── 因為你已經知道整篇要去哪裡了。</p>
+    <div class="foot">第 6 堂 ・ 抓住讀者</div>
+  </section>
+
+  <section>
+    <span class="chip g">三種開頭</span>
+    <h3>同一個故事，三種開法</h3>
+    <aside class="notes">⏱6分鐘。三張卡片逐一點出，每種唸出來比較感覺。問：哪一種最想看下去？</aside>
+    <p class="small" style="margin:.1em 0 .4em;">用第 4 堂的〈電梯停電那一分鐘〉示範：</p>
+    <div class="grid3">
+      <div class="card fragment"><h4>① 倒敘法</h4><p>「現在我每次搭電梯，手都會偷偷按著牆壁。這個習慣，是從那一次停電開始的。」</p></div>
+      <div class="card fragment"><h4>② 提問法</h4><p>「你有沒有在電梯裡，突然陷入一片黑暗的經驗？我有，而且只有一分鐘，卻像一輩子。」</p></div>
+      <div class="card fragment"><h4>③ 畫面法</h4><p>「燈『啪』地一聲全暗了。樓層數字停在一個閃爍的紅色『4』。」</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>三種都比「今天我要說一件可怕的事」好太多 ── 因為它們讓人<strong>想知道接下來</strong>。</div>
+    <div class="foot">第 6 堂 ・ 抓住讀者</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">同一篇〈段考前的書桌〉── 三種開頭</h3>
+    <aside class="notes">⏱4分鐘。讀三種開頭範例，讓學生票選最吸引人的一種。</aside>
+    <div class="essay">
+      <p class="t"><strong>【倒敘版】</strong>考卷發下來的那一刻，我才後悔，前一晚不該一直整理那張根本沒在讀的書桌。</p>
+      <p><strong>【提問版】</strong>你會不會也這樣？越是該讀書的時候，越想先把書桌整理得乾乾淨淨？那天段考前，我就是這樣。</p>
+      <p><strong>【畫面版】</strong>橡皮擦排成一列，鉛筆按顏色站好，便利貼貼成一道彩虹 ── 而我的課本，還停在第一頁。</p>
+      <p style="text-indent:0;color:#7d8a80;">同一件事，三種開頭都把讀者「勾」住了，再接下去寫那晚的故事就好。</p>
+    </div>
+    <div class="foot">第 6 堂 ・ 抓住讀者</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：替舊文章換三種開頭</h3>
+    <aside class="notes">⏱20分鐘。工作本第6課。只重寫開頭、不必重寫全文，三選一貼回原文。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">拿出第 4 或第 5 堂的文章，<strong>只重寫開頭</strong>，三種版本都試試：</p>
+      <ul class="steps">
+        <li class="fragment">倒敘版：把最後的感受搬到最前面。</li>
+        <li class="fragment">提問版：用一個問題勾住讀者。</li>
+        <li class="fragment">畫面版：用一個感官畫面開場。</li>
+      </ul>
+      <p class="small">三選一貼回原文，比比看哪個最吸引人。→ 工作本第 6 課。</p>
+    </div>
+    <div class="foot">第 6 堂 ・ 抓住讀者</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 7 堂 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#2e6b4a)">
+    <div class="num">第 七 堂</div>
+    <h2 style="color:#fff">說服與修改</h2>
+    <span class="tag">寫一份能說服大人的企劃書</span>
+  </section>
+
+  <section>
+    <span class="chip">這堂課在學什麼</span>
+    <h3>把話「說進對方心裡」</h3>
+    <aside class="notes">⏱5分鐘。議論=說服，不是吵架。比哭鬧有效的是講道理。重點：先表明立場、先懂對方在擔心什麼。</aside>
+    <div class="lead fragment">想要一樣東西，與其哭鬧，不如寫一份<strong>講得頭頭是道的企劃書</strong>。能說服別人，是一種很強的能力 ── 而且是寫作教你的。</div>
+    <div class="grid2">
+      <div class="card fragment"><h4>先表明立場</h4><p>用「一句話」說清楚你想要什麼，再慢慢說理由。</p></div>
+      <div class="card fragment"><h4>先懂對方</h4><p>先說出大人在擔心什麼，再回應 ── 對方才覺得被理解。</p></div>
+    </div>
+    <div class="foot">第 7 堂 ・ 說服與修改</div>
+  </section>
+
+  <section>
+    <span class="chip">怎麼寫＋怎麼改</span>
+    <h3>企劃書四步 ＋ 修好離手</h3>
+    <aside class="notes">⏱5分鐘。帶企劃書四步與修改三件事。強調：好文章是改出來的。</aside>
+    <div class="grid2">
+      <div class="card fragment"><h4>企劃書四步</h4><p>① 我想要什麼 ② 為什麼（動機）③ 對大家有什麼好處 ④ 我願意付出什麼（配套）</p></div>
+      <div class="card fragment"><h4>改文章三件事</h4><p>① 圈出錯字 ② 刪掉重複囉嗦的句子 ③ 把模糊的地方寫具體</p></div>
+    </div>
+    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span><strong>好文章是改出來的</strong>。先自己改一遍，再和同學互相當對方的讀者。</div>
+    <div class="foot">第 7 堂 ・ 說服與修改</div>
+  </section>
+
+  <section>
+    <span class="chip g">國中生範例文</span>
+    <h3 style="font-size:1em;margin-bottom:.2em;">〈請讓我養一隻狗〉</h3>
+    <aside class="notes">⏱5分鐘。讀範例文，指出立場／回應擔心／好處／配套四個要素。</aside>
+    <div class="essay two">
+      <p class="ttl">請讓我養一隻狗</p>
+      <p class="t">親愛的爸爸媽媽，我想養一隻狗。</p>
+      <p>我知道你們最擔心的是「沒有人照顧」，所以我先想好了：每天早上六點半我自己起床遛牠，放學回家先餵牠、清理牠的窩，週末幫牠洗澡。這些我都寫進一張「責任表」，貼在冰箱上，沒做到就扣我一週的零用錢。</p>
+      <p>養狗不只是我想要而已，對全家都有好處。奶奶一個人在家會無聊，有狗陪她，她就不會整天看電視看到睡著；而我也能學會照顧另一個生命，不再只想著自己。</p>
+      <p>我不是一時衝動，這份企劃我想了三天才寫出來。如果你們願意給我一次機會，我會證明：我已經準備好，當一個負責任的主人了。</p>
+    </div>
+    <div class="ann">有<b>立場</b>（想養狗）、先回應大人的<b>擔心</b>、說出<b>好處</b>、再給<b>配套</b>（責任表）── 比哭鬧有力多了。</div>
+    <div class="foot">第 7 堂 ・ 說服與修改</div>
+  </section>
+
+  <section>
+    <span class="chip g">換你寫</span>
+    <h3>寫作任務：〈我想爭取的一件事〉</h3>
+    <aside class="notes">⏱30分鐘。工作本第7課。寫完互圈錯字、唸出來提案給全班投票，可作為整個課程的成果展示。</aside>
+    <div class="task">
+      <p style="font-size:.82em;">挑一件你真的想爭取的事（養寵物、改門禁、買某樣東西…），寫一份企劃書。</p>
+      <ul class="steps">
+        <li class="fragment">立場：用一句話說清楚你想要什麼。</li>
+        <li class="fragment">理由＋好處：對你、對家人各有什麼好處？</li>
+        <li class="fragment">配套：你願意負什麼責任？怎麼讓大人放心？</li>
+      </ul>
+      <p class="small">寫完先互相圈錯字，再唸出來「提案」給全班投票。→ 工作本第 7 課。</p>
+    </div>
+    <div class="foot">第 7 堂 ・ 說服與修改</div>
+  </section>
+</section>
+
+<!-- ============ 結尾 ============ -->
+<section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#2e6b4a)">
+  <div class="brush" style="font-family:'LXGW WenKai TC',serif;color:#e6c878;font-size:1.7em;font-weight:700;line-height:1.3;">寫作，是把話<br>說進別人心裡</div>
+  <p style="color:#d8e6dc;font-size:.62em;margin-top:1.1em;">先把心打開，你就會有話想說；<br>有話想說，這些技巧才真正派得上用場。</p>
+  <p class="small" style="color:#9bbfa8;margin-top:1.3em;">七堂課完 ・ 願你找回寫作的熱情與自信</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/notes/notes.min.js"></script>
+<script>
+Reveal.initialize({
+  hash:true,
+  slideNumber:'c/t',
+  controls:true,
+  progress:true,
+  center:true,
+  transition:'slide',
+  backgroundTransition:'fade',
+  width:1180,
+  height:740,
+  margin:0.06,
+  plugins:[ RevealNotes ]
+});
+
+/* ===== 便條紙：可拖曳、記住位置 ===== */
+(function(){
+  function scale(){ return (Reveal.getScale && Reveal.getScale()) || 1; }
+  function key(el){ return 'notepos:' + el.dataset.note; }
+
+  function restore(el){
+    try{
+      var s = localStorage.getItem(key(el));
+      if(s){ var p = JSON.parse(s);
+        el.style.left = p.left+'px'; el.style.top = p.top+'px';
+        el.style.right = 'auto'; el.style.bottom = 'auto';
+      }
+    }catch(e){}
+  }
+
+  function drag(el){
+    el.addEventListener('mousedown', function(e){
+      e.preventDefault();
+      var k = scale();
+      var startLeft = el.offsetLeft, startTop = el.offsetTop;
+      var sx = e.clientX, sy = e.clientY;
+      el.style.right='auto'; el.style.bottom='auto';
+      el.style.left = startLeft+'px'; el.style.top = startTop+'px';
+      el.classList.add('dragging');
+      function move(ev){
+        el.style.left = (startLeft + (ev.clientX-sx)/k) + 'px';
+        el.style.top  = (startTop  + (ev.clientY-sy)/k) + 'px';
+      }
+      function up(){
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', up);
+        el.classList.remove('dragging');
+        try{ localStorage.setItem(key(el),
+          JSON.stringify({left:parseFloat(el.style.left), top:parseFloat(el.style.top)})); }catch(e){}
+      }
+      document.addEventListener('mousemove', move);
+      document.addEventListener('mouseup', up);
+    });
+    // 雙擊還原預設位置
+    el.addEventListener('dblclick', function(){
+      try{ localStorage.removeItem(key(el)); }catch(e){}
+      el.style.left=''; el.style.top=''; el.style.right=''; el.style.bottom='';
+    });
+  }
+
+  Reveal.on('ready', function(){
+    document.querySelectorAll('.note-paper').forEach(function(el,i){
+      if(!el.dataset.note) el.dataset.note = 'n'+i;
+      restore(el); drag(el);
+    });
+  });
+})();
+</script>
+</body>
+</html>

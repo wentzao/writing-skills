@@ -1,0 +1,7 @@
+# Ignore everything by default; publish only the static GitHub Pages bundle.
+*
+
+!/.gitignore
+!/index.html
+!/bookcover.jpg
+!/wentzao_logo.png
