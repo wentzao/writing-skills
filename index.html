@@ -216,8 +216,25 @@
 }
 .sample-text .steps{ margin:.35em 0 0; }
 .sample-text .steps li{ font-size:.54em; line-height:1.5; margin:.16em 0; }
-.choice-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.45em; margin-top:.45em; }
-.choice-grid .mini-card{ min-height:3.4em; }
+.flip-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.48em; margin-top:.48em; }
+.flip-card{
+  min-height:4.75em; perspective:900px; cursor:pointer; outline:none;
+}
+.flip-inner{
+  position:relative; width:100%; min-height:4.75em;
+  transform-style:preserve-3d; transition:transform .42s ease;
+}
+.flip-card.flipped .flip-inner{ transform:rotateY(180deg); }
+.flip-face{
+  position:absolute; inset:0; backface-visibility:hidden;
+  background:#fff; border:1px solid #dfe7dc; border-radius:10px;
+  padding:.42em .55em; box-shadow:0 4px 14px rgba(3,73,45,.06);
+}
+.flip-back{ transform:rotateY(180deg); background:#fffdf4; border-color:#e6c878; }
+.flip-face b{ color:var(--green2); font-size:.64em; }
+.flip-face p{ font-size:.5em; margin:.12em 0 0; line-height:1.42; color:#3f4a42; }
+.flip-back p{ font-size:.54em; color:#34403a; }
+.flip-card:focus-visible .flip-face{ outline:3px solid rgba(207,153,61,.4); outline-offset:3px; }
 
 /* 故事卷 / 範例文 稿紙風 */
 .story{
@@ -398,7 +415,7 @@
   <section>
     <span class="chip l">安靜看圖</span>
     <h3>先不要討論，自己慢慢看</h3>
-    <aside class="notes">⏱8分鐘。全班安靜觀察，不討論。請學生先把筆放下30秒只看圖，再寫下8個細節。老師巡堂時只提醒：寫具體名詞和動作，不要只寫漂亮、很美、很安靜。</aside>
+    <aside class="notes">⏱8分鐘。全班安靜觀察，不討論。請學生先把筆放下30秒只看圖，再挑幾個最清楚的景物寫下來。老師巡堂時只提醒：寫具體名詞和動作，不要只寫漂亮、很美、很安靜。</aside>
     <div class="scene-grid">
       <img class="scene-img" src="assets/describe-scene.png" alt="雨後校園走廊與教室景象">
       <div class="scene-panel">
@@ -408,23 +425,6 @@
         <div class="mini-card fragment"><b>心裡</b><p>如果你站在那裡，會覺得安靜、期待、孤單，還是放鬆？</p></div>
       </div>
     </div>
-  </section>
-
-  <section>
-    <span class="chip g">個人練習</span>
-    <h3>把 8 個細節，合成 4 句描述</h3>
-    <aside class="notes">⏱8分鐘。每位學生自己寫，不互相交換。規則：一句寫看見，一句寫正在發生，一句寫顏色或聲音，一句寫自己的感覺。鼓勵普通字，不追求成語。</aside>
-    <div class="task">
-      <span class="chip g">四句就好</span>
-      <ul class="steps">
-        <li class="fragment">一句寫「我看見」：要有具體物品，不要只寫很漂亮。</li>
-        <li class="fragment">一句寫「正在發生」：有人在走、雨水在滴、光在照。</li>
-        <li class="fragment">一句寫「顏色或聲音」：讓讀者像在現場。</li>
-        <li class="fragment">一句寫「我的感覺」：安靜、期待、孤單、放鬆都可以。</li>
-      </ul>
-    </div>
-    <div class="note-paper fragment"><span class="nt">小祕訣</span>如果卡住，就從「哪一個地方最吸引我？」開始寫。</div>
-    <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
 
   <section>
@@ -463,50 +463,69 @@
   </section>
 
   <section>
-    <span class="chip g">範例文二</span>
-    <h3>完整的版本：讓讀者真的站進畫面</h3>
-    <aside class="notes">⏱6分鐘。朗讀完整版本，請學生只找三種東西：具體物品、正在發生、心裡感覺。強調完整不是硬塞字，而是每句都多給讀者一個可看見的線索。</aside>
-    <div class="sample-layout">
-      <img class="sample-img" src="assets/describe-scene.png" alt="雨後校園走廊與教室景象">
-      <div class="sample-text">
-        <h4>雨後的教室</h4>
-        <p>雨剛停，走廊像被誰擦亮了一遍。窗邊的雨傘一支支靠在架上，地板上的水窪把天空和樹影揉成碎片。</p>
-        <p>教室門半開著，桌上的筆記本還攤在那裡，藍色鉛筆盒斜斜躺著，好像主人只是匆忙離開一下。遠處幾個學生背著書包往校門走，腳步聲被濕亮的走廊吞得很輕。</p>
-        <p>我站在門口，忽然不想立刻回家。這個雨後的下午像一封沒寫完的信，安靜地提醒我：有些畫面，只要多看幾秒，就會變成故事。</p>
-        <div class="warn"><b>可以學：</b>同樣寫「安靜」，完整版本會把水窪、筆記本、腳步聲和心裡的停頓一起寫出來。</div>
+    <span class="chip l">故事角度</span>
+    <h3>點一下問題，翻出可以直接學的句子</h3>
+    <aside class="notes">⏱5分鐘。這頁不要只丟問題，老師可以點卡片翻面，讓學生看到「問題如何變句子」。翻完再接範例文二，讓學生聽到這些句子怎麼被放進完整段落。</aside>
+    <div class="lead">問題只是入口。翻到背面時，要看的是：這個問題怎麼變成一句有畫面、可以放進文章裡的句子。</div>
+    <div class="flip-grid">
+      <div class="flip-card" role="button" tabindex="0" aria-label="翻開等待示範句">
+        <div class="flip-inner">
+          <div class="flip-face"><b>等待</b><p>誰還沒有回來？為什麼那個人值得等？</p></div>
+          <div class="flip-face flip-back"><b>示範句</b><p>我站在門口等了很久，直到走廊的水光慢慢暗下來，那個人還是沒有回來。</p></div>
+        </div>
+      </div>
+      <div class="flip-card" role="button" tabindex="0" aria-label="翻開遺失示範句">
+        <div class="flip-inner">
+          <div class="flip-face"><b>遺失</b><p>被留下的東西，會不會代表一件重要的事？</p></div>
+          <div class="flip-face flip-back"><b>示範句</b><p>桌上的筆記本沒有闔上，像主人只是離開一下，卻把一個下午留在原位。</p></div>
+        </div>
+      </div>
+      <div class="flip-card" role="button" tabindex="0" aria-label="翻開告別示範句">
+        <div class="flip-inner">
+          <div class="flip-face"><b>告別</b><p>這個地方是不是某個人最後一次經過？</p></div>
+          <div class="flip-face flip-back"><b>示範句</b><p>我回頭看那間教室，知道明天開始，它就只是我曾經待過的地方。</p></div>
+        </div>
+      </div>
+      <div class="flip-card" role="button" tabindex="0" aria-label="翻開重新開始示範句">
+        <div class="flip-inner">
+          <div class="flip-face"><b>重新開始</b><p>雨停之後，有沒有什麼心情也慢慢亮起來？</p></div>
+          <div class="flip-face flip-back"><b>示範句</b><p>雨停以後，地板還是濕的，但窗外的光已經先替新的一天鋪好路。</p></div>
+        </div>
       </div>
     </div>
     <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
 
   <section>
-    <span class="chip l">故事角度</span>
-    <h3>景物不是背景，它可以藏著一個故事</h3>
-    <aside class="notes">⏱4分鐘。讓學生知道最後任務不是只寫風景清單，而是用風景帶出一個故事或主題。先看四個角度，選一個就好，不用全部寫。</aside>
-    <div class="lead">當你把景物寫清楚，故事就比較容易出現。你可以從一個物品、一個空位、一種光線，猜出「可能發生了什麼」。</div>
-    <div class="choice-grid">
-      <div class="mini-card fragment"><b>等待</b><p>誰還沒有回來？為什麼那個人值得等？</p></div>
-      <div class="mini-card fragment"><b>遺失</b><p>被留下的東西，會不會代表一件重要的事？</p></div>
-      <div class="mini-card fragment"><b>告別</b><p>這個地方是不是某個人最後一次經過？</p></div>
-      <div class="mini-card fragment"><b>重新開始</b><p>雨停之後，有沒有什麼心情也慢慢亮起來？</p></div>
+    <span class="chip g">範例文二</span>
+    <h3>完整的版本：讓讀者真的站進畫面</h3>
+    <aside class="notes">⏱6分鐘。朗讀完整版本，語氣改成更冷靜、簡潔、具體。請學生聽：作者不急著抒情，而是用看見的東西慢慢推出心情。</aside>
+    <div class="sample-layout">
+      <img class="sample-img" src="assets/describe-scene.png" alt="雨後校園走廊與教室景象">
+      <div class="sample-text">
+        <h4>雨後的教室</h4>
+        <p>雨停後，走廊沒有立刻恢復熱鬧。地板上還有水，水裡映著窗框和樹。幾把雨傘靠在牆邊，像被留下來值班。</p>
+        <p>教室門開著。一本筆記本攤在靠門的桌上，鉛筆盒壓住紙角。這些東西都很普通，可是它們說明一件事：人剛走，聲音也剛走。</p>
+        <p>遠處幾個學生走向校門，腳步很輕。我站在門邊，看著走廊慢慢變暗。那一刻我明白，安靜不是什麼都沒有。安靜是剛剛發生過的事，還留在原來的位置。</p>
+        <div class="warn"><b>可以學：</b>句子短一點，觀察穩一點；不要急著說感動，先讓讀者看見證據。</div>
+      </div>
     </div>
     <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
 
   <section>
     <span class="chip g">換你寫</span>
-    <h3>寫作任務：把一個風景寫成故事</h3>
-    <aside class="notes">⏱24分鐘安靜寫作＋5分鐘自我檢查。全程個人安靜寫，不上台、不分組。請學生先觀察圖片，再選一個主題：等待、遺失、告別、重新開始。提醒：至少五個看得見的細節，最後圈出三個最清楚的句子。</aside>
+    <h3>寫作任務：像會考一樣看圖寫作</h3>
+    <aside class="notes">⏱25分鐘安靜寫作。全程個人安靜寫，不上台、不分組。用會考式引導：先讀題目與說明，再觀察圖片，最後完成短文。不要求圈優美句子，重點是能依題意描寫場景並寫出心情或故事。</aside>
     <div class="sample-layout">
-      <img class="sample-img" src="assets/final-landscape.png" alt="雨後河岸、長椅、書包與雨傘">
+      <img class="sample-img" src="assets/graduation-scene.svg" alt="國小畢業典禮結束後的大禮堂">
       <div class="sample-text">
-        <h4>題目：雨後河岸邊</h4>
-        <p>請觀察左邊這張全新的風景圖，寫一段 250～400 字的短文。你可以自由描寫，但文章要有一個故事或主題。</p>
+        <h4>題目：典禮結束以後</h4>
+        <p>左圖是一處國小畢業典禮結束後的場景。請根據圖片內容，寫一篇短文。</p>
         <ul class="steps">
-          <li class="fragment">先寫景：至少放進 5 個看得見的細節，例如長椅、書包、雨傘、水光、橋、落葉。</li>
-          <li class="fragment">再選主題：等待、遺失、告別、重新開始，選一個就好。</li>
-          <li class="fragment">放入故事問題：誰把東西留在長椅上？我為什麼會在這裡停下來？</li>
-          <li class="fragment">寫完自我檢查：圈出 3 句最有畫面的句子。</li>
+          <li class="fragment">可以先描寫你看見的景物，例如椅子、舞台、麥克風、花束、光線。</li>
+          <li class="fragment">再想像一個剛離開或還沒離開的人，寫出他當時的心情。</li>
+          <li class="fragment">文章不必逐項介紹圖片，但要讓讀者知道：典禮結束後，某個人心裡發生了什麼變化。</li>
         </ul>
       </div>
     </div>
@@ -936,6 +955,17 @@ Reveal.initialize({
   height:740,
   margin:0.06,
   plugins:[ RevealNotes ]
+});
+
+document.querySelectorAll('.flip-card').forEach(function(card){
+  function flip(){ card.classList.toggle('flipped'); }
+  card.addEventListener('click', flip);
+  card.addEventListener('keydown', function(event){
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      flip();
+    }
+  });
 });
 
 /* ===== 便條紙：可拖曳、記住位置 ===== */

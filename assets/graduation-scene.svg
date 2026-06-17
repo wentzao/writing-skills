@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="An empty elementary school graduation ceremony hall after the ceremony">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8efe0"/>
+      <stop offset="0.56" stop-color="#ead8bb"/>
+      <stop offset="1" stop-color="#d8c19b"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8b57c"/>
+      <stop offset="1" stop-color="#9a7148"/>
+    </linearGradient>
+    <linearGradient id="curtain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7d2733"/>
+      <stop offset="1" stop-color="#4d1826"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4c8" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#fff4c8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <style>
+      .line{stroke:#5f4a38;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#6e5945;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .chair{fill:#efe2cf;stroke:#72563e;stroke-width:3}
+      .chairBack{fill:#f7ecdc}
+      .petal{fill:#d88b76;opacity:.88}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#wall)"/>
+  <rect x="0" y="518" width="1600" height="382" fill="url(#floor)"/>
+  <path d="M0 518H1600" class="line" opacity=".35"/>
+
+  <g opacity=".8">
+    <rect x="110" y="72" width="168" height="150" rx="8" fill="#d9e7eb" stroke="#8aa0a6" stroke-width="5"/>
+    <rect x="332" y="72" width="168" height="150" rx="8" fill="#d9e7eb" stroke="#8aa0a6" stroke-width="5"/>
+    <rect x="1100" y="72" width="168" height="150" rx="8" fill="#d9e7eb" stroke="#8aa0a6" stroke-width="5"/>
+    <rect x="1322" y="72" width="168" height="150" rx="8" fill="#d9e7eb" stroke="#8aa0a6" stroke-width="5"/>
+    <path d="M194 72v150M416 72v150M1184 72v150M1406 72v150" class="thin" opacity=".55"/>
+    <path d="M110 147h168M332 147h168M1100 147h168M1322 147h168" class="thin" opacity=".55"/>
+  </g>
+
+  <path d="M40 100L650 520L510 520L0 220Z" fill="url(#light)" filter="url(#soft)"/>
+  <path d="M1560 110L935 520H1080L1600 238Z" fill="url(#light)" filter="url(#soft)"/>
+
+  <g>
+    <rect x="424" y="220" width="752" height="280" rx="18" fill="#8d3440"/>
+    <path d="M424 220h752v280H424Z" fill="url(#curtain)"/>
+    <path d="M500 220c24 80 18 186-8 280M620 220c18 84 12 184-10 280M740 220c16 84 13 184-6 280M860 220c-16 84-13 184 6 280M980 220c-18 84-12 184 10 280M1100 220c-24 80-18 186 8 280" fill="none" stroke="#3d1620" stroke-width="8" opacity=".36"/>
+    <rect x="386" y="490" width="828" height="64" rx="10" fill="#6c472d"/>
+    <rect x="342" y="536" width="916" height="52" fill="#8b633d"/>
+    <path d="M342 588h916" class="line" opacity=".45"/>
+  </g>
+
+  <g>
+    <line x1="802" y1="348" x2="802" y2="493" class="line"/>
+    <ellipse cx="802" cy="338" rx="20" ry="14" fill="#2c3134"/>
+    <path d="M795 337c17-8 39-3 52 15" fill="none" class="thin"/>
+    <rect x="760" y="490" width="86" height="12" rx="6" fill="#2f2a24"/>
+  </g>
+
+  <g opacity=".85">
+    <rect x="600" y="555" width="118" height="20" rx="4" fill="#f2e6d6"/>
+    <rect x="608" y="540" width="106" height="18" rx="3" fill="#fff8ed" transform="rotate(-3 661 549)"/>
+    <rect x="888" y="548" width="118" height="20" rx="4" fill="#f2e6d6"/>
+    <rect x="895" y="531" width="106" height="18" rx="3" fill="#fff8ed" transform="rotate(4 948 540)"/>
+  </g>
+
+  <g id="chairs">
+    <g transform="translate(150 612) scale(1.25)">
+      <rect class="chair chairBack" x="0" y="0" width="76" height="54" rx="9"/>
+      <rect class="chair" x="5" y="42" width="66" height="36" rx="8"/>
+      <path d="M10 78v52M66 78v52" class="line"/>
+    </g>
+    <g transform="translate(298 608) scale(1.25)">
+      <rect class="chair chairBack" x="0" y="0" width="76" height="54" rx="9"/>
+      <rect class="chair" x="5" y="42" width="66" height="36" rx="8"/>
+      <path d="M10 78v52M66 78v52" class="line"/>
+    </g>
+    <g transform="translate(446 612) scale(1.25)">
+      <rect class="chair chairBack" x="0" y="0" width="76" height="54" rx="9"/>
+      <rect class="chair" x="5" y="42" width="66" height="36" rx="8"/>
+      <path d="M10 78v52M66 78v52" class="line"/>
+    </g>
+    <g transform="translate(892 612) scale(1.25)">
+      <rect class="chair chairBack" x="0" y="0" width="76" height="54" rx="9"/>
+      <rect class="chair" x="5" y="42" width="66" height="36" rx="8"/>
+      <path d="M10 78v52M66 78v52" class="line"/>
+    </g>
+    <g transform="translate(1040 608) scale(1.25)">
+      <rect class="chair chairBack" x="0" y="0" width="76" height="54" rx="9"/>
+      <rect class="chair" x="5" y="42" width="66" height="36" rx="8"/>
+      <path d="M10 78v52M66 78v52" class="line"/>
+    </g>
+    <g transform="translate(1188 612) scale(1.25)">
+      <rect class="chair chairBack" x="0" y="0" width="76" height="54" rx="9"/>
+      <rect class="chair" x="5" y="42" width="66" height="36" rx="8"/>
+      <path d="M10 78v52M66 78v52" class="line"/>
+    </g>
+  </g>
+
+  <g transform="translate(705 636) rotate(-8)">
+    <path d="M0 50c34-18 78-16 112 0l-10 34H10Z" fill="#f1d1b8" stroke="#73563e" stroke-width="3"/>
+    <path d="M52 46l-6-70M66 48l10-72M38 48l-28-62M82 46l30-58" class="thin"/>
+    <circle cx="46" cy="-18" r="16" fill="#e99ca2"/>
+    <circle cx="76" cy="-20" r="17" fill="#f0c45d"/>
+    <circle cx="22" cy="-12" r="14" fill="#e6a36b"/>
+    <circle cx="104" cy="-10" r="13" fill="#d986a1"/>
+    <path d="M20 20c26 10 58 10 88-1" fill="none" stroke="#b35b65" stroke-width="8" opacity=".7"/>
+  </g>
+
+  <g opacity=".72">
+    <path class="petal" d="M220 760c18-8 30 3 24 16c-18 7-30-3-24-16Z"/>
+    <path class="petal" d="M370 705c20-6 28 8 18 19c-19 3-27-8-18-19Z"/>
+    <path class="petal" d="M536 807c17-11 31-2 28 13c-17 10-31 2-28-13Z"/>
+    <path class="petal" d="M914 746c21-8 32 5 24 18c-21 5-31-5-24-18Z"/>
+    <path class="petal" d="M1136 816c18-10 32 0 27 15c-18 8-31 0-27-15Z"/>
+    <path class="petal" d="M1328 710c17-7 28 4 21 17c-17 5-27-4-21-17Z"/>
+  </g>
+
+  <path d="M80 650c346-70 642-70 1040-6c144 23 272 23 398-8" fill="none" stroke="#fff3c1" stroke-width="18" opacity=".24"/>
+  <path d="M124 848c374-88 772-91 1348-18" fill="none" stroke="#6f4e32" stroke-width="2" opacity=".25"/>
+</svg>
