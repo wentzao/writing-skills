@@ -154,13 +154,6 @@
   background:var(--green); color:#fff; border-radius:8px; font-weight:700;
 }
 
-.timegrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:.45em; margin-top:.45em; }
-.timebox{
-  background:#fff; border:1px solid #dfe7dc; border-radius:10px;
-  padding:.42em .5em; min-height:5.3em;
-}
-.timebox b{ display:block; color:var(--green); font-size:.72em; margin-bottom:.18em; }
-.timebox p{ font-size:.57em; margin:0; line-height:1.38; color:#3f4a42; }
 .exam-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.55em; margin-top:.6em; }
 .exam-card{
   background:#fff; border:1px solid #dfe7dc; border-radius:12px;
@@ -192,6 +185,14 @@
   color:#34403a; font-size:.84em; line-height:1.65;
 }
 .bigline .thin{ color:#879187; font-size:.8em; }
+.example-pair{ display:grid; grid-template-columns:.86fr 1.14fr; gap:.45em; align-items:stretch; }
+.example-pair .plain,.example-pair .rich{
+  border-radius:10px; padding:.45em .55em; min-height:3.8em;
+}
+.example-pair .plain{ background:#f3f5f1; color:#68736a; }
+.example-pair .rich{ background:#fffdf4; border:1px solid #e6c878; color:#34403a; }
+.example-pair b{ display:block; color:var(--green2); font-size:.55em; margin-bottom:.12em; }
+.example-pair p{ font-size:.58em; line-height:1.45; margin:0; }
 
 /* 故事卷 / 範例文 稿紙風 */
 .story{
@@ -335,22 +336,6 @@
   </section>
 
   <section>
-    <span class="chip">今天 90 分鐘</span>
-    <h3>第一堂課：先把「看見」寫清楚</h3>
-    <aside class="notes">⏱1分鐘。今天總共90分鐘，中間休息10分鐘。前面10分鐘含會考題目快速導覽；這張只是幫老師和學生建立節奏。</aside>
-    <div class="timegrid">
-      <div class="timebox fragment"><b>0-10 分</b><p>看近三年會考題目，抓共同能力：觀察與表達。</p></div>
-      <div class="timebox fragment"><b>10-18 分</b><p>寫作不是一開始寫長文，先從一句想說的話開始。</p></div>
-      <div class="timebox fragment"><b>18-37 分</b><p>分組看圖：每組負責一種細節，把景象說清楚。</p></div>
-      <div class="timebox fragment"><b>37-40 分</b><p>把小組細節合成一段「變大」的描述。</p></div>
-      <div class="timebox fragment"><b>40-50 分</b><p>休息 10 分鐘。</p></div>
-      <div class="timebox fragment"><b>50-62 分</b><p>把描述力接到自我介紹：用小故事讓人記得你。</p></div>
-      <div class="timebox fragment"><b>62-76 分</b><p>寫〈這就是我〉草稿，先求清楚、真實、具體。</p></div>
-      <div class="timebox fragment"><b>76-90 分</b><p>分享 50-70 秒，同學聽完說出記得的細節。</p></div>
-    </div>
-  </section>
-
-  <section>
     <span class="chip">這堂課在學什麼</span>
     <h3>「寫作文有什麼用？」其實是假議題</h3>
     <aside class="notes">⏱4分鐘。呼應開場：孩子質疑寫作沒用，多半是還沒愛上它。重點不是回答「有什麼用」，而是讓他先在生活裡用得到字的地方動筆。引用林語堂「因為我有話要說」。</aside>
@@ -362,22 +347,22 @@
 
   <section>
     <span class="chip l">方法一</span>
-    <h3>寫作，從一張小紙條開始</h3>
-    <aside class="notes">⏱4分鐘。改採書中「在生活中善用書寫彌補口語交流不足」的概念。說明：作文不是一開始就寫四百字；只要能把提醒、請求、感謝或說不出口的話寫清楚，就是寫作的第一步。請學生想想最近有沒有一句話，口頭說容易忘、容易吵，或不好意思說。</aside>
-    <div class="lead fragment">作文不一定一開始就是四百字。你能把一個提醒、一個請求、一句感謝，寫得讓對方看懂，這就是寫作。</div>
+    <h3>寫作，從一張給自己的小紙條開始</h3>
+    <aside class="notes">⏱5分鐘。把原本「寫給別人」收回來，改成安靜寫給自己。說明：作文不是一開始就寫四百字；能把提醒自己的話寫清楚，就是寫作的第一步。請學生想想升上國中後，最需要提醒自己的事。</aside>
+    <div class="lead fragment">作文不一定一開始就是四百字。你能把一個提醒自己的句子，寫得清楚、真實、看了會記得，這就是寫作。</div>
     <div class="grid3">
-      <div class="card fragment"><h4>提醒</h4><p>「明天要帶水壺，別又忘在玄關。」</p></div>
-      <div class="card fragment"><h4>請求</h4><p>「我想晚一點睡，因為作業還差最後一題。」</p></div>
-      <div class="card fragment"><h4>說不出口</h4><p>「其實我很緊張，但我不太敢直接說。」</p></div>
+      <div class="card fragment"><h4>提醒自己</h4><p>「明天進教室前，先深呼吸，不要一直低頭看地板。」</p></div>
+      <div class="card fragment"><h4>安定自己</h4><p>「緊張的時候，摸一下書包拉鍊，提醒自己慢慢來。」</p></div>
+      <div class="card fragment"><h4>鼓勵自己</h4><p>「今天只要主動問一個問題，就比昨天更勇敢。」</p></div>
     </div>
-    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>字不用多，但要讓對方知道：你在跟誰說、想說什麼、希望對方怎麼做。</div>
+    <div class="note-paper fragment"><span class="nt">小祕訣</span>字不用多，但要讓未來的自己知道：我在怕什麼、我想提醒什麼、我可以怎麼做。</div>
     <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
 
   <section>
     <span class="chip l">方法二</span>
     <h3>一句話怎麼變大？先把它看清楚</h3>
-    <aside class="notes">⏱4分鐘。融入《作文變很大》的方向：不要要求學生一開始就「寫漂亮」，而是讓普通句子透過觀察、追問和感受慢慢長大。這張只示範一輪，接著讓學生分組看圖。</aside>
+    <aside class="notes">⏱5分鐘。融入《作文變很大》的方向：不要要求學生一開始就「寫漂亮」，而是讓普通句子透過觀察、追問和感受慢慢長大。這張示範「普通句 → 看見 → 感受」。</aside>
     <div class="bigline fragment"><span class="thin">普通句：</span>放學後，教室很安靜。</div>
     <div class="bigline fragment" style="margin-top:.45em;"><span class="thin">加上看見：</span>放學後，教室只剩幾個背包靠在椅腳旁，窗邊的雨水一滴一滴往下滑。</div>
     <div class="bigline fragment" style="margin-top:.45em;"><span class="thin">再加感受：</span>我站在門口，忽然覺得這間教室像剛說完一個祕密，安靜得讓人不敢太大聲。</div>
@@ -386,24 +371,24 @@
   </section>
 
   <section>
-    <span class="chip l">分組看圖</span>
-    <h3>請把你看到的景象寫下來</h3>
-    <aside class="notes">⏱10分鐘。四人一組，每組分工：前景、教室、走廊、窗外與氣氛。先不寫成文章，只寫名詞、動作、顏色、聲音、感覺。每組至少產出8個細節。</aside>
+    <span class="chip l">安靜看圖</span>
+    <h3>先不要討論，自己慢慢看</h3>
+    <aside class="notes">⏱8分鐘。全班安靜觀察，不討論。請學生先把筆放下30秒只看圖，再寫下8個細節。老師巡堂時只提醒：寫具體名詞和動作，不要只寫漂亮、很美、很安靜。</aside>
     <div class="scene-grid">
       <img class="scene-img" src="assets/describe-scene.png" alt="雨後校園走廊與教室景象">
       <div class="scene-panel">
-        <div class="mini-card fragment"><b>A 組：前景</b><p>桌上有什麼？物品的位置、顏色、狀態是什麼？</p></div>
-        <div class="mini-card fragment"><b>B 組：教室</b><p>教室裡的人在做什麼？桌椅、光線、空氣像什麼？</p></div>
-        <div class="mini-card fragment"><b>C 組：走廊</b><p>雨傘、積水、公告欄、盆栽，哪些細節最明顯？</p></div>
-        <div class="mini-card fragment"><b>D 組：窗外</b><p>雨剛停後，外面的光、樹、遠方學生給你什麼感覺？</p></div>
+        <div class="mini-card fragment"><b>前景</b><p>桌上有什麼？它們的位置、顏色、狀態是什麼？</p></div>
+        <div class="mini-card fragment"><b>中景</b><p>教室、走廊、雨傘、積水，哪一個最吸引你？</p></div>
+        <div class="mini-card fragment"><b>遠景</b><p>窗外的光、樹、遠方學生，讓畫面變成什麼氣氛？</p></div>
+        <div class="mini-card fragment"><b>心裡</b><p>如果你站在那裡，會覺得安靜、期待、孤單，還是放鬆？</p></div>
       </div>
     </div>
   </section>
 
   <section>
-    <span class="chip g">小組任務</span>
+    <span class="chip g">個人練習</span>
     <h3>把 8 個細節，合成 4 句描述</h3>
-    <aside class="notes">⏱5分鐘。每組把剛才的細節改成4句完整句：一句寫看見，一句寫動作或聲音，一句寫光線或顏色，一句寫感受。鼓勵普通字，不追求成語。</aside>
+    <aside class="notes">⏱8分鐘。每位學生自己寫，不互相交換。規則：一句寫看見，一句寫正在發生，一句寫顏色或聲音，一句寫自己的感覺。鼓勵普通字，不追求成語。</aside>
     <div class="task">
       <span class="chip g">四句就好</span>
       <ul class="steps">
@@ -418,18 +403,38 @@
   </section>
 
   <section>
-    <span class="chip l">小練習</span>
-    <h3>把想說的話，寫給一個人</h3>
-    <aside class="notes">⏱7分鐘。學生從三個對象中選一個，寫 30～60 字小紙條。提醒把剛才練到的描述放進去：不要只說「我很緊張」，可以寫「想到開學第一天走進陌生教室，我的手會一直摸書包拉鍊」。寫完請同桌交換，只問兩件事：我看得懂你想說什麼嗎？我記得哪一句？</aside>
-    <div class="lead fragment">請選一個對象，寫一張 30～60 字的小紙條。不要追求漂亮，先追求<strong>清楚、真實、有人聽得懂</strong>。</div>
+    <span class="chip g">描寫範例</span>
+    <h3>不是寫更多字，是寫得更看得見</h3>
+    <aside class="notes">⏱6分鐘。這張多給範例，讓學生理解「具體」不是堆形容詞，而是把物品、動作、光線、感覺寫出來。每一個範例只讀右邊，請學生說右邊比左邊多看見什麼。</aside>
     <div class="grid3">
-      <div class="card fragment"><h4>寫給升上國中的自己</h4><p>提醒自己一件不要忘記的事。</p></div>
-      <div class="card fragment"><h4>寫給未來同學</h4><p>讓他知道你是一個怎樣的人。</p></div>
-      <div class="card fragment"><h4>寫給家人</h4><p>說一句平常不太好意思說的話。</p></div>
+      <div class="example-pair fragment">
+        <div class="plain"><b>太空</b><p>桌上很亂。</p></div>
+        <div class="rich"><b>看得見</b><p>桌角攤著一本沒闔上的筆記本，藍色鉛筆盒斜斜壓在紙邊。</p></div>
+      </div>
+      <div class="example-pair fragment">
+        <div class="plain"><b>太空</b><p>走廊很濕。</p></div>
+        <div class="rich"><b>看得見</b><p>走廊地板留著一塊塊水痕，窗外的光被踩成碎碎的亮片。</p></div>
+      </div>
+      <div class="example-pair fragment">
+        <div class="plain"><b>太空</b><p>我很緊張。</p></div>
+        <div class="rich"><b>看得見</b><p>我一直捏著書包背帶，手心黏黏的，連拉鍊聲都覺得太大。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="chip l">小練習</span>
+    <h3>把想說的話，寫給自己</h3>
+    <aside class="notes">⏱8分鐘。學生寫30～60字小紙條，只寫給自己，不交換。提醒把剛才練到的描述放進去：不要只說「我很緊張」，可以寫「想到開學第一天走進陌生教室，我的手會一直摸書包拉鍊」。</aside>
+    <div class="lead fragment">請寫一張 30～60 字的小紙條給自己。不要追求漂亮，先追求<strong>清楚、真實、看了會記得</strong>。</div>
+    <div class="grid3">
+      <div class="card fragment"><h4>寫給明天的自己</h4><p>提醒自己一件明天不要忘記的事。</p></div>
+      <div class="card fragment"><h4>寫給升上國中的自己</h4><p>提醒自己遇到陌生環境時，可以怎麼安定下來。</p></div>
+      <div class="card fragment"><h4>寫給緊張時的自己</h4><p>留一句話，讓自己不那麼慌。</p></div>
     </div>
     <div class="task fragment">
-      <span class="chip g">同桌回饋</span>
-      <p style="font-size:.82em;">讀完只回答兩題：我看得懂你想說什麼嗎？我最記得哪一句？</p>
+      <span class="chip g">自我檢查</span>
+      <p style="font-size:.82em;">讀完只問自己兩題：這句提醒夠具體嗎？我有沒有寫出一個看得見的細節？</p>
     </div>
     <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
@@ -437,8 +442,8 @@
   <section>
     <span class="chip l">方法三</span>
     <h3>從一句話，走到「認識自己」</h3>
-    <aside class="notes">⏱3分鐘。把小紙條接到自我介紹：我剛剛選了什麼對象？我想讓他知道什麼？這透露我在意什麼？再帶學生盤點三件事：讓我驕傲的成就、我最喜歡的科目／才藝、我的短期與長期目標。</aside>
-    <div class="lead fragment">你剛剛寫下的那句話，可能透露了你在意什麼、害怕什麼、期待什麼。接下來，把它整理成自我介紹的材料。</div>
+    <aside class="notes">⏱4分鐘。把給自己的小紙條接到自我介紹：我提醒自己什麼？這透露我在意什麼、害怕什麼、期待什麼？再帶學生盤點三件事：讓我驕傲的成就、我最喜歡的科目／才藝、我的短期與長期目標。</aside>
+    <div class="lead fragment">你剛剛寫給自己的那句話，可能透露了你在意什麼、害怕什麼、期待什麼。接下來，把它整理成自我介紹的材料。</div>
     <div class="grid3">
       <div class="card fragment"><h4>我的成就</h4><p>讓我最驕傲的一件事（校內、校外、家裡都算）。</p></div>
       <div class="card fragment"><h4>我的興趣</h4><p>最喜歡的科目或才藝，挑一個「最」喜歡的。</p></div>
@@ -455,16 +460,16 @@
 
   <section>
     <span class="chip l">怎麼寫</span>
-    <h3>一分鐘自我介紹的五步驟</h3>
-    <aside class="notes">⏱6分鐘。核心是「區別化」── 一開口就講出一個與眾不同的特質，最重要、最花心思。架構五步，控制在約400字、60秒。舉例只要兩個，別超過三個，否則失焦。提醒學生：例子要有畫面，不只寫個性標籤。</aside>
+    <h3>一段自我介紹的五步驟</h3>
+    <aside class="notes">⏱6分鐘。核心是「區別化」── 第一段就寫出一個與眾不同的特質，最重要、最花心思。架構五步，控制在約400字。舉例只要兩個，別超過三個，否則失焦。提醒學生：例子要有畫面，不只寫個性標籤。</aside>
     <ul class="steps">
-      <li class="fragment"><strong>我是個怎樣的人</strong>：一開口就講「一個與眾不同的特質」。</li>
+      <li class="fragment"><strong>我是個怎樣的人</strong>：第一句就寫「一個與眾不同的特質」。</li>
       <li class="fragment"><strong>舉例一</strong>：一個小故事，證明這個特質。</li>
       <li class="fragment"><strong>舉例二</strong>：再一個例子就好，別超過三個。</li>
       <li class="fragment"><strong>展望</strong>：這個特質，未來想怎麼發揮？</li>
       <li class="fragment"><strong>結語</strong>：一句話收尾，讓人記得你。</li>
     </ul>
-    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>全部約 400 字、講 60 秒。最重要的是「第一句」── 一開口就要與眾不同。</div>
+    <div class="note-paper fragment"><span class="nt">小祕訣</span>全部約 400 字。最重要的是「第一句」── 一開始就要讓人看見你的特質。</div>
     <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
 
@@ -485,17 +490,17 @@
 
   <section>
     <span class="chip g">換你寫</span>
-    <h3>寫作任務：〈這就是我〉＋上台說</h3>
-    <aside class="notes">⏱14分鐘寫作＋14分鐘上台。這次先不改學生文稿，投影片先對齊未來工作本方向。學生可以先寫草稿，不必完整定稿。上台講50–70秒；同學聽完說出一個記得的細節，老師再問1個問題確認講清楚。</aside>
+    <h3>寫作任務：安靜寫〈這就是我〉</h3>
+    <aside class="notes">⏱22分鐘安靜寫作＋5分鐘自我檢查。維持安靜書寫。這次先不改學生文稿，投影片先對齊未來工作本方向。學生可以先寫草稿，不必完整定稿；最後圈出三個具體細節。</aside>
     <div class="task">
-      <p style="font-size:.82em;">翻開「作文稿紙工作本」第 1 課，用五步驟寫一篇屬於你的自我介紹，再上台說給大家聽。</p>
+      <p style="font-size:.82em;">翻開「作文稿紙工作本」第 1 課，用五步驟寫一篇屬於你的自我介紹。今天只安靜完成草稿。</p>
       <ul class="steps">
         <li class="fragment">先想好「一個與眾不同的特質」，再配兩個真實的小故事。</li>
-        <li class="fragment">寫成約 400 字的講稿，自己先讀一遍、抓時間。</li>
-        <li class="fragment">上台講 50～70 秒；老師會問台下三個問題，考考你講清楚了沒。</li>
+        <li class="fragment">每個小故事至少放一個看得見的細節：動作、物品、表情或聲音。</li>
+        <li class="fragment">寫完自己讀一遍，圈出三個最具體的地方。</li>
       </ul>
     </div>
-    <div class="note-paper fragment"><span class="nt">💡 小祕訣</span>講得好不好，不是看用多少成語，而是看別人記不記得住你。</div>
+    <div class="note-paper fragment"><span class="nt">小祕訣</span>今天不急著讓別人聽見你，先讓自己把話寫清楚。</div>
     <div class="foot">第 1 堂 ・ 因為我有話要說</div>
   </section>
 </section>
@@ -536,7 +541,7 @@
   <section>
     <span class="chip l">換個角度想</span>
     <h3>替「後母」問三個問題</h3>
-    <aside class="notes">⏱8分鐘分組討論。三個問題逐一拋出，鼓勵天馬行空。關鍵引導：那個年代女性沒有經濟能力 → 後母的恐懼。</aside>
+    <aside class="notes">⏱8分鐘。三個問題逐一拋出，每題先安靜想30秒，再請幾位學生回答。關鍵引導：那個年代女性沒有經濟能力 → 後母的恐懼。</aside>
     <ul class="steps">
       <li class="fragment">她其實沒那麼壞？至少她沒做出更過分的事？</li>
       <li class="fragment">她為什麼會變這麼壞？是不是有什麼苦衷或難處？</li>
