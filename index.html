@@ -245,6 +245,27 @@
 }
 .story p{ margin:.18em 0; text-indent:1.6em; }
 .story p.t{ text-indent:0; }
+.villain-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:.45em; margin-top:.45em; }
+.villain-card{
+  background:#fff; border:1px solid #dfe7dc; border-radius:12px;
+  padding:.48em .55em; box-shadow:0 4px 14px rgba(3,73,45,.06);
+  min-height:8.2em;
+}
+.villain-card b{ display:block; color:var(--green); font-family:"Noto Serif TC",serif; font-size:.66em; margin-bottom:.18em; }
+.villain-card p{ font-size:.5em; line-height:1.42; margin:.12em 0; color:#3f4a42; }
+.case-layout{ display:grid; grid-template-columns:1.06fr .94fr; gap:.58em; align-items:stretch; }
+.case-story{
+  background:#fffdf6; border:1px solid #e7dec6; border-radius:14px;
+  padding:.58em .82em; box-shadow:0 6px 18px rgba(3,73,45,.07);
+  font-family:"Noto Serif TC",serif; color:#34403a;
+}
+.case-story p{ font-size:.5em; line-height:1.6; margin:.2em 0; text-indent:1.6em; }
+.case-story p.t{ text-indent:0; font-weight:700; color:var(--green); }
+.case-panel{ display:flex; flex-direction:column; gap:.38em; }
+.case-panel .mini-card{ flex:1; }
+.case-panel .mini-card p{ font-size:.52em; }
+.method-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:.45em; margin-top:.5em; }
+.method-strip .card{ min-height:6.6em; }
 .essay{
   background:#fffdf6; border:1px solid #e7dec6; border-radius:14px;
   padding:.7em 1.3em; box-shadow:0 6px 18px rgba(3,73,45,.07);
@@ -543,39 +564,115 @@
 
   <section>
     <span class="chip">這堂課在學什麼</span>
-    <h3>同樣一件事，背後的「為什麼」可能差很多</h3>
-    <aside class="notes">⏱5分鐘。核心：做法 vs 動機。用『把菜倒掉』的例子問學生：他可能在怕什麼？帶出『正面意圖』。</aside>
-    <div class="lead fragment">一個人做了「壞事」，不代表他就是「壞人」。把菜偷偷倒掉的小孩，也許只是<strong>怕被罵</strong>；故事裡的壞蛋，也可能有他的<em>苦衷</em>。</div>
-    <p style="font-size:.85em;">學會看見別人的「為什麼」，你不但更懂人，文章也會更有深度、更動人。這一課，我們先讀一個你很熟的故事 ──</p>
+    <h3>平反不是洗白，是把「為什麼」補完整</h3>
+    <aside class="notes">⏱5分鐘。核心：做法 vs 動機。強調平反不是說壞事沒關係，而是承認做錯，再補上壓力、害怕、想保護的東西。</aside>
+    <div class="lead fragment">一個人做了錯事，不代表他的心裡只有壞。替反派說話，不是把壞事抹掉，而是問：<strong>他在怕什麼？他想保護什麼？他有沒有更好的選擇？</strong></div>
+    <div class="method-strip">
+      <div class="card fragment"><h4>先承認</h4><p>他確實做錯了什麼，不替錯事找藉口。</p></div>
+      <div class="card fragment"><h4>再追問</h4><p>他為什麼會走到這一步？壓力在哪裡？</p></div>
+      <div class="card fragment"><h4>補心聲</h4><p>把反派說不出口的害怕、羨慕或孤單寫出來。</p></div>
+      <div class="card fragment"><h4>給出路</h4><p>想一個不傷人的做法，讓故事有轉圜。</p></div>
+    </div>
     <div class="foot">第 2 堂 ・ 反派有話要說</div>
   </section>
 
-  <!-- 完整童話故事 -->
   <section>
-    <span class="chip l">先讀一個故事</span>
-    <h3 style="font-size:.95em;margin-bottom:.15em;">《灰姑娘》（完整版）</h3>
-    <aside class="notes">⏱5分鐘。朗讀或請學生輪讀整篇故事喚起記憶。讀完先別評論，直接進下一張的三個問題。</aside>
-    <div class="story">
-      <p class="t">很久以前，有一個善良的女孩。她的媽媽很早就過世了，爸爸娶了一位帶著兩個女兒的後母。</p>
-      <p>後母和兩個姊姊都不喜歡她。她們把所有粗重的家事都丟給她做：生火、煮飯、洗衣、掃地。她每天忙到全身髒兮兮，睡在冰冷的灰燼旁邊，所以大家叫她「灰姑娘」。</p>
-      <p>有一天，王子要舉辦舞會，邀請全國的女孩參加。兩個姊姊高興得不得了，逼灰姑娘幫她們梳頭、繫緊衣裙。灰姑娘也好想去，後母卻冷冷地說：「像妳這樣髒兮兮的，也配去舞會？」說完就帶著女兒們走了，留下哭泣的灰姑娘。</p>
-      <p>這時，仙女出現了。她揮一揮魔杖，把南瓜變成馬車，把灰姑娘的破衣裳變成閃亮的禮服，還給她一雙水晶鞋。仙女叮嚀：「魔法只到午夜十二點，鐘聲一響，一切都會變回原樣。」</p>
-      <p>灰姑娘來到舞會，美得讓全場驚豔，王子整晚只和她跳舞。可是當鐘聲敲響十二點，她急忙逃走，慌亂中掉了一隻水晶鞋。</p>
-      <p>王子撿起水晶鞋，發誓要娶能穿上它的女孩。他命人挨家挨戶尋找。兩個姊姊用力把腳塞進鞋裡，卻怎麼也穿不下。輪到灰姑娘，水晶鞋剛好合腳。最後，王子帶著灰姑娘回到城堡，從此過著幸福的日子。</p>
+    <span class="chip l">今天的故事素材庫</span>
+    <h3>選一則你最想替他說話的反派</h3>
+    <aside class="notes">⏱4分鐘。先快速瀏覽四則故事，不急著討論對錯。請學生心裡先選：哪一個反派最有可能被誤會？</aside>
+    <div class="villain-grid">
+      <div class="villain-card fragment"><b>灰姑娘的後母</b><p>她阻止灰姑娘去舞會，把家事丟給她做。</p><p>她可能怕兩個女兒沒有未來，也怕自己再次失去依靠。</p></div>
+      <div class="villain-card fragment"><b>三隻小豬的大野狼</b><p>牠吹倒房子，想闖進小豬家。</p><p>牠可能飢餓、被趕出森林，或只懂用力氣解決問題。</p></div>
+      <div class="villain-card fragment"><b>白雪公主的皇后</b><p>她嫉妒白雪公主，甚至想害她。</p><p>她可能害怕變老、失去地位，也從來沒被教過怎麼愛自己。</p></div>
+      <div class="villain-card fragment"><b>小紅帽的大野狼</b><p>牠欺騙小紅帽，闖進外婆家。</p><p>牠可能一直被人類當成危險動物，只學會先攻擊。</p></div>
+    </div>
+    <p class="small fragment" style="margin-top:.75em;">等一下你只要選一則，替那個反派寫一段自白。</p>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">案件一</span>
+    <h3>《灰姑娘》：後母真的只是不喜歡她嗎？</h3>
+    <aside class="notes">⏱4分鐘。讀故事後問：後母做錯什麼？她可能在怕什麼？提醒：平反不是說她可以欺負灰姑娘。</aside>
+    <div class="case-layout">
+      <div class="case-story">
+        <p class="t">灰姑娘的媽媽過世後，爸爸再婚，後母帶著兩個女兒住進家裡。後母把洗衣、掃地、煮飯都交給灰姑娘，讓她睡在灰燼旁。</p>
+        <p>王子舉辦舞會時，灰姑娘也想去。後母卻說她不配，還帶著兩個女兒先走。灰姑娘後來靠仙女的幫助進了皇宮，王子最後用水晶鞋找到了她。</p>
+      </div>
+      <div class="case-panel">
+        <div class="mini-card fragment"><b>被指控</b><p>偏心、欺負灰姑娘、阻止她去舞會。</p></div>
+        <div class="mini-card fragment"><b>可能的苦衷</b><p>她帶著兩個女兒改嫁，沒有安全感，怕女兒輸給灰姑娘，也怕失去生活依靠。</p></div>
+        <div class="mini-card fragment"><b>平反方向</b><p>承認她做錯，但寫出她其實是被恐懼推著走。</p></div>
+      </div>
+    </div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">案件二</span>
+    <h3>《三隻小豬》：大野狼為什麼一直追？</h3>
+    <aside class="notes">⏱4分鐘。提醒學生不要只寫『牠餓了』，可以多問：牠為什麼找不到食物？牠有沒有被人類趕走？</aside>
+    <div class="case-layout">
+      <div class="case-story">
+        <p class="t">三隻小豬離家後，分別蓋了稻草屋、木頭屋和磚頭屋。大野狼來到稻草屋前，要求小豬開門。小豬不肯，牠就用力一吹，把房子吹倒。</p>
+        <p>牠又追到木頭屋，還是用同樣的方法把房子吹壞。最後牠來到磚頭屋，怎麼吹都吹不倒，甚至想從煙囪爬進去，卻掉進熱鍋裡逃走了。</p>
+      </div>
+      <div class="case-panel">
+        <div class="mini-card fragment"><b>被指控</b><p>破壞別人的家、威脅小豬、只想吃掉別人。</p></div>
+        <div class="mini-card fragment"><b>可能的苦衷</b><p>森林變小、食物不夠，牠又沒有人教牠怎麼求助，只會用可怕的方式靠近別人。</p></div>
+        <div class="mini-card fragment"><b>平反方向</b><p>寫出牠的飢餓和笨拙，但也讓牠學會道歉或交換食物。</p></div>
+      </div>
+    </div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">案件三</span>
+    <h3>《白雪公主》：皇后為什麼害怕鏡子？</h3>
+    <aside class="notes">⏱4分鐘。把焦點放在比較、年齡焦慮、地位不安全。提醒：嫉妒可以被理解，但傷害不能被合理化。</aside>
+    <div class="case-layout">
+      <div class="case-story">
+        <p class="t">皇后每天問魔鏡：「誰是世界上最美的人？」很長一段時間，鏡子都回答是她。可是有一天，鏡子說白雪公主比她更美。</p>
+        <p>皇后聽了又怕又氣，命人把白雪公主帶到森林。白雪公主逃過一劫，住進七個小矮人的家。皇后卻仍不放手，最後假扮成老婆婆，把毒蘋果交給她。</p>
+      </div>
+      <div class="case-panel">
+        <div class="mini-card fragment"><b>被指控</b><p>嫉妒、殘忍、為了美貌傷害白雪公主。</p></div>
+        <div class="mini-card fragment"><b>可能的苦衷</b><p>她把價值都放在外表上，害怕變老、被取代，也沒有人告訴她：不被鏡子稱讚，仍然值得被愛。</p></div>
+        <div class="mini-card fragment"><b>平反方向</b><p>寫出她被比較困住，但讓她學會放下鏡子的答案。</p></div>
+      </div>
+    </div>
+    <div class="foot">第 2 堂 ・ 反派有話要說</div>
+  </section>
+
+  <section>
+    <span class="chip l">案件四</span>
+    <h3>《小紅帽》：大野狼只會欺騙嗎？</h3>
+    <aside class="notes">⏱4分鐘。這則適合寫第一人稱自白。引導：被人類害怕的動物，會不會也學會先偽裝、先攻擊？</aside>
+    <div class="case-layout">
+      <div class="case-story">
+        <p class="t">小紅帽帶著點心去看外婆，在森林裡遇見大野狼。大野狼問出外婆家的位置，先跑到外婆家，假裝成外婆等小紅帽來。</p>
+        <p>小紅帽發現「外婆」的耳朵、眼睛、嘴巴都變得很奇怪，這才知道自己被騙了。故事裡，大野狼總是被說成狡猾又危險的壞蛋。</p>
+      </div>
+      <div class="case-panel">
+        <div class="mini-card fragment"><b>被指控</b><p>欺騙小紅帽、闖進外婆家、利用別人的信任。</p></div>
+        <div class="mini-card fragment"><b>可能的苦衷</b><p>牠也許長年被獵人追趕，從來沒被人相信過，所以以為只有偽裝才能靠近人類。</p></div>
+        <div class="mini-card fragment"><b>平反方向</b><p>寫出牠渴望被聽見，但必須承認欺騙讓別人更害怕牠。</p></div>
+      </div>
     </div>
     <div class="foot">第 2 堂 ・ 反派有話要說</div>
   </section>
 
   <section>
     <span class="chip l">換個角度想</span>
-    <h3>替「後母」問三個問題</h3>
-    <aside class="notes">⏱8分鐘。三個問題逐一拋出，每題先安靜想30秒，再請幾位學生回答。關鍵引導：那個年代女性沒有經濟能力 → 後母的恐懼。</aside>
+    <h3>替反派問四個問題</h3>
+    <aside class="notes">⏱6分鐘。讓學生從剛才四則裡選一則，逐題想答案。可以讓學生只在心裡選，不需要分組。</aside>
     <ul class="steps">
-      <li class="fragment">她其實沒那麼壞？至少她沒做出更過分的事？</li>
-      <li class="fragment">她為什麼會變這麼壞？是不是有什麼苦衷或難處？</li>
-      <li class="fragment">如果你是她，怎麼做能不傷害任何人、又顧到自己的女兒？</li>
+      <li class="fragment">他做錯了什麼？先不要把錯事拿掉。</li>
+      <li class="fragment">他最害怕失去什麼？安全、家人、食物、地位，還是被愛？</li>
+      <li class="fragment">他真正想說卻說不出口的話是什麼？</li>
+      <li class="fragment">如果重來一次，他可以怎麼做，才不會傷害別人？</li>
     </ul>
-    <div class="note-paper fragment"><span class="nt">🤔 想一想</span>在那個女人不能工作、沒有錢的年代，後母帶著兩個女兒，她在「怕」什麼呢？</div>
+    <div class="note-paper fragment"><span class="nt">小祕訣</span>好的平反文不是「他其實沒錯」，而是「他錯了，可是我終於懂他為什麼會錯」。</div>
     <div class="foot">第 2 堂 ・ 反派有話要說</div>
   </section>
 
@@ -598,15 +695,15 @@
   <section>
     <span class="chip g">換你寫</span>
     <h3>寫作任務：〈反派有話要說〉</h3>
-    <aside class="notes">⏱25–30分鐘。工作本第2課。提醒：先照原版說壞事，再補苦衷。挑戰：能讓同學同情你的反派。</aside>
+    <aside class="notes">⏱25–30分鐘。工作本第2課。提醒：從四則故事選一則。先照原版說壞事，再補苦衷，最後給一個更好的選擇。</aside>
     <div class="task">
-      <p style="font-size:.82em;">選一個你熟悉的反派（後母、大野狼、虎姑婆、巫婆…），幫他寫一段自白。</p>
+      <p style="font-size:.82em;">從今天四則故事選一個反派，幫他寫一段自白。你可以替他說話，但不能假裝他沒做錯。</p>
       <ul class="steps">
         <li class="fragment">他做了什麼「壞事」？（先照原版說一遍）</li>
-        <li class="fragment">他的苦衷／正面意圖是什麼？（替他說出心裡話）</li>
+        <li class="fragment">他的苦衷／壓力／害怕是什麼？（替他說出心裡話）</li>
         <li class="fragment">給他一個更好的做法，翻轉結局。</li>
       </ul>
-      <p class="small">挑戰：能不能讓同學讀完後，反而「同情」你的反派？→ 工作本第 2 課。</p>
+      <p class="small">挑戰：讓讀者讀完後，不一定原諒他，但能理解他。→ 工作本第 2 課。</p>
     </div>
     <div class="foot">第 2 堂 ・ 反派有話要說</div>
   </section>
