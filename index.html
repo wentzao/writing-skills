@@ -266,6 +266,29 @@
 .case-panel .mini-card p{ font-size:.52em; }
 .method-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:.45em; margin-top:.5em; }
 .method-strip .card{ min-height:6.6em; }
+.wb-ref{
+  position:absolute; right:34px; top:24px;
+  font-size:.48em; color:#6f7d72; background:#fff;
+  border:1px solid #dfe7dc; border-radius:999px;
+  padding:.18em .75em; box-shadow:0 3px 10px rgba(3,73,45,.06);
+}
+.diary-page{
+  width:78%; margin:.15em auto 0; background:#fffdf6;
+  border:1px solid #e7dec6; border-radius:12px;
+  padding:.65em 1.05em; box-shadow:0 6px 18px rgba(3,73,45,.07);
+  font-family:"LXGW WenKai TC","Noto Serif TC",serif; color:#34403a;
+}
+.diary-page .ttl{
+  text-align:center; text-indent:0; font-family:"Noto Serif TC",serif;
+  font-weight:700; color:var(--green); font-size:.86em; margin:.05em 0 .25em;
+}
+.diary-page .meta{
+  display:flex; justify-content:space-between;
+  border-bottom:1px solid #d8cda9; padding-bottom:.22em; margin-bottom:.28em;
+  font-family:"Noto Sans TC","PingFang TC",sans-serif; color:#697369; font-size:.48em;
+}
+.diary-page p{ font-size:.58em; line-height:1.78; margin:.2em 0; text-indent:1.8em; }
+.diary-page p.first{ text-indent:0; }
 .essay{
   background:#fffdf6; border:1px solid #e7dec6; border-radius:14px;
   padding:.7em 1.3em; box-shadow:0 6px 18px rgba(3,73,45,.07);
@@ -563,6 +586,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.2-3</div>
     <span class="chip">這堂課在學什麼</span>
     <h3>平反不是洗白，是把「為什麼」補完整</h3>
     <aside class="notes">⏱5分鐘。核心：做法 vs 動機。強調平反不是說壞事沒關係，而是承認做錯，再補上壓力、害怕、想保護的東西。</aside>
@@ -577,6 +601,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.4</div>
     <span class="chip l">今天的故事素材庫</span>
     <h3>選一則你最想替他說話的反派</h3>
     <aside class="notes">⏱4分鐘。先快速瀏覽四則故事，不急著討論對錯。請學生心裡先選：哪一個反派最有可能被誤會？</aside>
@@ -591,6 +616,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.5</div>
     <span class="chip l">案件一</span>
     <h3>《灰姑娘》：後母真的只是不喜歡她嗎？</h3>
     <aside class="notes">⏱4分鐘。讀故事後問：後母做錯什麼？她可能在怕什麼？提醒：平反不是說她可以欺負灰姑娘。</aside>
@@ -609,6 +635,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.6</div>
     <span class="chip l">案件二</span>
     <h3>《三隻小豬》：大野狼為什麼一直追？</h3>
     <aside class="notes">⏱4分鐘。提醒學生不要只寫『牠餓了』，可以多問：牠為什麼找不到食物？牠有沒有被人類趕走？</aside>
@@ -627,6 +654,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.7</div>
     <span class="chip l">案件三</span>
     <h3>《白雪公主》：皇后為什麼害怕鏡子？</h3>
     <aside class="notes">⏱4分鐘。把焦點放在比較、年齡焦慮、地位不安全。提醒：嫉妒可以被理解，但傷害不能被合理化。</aside>
@@ -645,6 +673,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.8</div>
     <span class="chip l">案件四</span>
     <h3>《小紅帽》：大野狼只會欺騙嗎？</h3>
     <aside class="notes">⏱4分鐘。這則適合寫第一人稱自白。引導：被人類害怕的動物，會不會也學會先偽裝、先攻擊？</aside>
@@ -663,6 +692,7 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.10</div>
     <span class="chip l">換個角度想</span>
     <h3>替反派問四個問題</h3>
     <aside class="notes">⏱6分鐘。讓學生從剛才四則裡選一則，逐題想答案。可以讓學生只在心裡選，不需要分組。</aside>
@@ -677,22 +707,24 @@
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.9</div>
     <span class="chip g">國中生範例文</span>
     <h3 style="font-size:1em;margin-bottom:.2em;">〈後母的日記〉</h3>
     <aside class="notes">⏱5分鐘。讀範例文，請學生指出作者『沒有改掉壞事，只補上動機』——這就是平反的關鍵。</aside>
-    <div class="essay two">
+    <div class="diary-page">
       <p class="ttl">後母的日記</p>
-      <p class="t">沒有人問過我，為什麼。</p>
-      <p>我嫁進這個家的時候，已經帶著兩個女兒。孩子的爸爸答應會照顧我們，可是他成天在外面，家裡的一切都落在我身上。</p>
-      <p>灰姑娘長得漂亮又溫柔，村子裡的人都疼她。可是我心裡很慌 ── 在這個女人不能工作、沒有錢的年代，如果我的兩個女兒嫁不出去，將來我們三個只能流落街頭。</p>
-      <p>我承認，我對灰姑娘太嚴厲了。我不讓她去舞會，不是因為我恨她，而是因為我怕。我怕我的女兒比不過她，怕我們的明天沒有著落。</p>
-      <p>如果可以重來，我會把灰姑娘也當成自己的女兒，帶著三個孩子一起去舞會。也許這樣，我就不會變成童話裡那個人人討厭的壞後母了。</p>
+      <div class="meta"><span>日期：舞會前一晚</span><span>天氣：陰</span></div>
+      <p class="first">今天，我又對灰姑娘說了很重的話。</p>
+      <p>我知道她低下頭的樣子很可憐，可是當我看見她站在兩個女兒旁邊，心裡就像被什麼抓住。她年輕、漂亮、安靜，連灰撲撲的衣服都遮不住她的光。</p>
+      <p>我不是不知道自己做錯了。我只是太怕了。這個家不是我的，錢也不是我的。如果我的女兒沒有被看見，將來我們三個還能靠誰生活？</p>
+      <p>如果可以重來，我想先承認自己的害怕，而不是把害怕變成命令。也許我可以牽著三個女孩一起去舞會，而不是把其中一個留在灰燼旁。</p>
     </div>
     <div class="ann"><b>看出來了嗎？</b>作者沒有改掉後母做的事，只是替她說出背後的「害怕」與「想保護女兒」的心 ── 這就是替反派平反。</div>
     <div class="foot">第 2 堂 ・ 反派有話要說</div>
   </section>
 
   <section>
+    <div class="wb-ref">學生練習本 p.10-13</div>
     <span class="chip g">換你寫</span>
     <h3>寫作任務：〈反派有話要說〉</h3>
     <aside class="notes">⏱25–30分鐘。工作本第2課。提醒：從四則故事選一則。先照原版說壞事，再補苦衷，最後給一個更好的選擇。</aside>
