@@ -518,7 +518,7 @@
     <h3>寫作任務：像會考一樣看圖寫作</h3>
     <aside class="notes">⏱25分鐘安靜寫作。全程個人安靜寫，不上台、不分組。用會考式引導：先讀題目與說明，再觀察圖片，最後完成短文。不要求圈優美句子，重點是能依題意描寫場景並寫出心情或故事。</aside>
     <div class="sample-layout">
-      <img class="sample-img" src="assets/graduation-scene.svg" alt="國小畢業典禮結束後的大禮堂">
+      <img class="sample-img" src="assets/graduation-real-crop.jpg" alt="國小畢業典禮結束後的空椅場景">
       <div class="sample-text">
         <h4>題目：典禮結束以後</h4>
         <p>左圖是一處國小畢業典禮結束後的場景。請根據圖片內容，寫一篇短文。</p>
@@ -967,6 +967,34 @@ document.querySelectorAll('.flip-card').forEach(function(card){
     }
   });
 });
+
+/* ===== 圖片：點擊後以新分頁開啟大圖 ===== */
+(function(){
+  function openImage(img){
+    var src = img.currentSrc || img.getAttribute('src');
+    if(!src) return;
+    window.open(new URL(src, window.location.href).href, '_blank', 'noopener');
+  }
+
+  Reveal.on('ready', function(){
+    document.querySelectorAll('.reveal img').forEach(function(img){
+      img.style.cursor = 'zoom-in';
+      img.title = img.title || '點擊開啟大圖';
+      img.setAttribute('tabindex', '0');
+      img.addEventListener('click', function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        openImage(img);
+      });
+      img.addEventListener('keydown', function(event){
+        if(event.key === 'Enter' || event.key === ' '){
+          event.preventDefault();
+          openImage(img);
+        }
+      });
+    });
+  });
+})();
 
 /* ===== 便條紙：可拖曳、記住位置 ===== */
 (function(){
