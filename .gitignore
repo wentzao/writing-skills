@@ -3,14 +3,7 @@
 
 !/.gitignore
 !/index.html
-!/作文稿紙工作本.docx
-!/bookcover.jpg
-!/bookcover2.png
-!/wentzao_logo.png
+!/教材/
+!/教材/**
 !/assets/
-!/assets/kaohui-113-page3.png
-!/assets/kaohui-114-page3.png
-!/assets/kaohui-115-page3.png
-!/assets/describe-scene.png
-!/assets/graduation-scene.svg
-!/assets/graduation-real-crop.jpg
+!/assets/**
