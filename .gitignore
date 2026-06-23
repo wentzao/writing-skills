@@ -1,5 +1,7 @@
 # Ignore everything by default; publish only the static GitHub Pages bundle.
 *
+.DS_Store
+~$*.docx
 
 !/.gitignore
 !/index.html
