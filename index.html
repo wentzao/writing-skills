@@ -260,11 +260,15 @@
 .case-layout{ display:grid; grid-template-columns:1.06fr .94fr; gap:.58em; align-items:stretch; }
 .case-story{
   background:#fffdf6; border:1px solid #e7dec6; border-radius:14px;
-  padding:.58em .82em; box-shadow:0 6px 18px rgba(3,73,45,.07);
+  height:355px; overflow-y:scroll;
+  padding:.7em .95em; box-shadow:0 6px 18px rgba(3,73,45,.07);
   font-family:"Noto Serif TC",serif; color:#34403a;
 }
-.case-story p{ font-size:.5em; line-height:1.6; margin:.2em 0; text-indent:1.6em; }
+.case-story p{ font-size:.68em; line-height:1.78; margin:.28em 0; text-indent:1.7em; }
 .case-story p.t{ text-indent:0; font-weight:700; color:var(--green); }
+.case-story::-webkit-scrollbar{ width:10px; }
+.case-story::-webkit-scrollbar-track{ background:#f1ecdf; border-radius:999px; }
+.case-story::-webkit-scrollbar-thumb{ background:#9bb49f; border-radius:999px; border:2px solid #f1ecdf; }
 .case-panel{ display:flex; flex-direction:column; gap:.38em; }
 .case-panel .mini-card{ flex:1; }
 .case-panel .mini-card p{ font-size:.52em; }
