@@ -272,6 +272,30 @@
 .case-panel{ display:flex; flex-direction:column; gap:.38em; }
 .case-panel .mini-card{ flex:1; }
 .case-panel .mini-card p{ font-size:.52em; }
+.case-story.artful{
+  display:grid; grid-template-columns:minmax(145px,.78fr) 1.22fr; gap:.68em;
+  overflow:hidden; padding:.5em;
+}
+.story-art{
+  position:relative; min-height:0; margin:0; overflow:hidden;
+  border:1px solid #d7cab0; border-radius:9px; background:#e7dfcb;
+}
+.story-art a{ display:block; width:100%; height:100%; }
+.story-art img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s ease; }
+.story-art a:hover img{ transform:scale(1.03); }
+.story-art figcaption{
+  position:absolute; right:0; bottom:0; left:0; z-index:2;
+  margin:0; padding:.3em .45em; background:rgba(21,42,32,.82); color:#fff;
+  font-size:.41em; line-height:1.32; text-align:left;
+}
+.story-art.is-alternate::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:rgba(8,45,32,.14); mix-blend-mode:multiply;
+}
+.story-art.is-alternate figcaption{ background:rgba(122,86,31,.88); }
+.case-story.artful .story-copy{ min-width:0; overflow-y:auto; padding:.02em .35em .02em .08em; }
+.case-story.artful .story-copy::-webkit-scrollbar{ width:7px; }
+.case-story.artful .story-copy::-webkit-scrollbar-thumb{ background:#9bb49f; border-radius:999px; }
 .method-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:.45em; margin-top:.5em; }
 .method-strip .card{ min-height:6.6em; }
 .wb-ref{
@@ -688,10 +712,13 @@
     <h3>三隻小豬：原本的故事怎麼寫？</h3>
     <aside class="notes">⏱3分鐘。先讀大家熟悉的版本。請學生注意：這一頁的狼只有行動，幾乎沒有心聲；讀者自然會站到小豬那一邊。</aside>
     <div class="case-layout">
-      <div class="case-story">
+      <div class="case-story artful">
+        <figure class="story-art"><a href="assets/fairy-tales/three-little-pigs-1904.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img src="assets/fairy-tales/three-little-pigs-1904.jpg" alt="三隻小豬與大野狼的經典童話插圖"></a><figcaption>原始插圖・1904 年繪本</figcaption></figure>
+        <div class="story-copy">
         <p class="t">三隻小豬離開家，各自在森林裡蓋房子。第一隻用稻草，第二隻用木頭，第三隻花了很久，用磚頭蓋出結實的房子。</p>
         <p>大野狼來到稻草屋前，說要吹倒房子。牠一吹，稻草屋就倒了；小豬逃到木頭屋。狼又吹倒木頭屋，兩隻小豬只好一起逃進磚頭屋。</p>
         <p>磚頭屋怎麼吹都不倒。狼想從煙囪進去，最後沒有成功，只能離開。原本的故事把重點放在小豬的勤勞與安全，也把狼寫成一個只想傷害人的敵人。</p>
+        </div>
       </div>
       <div class="case-panel">
         <div class="mini-card fragment"><b>反派怎麼出場？</b><p>牠一出現，就威脅、吹房子，沒有解釋。</p></div>
@@ -708,10 +735,13 @@
     <h3>如果狼也能寫日記：那隻一直敲門的狼</h3>
     <aside class="notes">⏱4分鐘。現在才換角度。提醒：我們仍然承認牠吹倒房子不對；只是補上原故事沒有寫到的飢餓、被拒絕與求助失敗。</aside>
     <div class="case-layout">
-      <div class="case-story">
+      <div class="case-story artful">
+        <figure class="story-art is-alternate"><a href="assets/fairy-tales/three-little-pigs-1904.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img src="assets/fairy-tales/three-little-pigs-1904.jpg" alt="三隻小豬與大野狼的經典童話插圖"></a><figcaption>同一幅插圖，換一雙眼睛讀</figcaption></figure>
+        <div class="story-copy">
         <p class="t">冬天快到了，大野狼已經兩天沒有找到食物。牠沿著森林邊緣走，看見三隻小豬各自蓋好房子；從第一間稻草屋裡飄出熱湯和麵包的味道。</p>
         <p>牠先敲門，屋裡沒有回答。牠又大聲說話，可是小豬只把門鎖得更緊。牠越來越急，對著稻草屋吹了一口氣，房子倒了；小豬尖叫著逃往下一間屋子。</p>
         <p>故事裡，大家只記得牠用力吹倒房子。可是，如果牠早一點知道怎麼開口求助，或者小豬願意隔著門遞給牠一點食物，這個下午會不會有別的結局？</p>
+        </div>
       </div>
       <div class="case-panel">
         <div class="mini-card fragment"><b>他做錯什麼？</b><p>用威脅和力氣逼小豬開門，讓人害怕。</p></div>
@@ -728,10 +758,13 @@
     <h3>白雪公主：原本的故事怎麼寫？</h3>
     <aside class="notes">⏱3分鐘。原始故事先讓皇后問鏡子，再讓她做出傷害白雪公主的選擇。請學生注意：故事告訴我們她嫉妒，卻很少讓她說明自己的害怕。</aside>
     <div class="case-layout">
-      <div class="case-story">
+      <div class="case-story artful">
+        <figure class="story-art"><a href="assets/fairy-tales/snow-white-magic-mirror.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img src="assets/fairy-tales/snow-white-magic-mirror.jpg" alt="白雪公主故事中皇后與魔鏡的經典插圖"></a><figcaption>經典童話插圖・皇后與魔鏡</figcaption></figure>
+        <div class="story-copy">
         <p class="t">皇后每天都問魔鏡：「誰是世界上最美的人？」鏡子總回答皇后。直到白雪公主長大，鏡子說白雪公主比皇后更美。</p>
         <p>皇后非常嫉妒，命令獵人把白雪公主帶進森林。獵人不忍心傷害她，白雪公主便逃到七個小矮人的家。皇后知道後，又假扮成別人，用毒蘋果讓白雪公主倒下。</p>
         <p>後來白雪公主醒來，和王子離開。原本的故事把皇后寫成嫉妒又危險的人；魔鏡的回答像是一道命令，卻沒有人問皇后除了美麗，還想被看見什麼。</p>
+        </div>
       </div>
       <div class="case-panel">
         <div class="mini-card fragment"><b>反派怎麼出場？</b><p>她嫉妒、下命令、一次次想阻止主角。</p></div>
@@ -748,10 +781,13 @@
     <h3>如果皇后寫給自己：每天問鏡子的皇后</h3>
     <aside class="notes">⏱4分鐘。問學生：鏡子每天只用外表替人打分數，會不會讓人越聽越害怕？要清楚說出皇后的傷害行為不能被原諒，但可以理解她如何被恐懼推著走。</aside>
     <div class="case-layout">
-      <div class="case-story">
+      <div class="case-story artful">
+        <figure class="story-art is-alternate"><a href="assets/fairy-tales/snow-white-magic-mirror.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img src="assets/fairy-tales/snow-white-magic-mirror.jpg" alt="白雪公主故事中皇后與魔鏡的經典插圖"></a><figcaption>同一面鏡子，也能照出不同心事</figcaption></figure>
+        <div class="story-copy">
         <p class="t">皇后每天都站在鏡子前，問同一個問題：「誰是世界上最美的人？」鏡子總是照實回答。直到有一天，它說白雪公主比她更美。</p>
         <p>皇后愣在原地。她想起自己曾經被稱讚的日子，也想起那些因為她年紀漸長而不再停留的目光。她沒有把這份害怕告訴任何人，反而把它變成命令，要獵人帶白雪公主離開。</p>
         <p>她的選擇傷害了別人，這件事沒有藉口。不過，若日記是她寫給自己的，也許她第一次能承認：她一直追著鏡子的答案，因為她不知道，除了「最美」，自己還剩下什麼。</p>
+        </div>
       </div>
       <div class="case-panel">
         <div class="mini-card fragment"><b>她做錯什麼？</b><p>因為嫉妒而想傷害白雪公主，把人當成競爭對手。</p></div>
@@ -768,10 +804,13 @@
     <h3>小紅帽：原本的故事怎麼寫？</h3>
     <aside class="notes">⏱3分鐘。故事版本很多，這裡採孩子熟悉的版本。重點是看見：狼先問路、再搶先到外婆家，讀者因此只會看到牠的狡猾與危險。</aside>
     <div class="case-layout">
-      <div class="case-story">
+      <div class="case-story artful">
+        <figure class="story-art"><a href="assets/fairy-tales/little-red-riding-hood-smith.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img src="assets/fairy-tales/little-red-riding-hood-smith.jpg" alt="小紅帽與大野狼的經典童話插圖"></a><figcaption>Jessie Willcox Smith・1911</figcaption></figure>
+        <div class="story-copy">
         <p class="t">小紅帽帶著食物，要穿過森林去看外婆。大野狼在路上遇見她，先問出外婆住在哪裡，又故意叫她去採花。</p>
         <p>狼搶先跑到外婆家，把外婆關起來，自己披上外婆的衣服等待小紅帽。小紅帽進門後，覺得外婆的眼睛、耳朵和牙齒都很奇怪，才發現眼前不是外婆。</p>
         <p>獵人聽見動靜，趕來救出外婆和小紅帽。原本的故事提醒孩子不要輕信陌生人，也把狼寫成狡猾、會設陷阱的壞角色。</p>
+        </div>
       </div>
       <div class="case-panel">
         <div class="mini-card fragment"><b>反派怎麼出場？</b><p>牠套話、欺騙、闖進別人家，讓人陷入危險。</p></div>
@@ -788,10 +827,13 @@
     <h3>如果狼不再先下手：森林裡那隻大野狼</h3>
     <aside class="notes">⏱4分鐘。這則較難，提醒學生：不可以把欺騙、闖入別人家說成沒關係。可把重點放在狼如何誤以為只要先下手，就不會再被人類傷害。</aside>
     <div class="case-layout">
-      <div class="case-story">
+      <div class="case-story artful">
+        <figure class="story-art is-alternate"><a href="assets/fairy-tales/little-red-riding-hood-smith.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img src="assets/fairy-tales/little-red-riding-hood-smith.jpg" alt="小紅帽與大野狼的經典童話插圖"></a><figcaption>同一片森林，狼看見的是什麼？</figcaption></figure>
+        <div class="story-copy">
         <p class="t">森林邊的小路常有人經過，可是沒有人願意靠近大野狼。只要遠遠看見牠，獵人就把手放到弓上，孩子也被大人拉到身後。</p>
         <p>那天，小紅帽提著籃子走進森林。狼聞到麵包和奶油的味道，也聽見她說要去看外婆。牠沒有好好問能不能得到一點食物，而是用話把她騙去採花，自己先跑到外婆家。</p>
         <p>牠做錯了，還讓外婆和小紅帽害怕。但如果牠要寫一篇日記，也許會寫：牠太習慣被當成怪物，於是先把每個人都當成敵人，最後真的做出了怪物會做的事。</p>
+        </div>
       </div>
       <div class="case-panel">
         <div class="mini-card fragment"><b>他做錯什麼？</b><p>欺騙小紅帽、闖進外婆家，讓兩人陷入危險。</p></div>
