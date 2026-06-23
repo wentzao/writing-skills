@@ -9,3 +9,6 @@
 !/教材/**
 !/assets/
 !/assets/**
+
+.DS_Store
+~$*.docx
