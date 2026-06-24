@@ -19,6 +19,9 @@ Chinese wording in the slides is a classroom translation and discussion prompt, 
 
 ## Images
 
+- `corridor-many-voices.png` - Original classroom illustration generated for this deck: a school-corridor incident with several possible viewpoints. Generated with OpenAI image generation, 2026-06-24.
+- `feelings-in-scenes.png` - Original classroom illustration generated for this deck: anticipation, nervousness, and hurt shown through observable school moments. Generated with OpenAI image generation, 2026-06-24.
+
 - `voltaire.jpg` - Portrait of Voltaire, after Maurice Quentin de La Tour. Public domain mark.
   - https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois-Marie_Arouet,_dit_Voltaire_(1694-1778)_portrait_(A).jpg
 - `hugo.jpg` - Victor Hugo portrait by Charles Hugo, 1853. Public domain.

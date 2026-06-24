@@ -396,6 +396,26 @@
   border-radius:14px; padding:.65em 1.05em; font-family:"Noto Serif TC",serif;
   color:#34403a; line-height:1.7; font-size:.85em;
 }
+.story-case-layout{ display:grid; grid-template-columns:1.05fr .95fr; gap:.72em; align-items:stretch; margin-top:.35em; }
+.story-case-illustration{
+  width:100%; height:463px; object-fit:cover; object-position:left center; margin:0;
+  border-radius:12px; border:1px solid #d7cab0; box-shadow:0 10px 26px rgba(3,73,45,.14);
+}
+.story-case-copy{ display:flex; flex-direction:column; gap:.42em; }
+.story-case-copy .lead{ font-size:.66em; line-height:1.55; margin:0; padding:.45em .65em; }
+.voice-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.35em; }
+.voice-card{ min-height:5.2em; background:#fff; border:1px solid #dfe7dc; border-radius:10px; padding:.38em .48em; }
+.voice-card b{ display:block; color:var(--green2); font-size:.59em; margin-bottom:.1em; }
+.voice-card p{ margin:0; color:#3f4a42; font-size:.48em; line-height:1.4; }
+.feelings-layout{ display:grid; grid-template-columns:1.12fr .88fr; gap:.72em; align-items:stretch; margin-top:.35em; }
+.feelings-illustration{
+  width:100%; height:468px; object-fit:cover; object-position:center; margin:0;
+  border-radius:12px; border:1px solid #d7cab0; box-shadow:0 10px 26px rgba(3,73,45,.14);
+}
+.feeling-evidence{ display:flex; flex-direction:column; gap:.4em; }
+.feeling-evidence .card{ flex:1; padding:.42em .55em; }
+.feeling-evidence .card h4{ margin:.02em 0 .12em; }
+.feeling-evidence .card p{ font-size:.54em; line-height:1.42; margin:.08em 0; }
 </style>
 </head>
 <body>
@@ -757,12 +777,20 @@
   <section data-background-color="#faf7ef">
     <span class="chip l">看見，不只是看熱鬧</span>
     <h3>同一件事，誰的聲音還沒被寫進去？</h3>
-    <div class="think-compare">
-      <div class="card bad fragment"><h4>太快的說法</h4><p>「那個同學很愛告狀。」</p><p class="small">一句話很快，卻把事情結束了。</p></div>
-      <div class="card good fragment"><h4>願意多看一步</h4><p>「他去找老師前，先看到有人被推倒；他可能不知道怎麼阻止，又怕事情變更糟。」</p><p class="small">不代表他一定做得最好，但我們開始知道事情不只一面。</p></div>
+    <div class="story-case-layout">
+      <img class="story-case-illustration" src="assets/thinking/corridor-many-voices.png" alt="午休前的校園走廊，一名學生跌坐在散落的講義旁，另一名學生跑去找老師">
+      <div class="story-case-copy">
+        <div class="lead">午休前，阿傑抱著籃球轉身，小恩跌坐在地上，講義散了一地。小安看見後跑去找老師；旁邊有人小聲說：「小安又在告狀。」</div>
+        <div class="voice-grid">
+          <div class="voice-card fragment"><b>旁邊同學</b><p>我只看到小安跑去找老師，所以先以為他愛把事情鬧大。</p></div>
+          <div class="voice-card fragment"><b>小安</b><p>我聽到小恩喊痛，也看見他一時站不起來；我怕他受傷。</p></div>
+          <div class="voice-card fragment"><b>阿傑</b><p>我轉身太快，沒有看見身後的人。不是故意，卻還是撞到他，應該先道歉、一起收講義。</p></div>
+          <div class="voice-card fragment"><b>小恩</b><p>我膝蓋很痛，也覺得大家都在看我；我不想被當成故意找麻煩的人。</p></div>
+        </div>
+        <div class="think-question fragment"><b>先不要急著選邊：</b>哪些是我們親眼看見的事實？哪些是還需要問一問才知道的心情與原因？</div>
+      </div>
     </div>
-    <div class="think-question fragment"><b>今天的練習：</b>把一句很快的判斷，改成一段有事實、有可能、有保留的說法。</div>
-    <aside class="notes">⏱約3分鐘。這不是要求孩子包容所有行為，而是提醒：理解動機不等於替錯誤開脫。</aside>
+    <aside class="notes">⏱約5分鐘。先靜靜看圖十秒，再讀事件。依序出現四個聲音，最後請學生分辨：阿傑撞到人是事實；是不是故意、小安是不是告狀，則需要更多資料。理解不同聲音，不等於不追究行為。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
@@ -866,13 +894,16 @@
   <section data-background-color="#faf7ef">
     <span class="chip l">把一個詞寫回生活</span>
     <h3>抽象的感受，要有具體的證據</h3>
-    <div class="thinking-steps">
-      <div class="card fragment"><h4>緊張</h4><p>不是只說「我很緊張」，而是手心、聲音、視線發生了什麼？</p></div>
-      <div class="card fragment"><h4>委屈</h4><p>不是只說「我很委屈」，而是誰說了什麼、你把什麼話吞回去？</p></div>
-      <div class="card fragment"><h4>期待</h4><p>不是只說「我很期待」，而是你一直看哪裡、等什麼聲音出現？</p></div>
+    <div class="feelings-layout">
+      <img class="feelings-illustration" src="assets/thinking/feelings-in-scenes.png" alt="校園中三個情緒瞬間：等待、上台前緊張、被同學取笑後的委屈">
+      <div class="feeling-evidence">
+        <div class="card fragment"><h4>期待</h4><p><b>不要只寫：</b>我很期待。</p><p><b>可以這樣寫：</b>我站在樓梯口，手裡捏著信封，眼睛一直往轉角看，等那個熟悉的書包先出現。</p></div>
+        <div class="card fragment"><h4>緊張</h4><p><b>不要只寫：</b>我很緊張。</p><p><b>可以這樣寫：</b>輪到我報告時，紙卡被我捏出一道折痕；明明只有幾行字，聲音卻卡在喉嚨裡。</p></div>
+        <div class="card fragment"><h4>委屈</h4><p><b>不要只寫：</b>我很委屈。</p><p><b>可以這樣寫：</b>聽見那句玩笑後，我把原本想說的話折成一小團，塞進口袋，假裝自己沒有聽見。</p></div>
+      </div>
     </div>
     <div class="think-question fragment"><b>這就是寫作的影響：</b>你為了找到畫面，開始更仔細地看自己的感受。</div>
-    <aside class="notes">⏱約2分鐘。和第一堂的描寫相連，但此處更強調：具體描寫不是技巧炫耀，而是認識自己感受的方式。</aside>
+    <aside class="notes">⏱約4分鐘。請學生先選一個畫面，再讀右側句子。老師可停在「不要只寫」讓學生猜，按下後才出現完整句。重點是：感受不是抽象答案，而是身體、眼神、聲音和被吞回去的話。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
