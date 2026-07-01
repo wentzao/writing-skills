@@ -475,8 +475,21 @@
 .simple-card p{ margin:0; color:#3f4a42; font-size:.5em; line-height:1.42; }
 .mini-examples{ display:grid; grid-template-columns:repeat(4,1fr); gap:.35em; margin-top:.45em; }
 .mini-examples .simple-card{ min-height:7.2em; }
+.mini-examples.photo-grid{ gap:.42em; }
+.mini-examples.photo-grid .simple-card{ min-height:11.1em; padding:.28em .34em .36em; overflow:hidden; }
+.mini-examples.photo-grid img{ width:100%; height:5.35em; object-fit:cover; object-position:center; display:block; margin:0 0 .28em; border-radius:8px; border:1px solid #d7cab0; }
+.mini-examples.photo-grid b{ font-size:.58em; }
+.mini-examples.photo-grid p{ font-size:.45em; line-height:1.36; }
 .compare-simple{ display:grid; grid-template-columns:1fr 1fr; gap:.55em; margin-top:.45em; }
 .compare-simple .form-card{ min-height:9.2em; }
+.poem-compare-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.48em; margin-top:.38em; }
+.poem-pair{ display:grid; grid-template-columns:1fr 1fr; gap:.34em; align-items:stretch; }
+.poem-card{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.36em .44em; min-height:7.9em; }
+.poem-card h4{ margin:.02em 0 .14em; color:var(--green); font-size:.58em; }
+.poem-card .poem-line{ font-family:"Noto Serif TC",serif; color:#34403a; font-size:.64em; line-height:1.45; margin:.08em 0; }
+.poem-card p{ margin:.12em 0 0; color:#536058; font-size:.44em; line-height:1.36; }
+.poem-card.tang{ border-top:5px solid #c79a3e; }
+.poem-card.haiku{ border-top:5px solid #5a9e6f; }
 .haiku-simple{ display:grid; grid-template-columns:.84fr 1.16fr; gap:.72em; align-items:stretch; margin-top:.34em; }
 .haiku-simple .haiku-portrait{ height:430px; }
 .haiku-simple .haiku-paper{ min-height:430px; padding:.62em .78em; }
@@ -1254,15 +1267,26 @@
   <section data-background-color="#faf7ef">
     <span class="chip g">例子二</span>
     <h3>生活裡也有「縮小」的語感</h3>
-    <div class="lead">書裡舉了「豆」「雛」這些字：它們常把東西變成小小的、可近看的版本。重點不是變迷你，而是變得更能被握住、收藏、細看。</div>
-    <div class="mini-examples">
-      <div class="simple-card fragment"><b>豆本</b><p>把一本書做得很小，讀者會忍不住靠近它。</p></div>
-      <div class="simple-card fragment"><b>豆燈</b><p>一點小光，不照亮整個世界，卻照亮眼前。</p></div>
-      <div class="simple-card fragment"><b>雛人形</b><p>把人物、節日與祝福，放進可以陳列的小場景。</p></div>
-      <div class="simple-card fragment"><b>盆栽</b><p>不是把樹縮小而已，而是把時間、修剪和自然放進一盆土。</p></div>
+    <div class="lead">書裡從「豆」「雛」這些字，談到摺扇、盆栽等生活形式：重點不是變迷你，而是讓龐大的內容變得更能被握住、收藏、細看。</div>
+    <div class="mini-examples photo-grid">
+      <div class="simple-card fragment">
+        <img src="assets/japanese-literature/real-examples/miniature-book.jpg" alt="真實迷你書照片">
+        <b>豆本</b><p>把一本書做得很小，讀者會忍不住靠近它。</p>
+      </div>
+      <div class="simple-card fragment">
+        <img src="assets/japanese-literature/real-examples/folding-fan.jpg" alt="日本摺扇照片">
+        <b>摺扇</b><p>把一片風景摺起來，收進手掌，也能帶著走。</p>
+      </div>
+      <div class="simple-card fragment">
+        <img src="assets/japanese-literature/real-examples/hina-dolls.jpg" alt="日本雛人形照片">
+        <b>雛人形</b><p>把人物、節日與祝福，放進可以陳列的小場景。</p>
+      </div>
+      <div class="simple-card fragment">
+        <img src="assets/japanese-literature/real-examples/bonsai.jpg" alt="日本盆栽照片">
+        <b>盆栽</b><p>不是把樹縮小而已，而是把時間、修剪和自然放進一盆土。</p>
+      </div>
     </div>
-    <div class="think-question fragment"><b>換成作文：</b>不要先寫「我的人生」，先寫「抽屜裡那張沒有丟掉的紙」。</div>
-    <aside class="notes">⏱約3分鐘。這頁可以快速帶過，用生活例子讓學生理解縮小不只存在於文學。最後把焦點拉回寫作的具體物件。</aside>
+    <aside class="notes">⏱約3分鐘。四張圖都是真實物件。重點不是背名詞，而是看見「小容器」如何讓內容更靠近、更可收藏、更可細看。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
@@ -1335,6 +1359,51 @@
     </div>
     <div class="think-question fragment"><b>寫作上兩種都要：</b>先用小鏡頭抓到細節，再用文章把它鋪成完整想法。</div>
     <aside class="notes">⏱約3分鐘。這頁不要講成中日高低比較。只講鏡頭距離：一個比較像遠景，一個像特寫。作文需要會切換。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip">再多看幾組</span>
+    <h3>唐詩常把天地打開，俳句常把一刻收住</h3>
+    <div class="poem-compare-grid">
+      <div class="poem-pair fragment">
+        <div class="poem-card tang">
+          <h4>王之渙〈登鸛雀樓〉</h4>
+          <p class="poem-line">白日依山盡<br>黃河入海流<br>欲窮千里目<br>更上一層樓</p>
+          <p>鏡頭從夕陽、群山、黃河一路推到千里之外。</p>
+        </div>
+        <div class="poem-card haiku">
+          <h4>芭蕉〈古池〉</h4>
+          <p class="poem-line">古池や<br>蛙飛びこむ<br>水の音</p>
+          <p>鏡頭停在一池、一蛙、一聲水響。</p>
+        </div>
+      </div>
+      <div class="poem-pair fragment">
+        <div class="poem-card tang">
+          <h4>杜甫〈望岳〉</h4>
+          <p class="poem-line">岱宗夫如何<br>齊魯青未了<br>會當凌絕頂<br>一覽眾山小</p>
+          <p>站上高處，看見山勢、國土與胸襟一起變大。</p>
+        </div>
+        <div class="poem-card haiku">
+          <h4>芭蕉〈閑寂〉</h4>
+          <p class="poem-line">閑さや<br>岩にしみ入る<br>蝉の声</p>
+          <p>只寫蟬聲滲進岩石，安靜反而變得很深。</p>
+        </div>
+      </div>
+      <div class="poem-pair fragment">
+        <div class="poem-card tang">
+          <h4>李白〈望廬山瀑布〉</h4>
+          <p class="poem-line">飛流直下三千尺<br>疑是銀河落九天</p>
+          <p>瀑布被寫成從銀河落下，想像直接衝到天上。</p>
+        </div>
+        <div class="poem-card haiku">
+          <h4>小林一茶</h4>
+          <p class="poem-line">やせ蛙<br>負けるな一茶<br>これにあり</p>
+          <p>只看一隻瘦青蛙，卻看見一個人替弱小者加油。</p>
+        </div>
+      </div>
+    </div>
+    <div class="think-question fragment"><b>給作文的提醒：</b>你可以先寫遠景，讓讀者知道世界有多大；也可以寫特寫，讓讀者感覺那一刻有多真。</div>
+    <aside class="notes">⏱約5分鐘。唐詩部分強調「浩大場景」：山河、千里、銀河。俳句部分強調「收束到一刻」：一聲水響、一陣蟬聲、一隻瘦蛙。提醒學生：兩種都不是高低，而是鏡頭不同。</aside>
   </section>
 
   <section data-background-color="#faf7ef">

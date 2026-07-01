@@ -14,9 +14,11 @@
 - 本次改寫主要參考根目錄教材資料 `參考資料/日本人的「縮小」意識：從生活態度到藝術表現，日本文化為何與眾不同？.epub`，轉化為適合國中先修課堂的簡化例子：
   - 一寸法師與「小巨人」
   - 「豆」「雛」等縮小語感
+  - 摺扇型的摺疊與攜帶
   - 便當盒型的安排
   - 庭園、縮景與枯山水
   - 俳句把季節縮成一瞬間
+- 唐詩與俳句比較頁使用的詩句皆為公版古典文本；投影片中的說明文字為課堂教學改寫。
 
 Chinese translations and classroom explanations in the slides are written for teaching use; they are not presented as published translations.
 
@@ -31,3 +33,11 @@ Chinese translations and classroom explanations in the slides are written for te
 - `issun-boshi-compact-world.png` - OpenAI-generated classroom illustration, 2026-07-01.
 - `bento-compact-box.png` - OpenAI-generated classroom illustration, 2026-07-01.
 - `karesansui-compact-garden.png` - OpenAI-generated classroom illustration, 2026-07-01.
+- `real-examples/miniature-book.jpg` - Miniature book photograph from Wikimedia Commons.
+  - https://commons.wikimedia.org/wiki/File:Book,_miniature_(AM_1948.170-13).jpg
+- `real-examples/folding-fan.jpg` - Japanese traditional paper fan photograph from Wikimedia Commons.
+  - https://commons.wikimedia.org/wiki/File:Japanese_traditional_paper_fan.jpg
+- `real-examples/hina-dolls.jpg` - Hina dolls photograph from Wikimedia Commons.
+  - https://commons.wikimedia.org/wiki/File:HinaDolls-Emperor-Empress-topplatform2011.jpg
+- `real-examples/bonsai.jpg` - Japanese white pine bonsai photograph from Wikimedia Commons.
+  - https://commons.wikimedia.org/wiki/File:Japanese_White_Pine,_1625-2007.jpg
