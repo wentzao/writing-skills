@@ -456,6 +456,35 @@
 .shrink-step b{ display:block; color:var(--green2); font-size:.64em; margin-bottom:.16em; }
 .shrink-step p{ margin:.08em 0; color:#3f4a42; font-size:.54em; line-height:1.45; }
 .shrink-arrow{ color:var(--gold); font-size:1.1em; align-self:center; }
+.compact-idea{ display:grid; grid-template-columns:.86fr 1.14fr; gap:.85em; align-items:center; margin-top:.28em; }
+.compact-line{ font-family:"Noto Serif TC",serif; color:var(--green); font-size:1.55em; line-height:1.38; font-weight:900; }
+.compact-line em{ color:var(--gold); font-style:normal; }
+.formula-box{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:.28em; align-items:stretch; margin-top:.45em; }
+.formula-item{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.42em .52em; min-height:5.4em; }
+.formula-item b{ display:block; color:var(--green2); font-size:.61em; margin-bottom:.12em; }
+.formula-item p{ margin:0; color:#3f4a42; font-size:.5em; line-height:1.42; }
+.formula-arrow{ color:var(--gold); font-size:.98em; align-self:center; }
+.japan-example{ display:grid; grid-template-columns:1.04fr .96fr; gap:.78em; align-items:stretch; margin-top:.34em; }
+.japan-example.reverse{ grid-template-columns:.92fr 1.08fr; }
+.japan-art{ width:100%; height:454px; object-fit:cover; object-position:center; margin:0; border-radius:12px; border:1px solid #d7cab0; box-shadow:0 10px 26px rgba(3,73,45,.14); }
+.japan-copy{ display:flex; flex-direction:column; gap:.38em; }
+.japan-copy .lead{ font-size:.66em; line-height:1.52; margin:0; padding:.45em .58em; }
+.simple-list{ display:flex; flex-direction:column; gap:.32em; }
+.simple-card{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.36em .48em; min-height:4.35em; }
+.simple-card b{ display:block; color:var(--green2); font-size:.61em; margin-bottom:.08em; }
+.simple-card p{ margin:0; color:#3f4a42; font-size:.5em; line-height:1.42; }
+.mini-examples{ display:grid; grid-template-columns:repeat(4,1fr); gap:.35em; margin-top:.45em; }
+.mini-examples .simple-card{ min-height:7.2em; }
+.compare-simple{ display:grid; grid-template-columns:1fr 1fr; gap:.55em; margin-top:.45em; }
+.compare-simple .form-card{ min-height:9.2em; }
+.haiku-simple{ display:grid; grid-template-columns:.84fr 1.16fr; gap:.72em; align-items:stretch; margin-top:.34em; }
+.haiku-simple .haiku-portrait{ height:430px; }
+.haiku-simple .haiku-paper{ min-height:430px; padding:.62em .78em; }
+.haiku-simple .haiku-paper .jp{ font-size:1.04em; line-height:1.58; }
+.haiku-simple .haiku-paper .zh{ font-size:.68em; line-height:1.55; }
+.haiku-simple .haiku-parts .card{ min-height:5.05em; }
+.compact-practice{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:.34em; align-items:stretch; margin-top:.55em; }
+.compact-practice .shrink-step{ min-height:8.1em; }
 </style>
 </head>
 <body>
@@ -1180,163 +1209,170 @@
 <section>
   <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#2e6b4a)">
     <div class="num">換 一 種 鏡 頭</div>
-    <h2 style="color:#fff">日本文學：把世界縮小</h2>
-    <span class="tag">俳句 ・ 留白 ・ 縮小意識</span>
+    <h2 style="color:#fff">日本的「縮小」意識</h2>
+    <span class="tag">從生活態度到藝術表現</span>
     <p class="nav-hint">按 <b>↓</b> 依序往下看</p>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip">先說清楚</span>
-    <div class="japan-opening">
-      <div class="big-japan">不是<br>「中國很大、<br>日本很小」。<br><em>而是兩種<br>觀看的鏡頭。</em></div>
+    <span class="chip">先用一句話理解</span>
+    <h3>不是「越小越好」，而是把世界放進小容器</h3>
+    <div class="compact-idea">
+      <div class="compact-line">把太大的東西<br>縮到手中，<br><em>反而看得更清楚。</em></div>
       <div>
-        <div class="lead">中國文學與日本文學都非常廣大，不能用一句話概括。今天只挑兩種形式來讀：<strong>近體詩</strong>與<strong>古典俳句</strong>。</div>
-        <div class="think-rule">我們不是替國家排高低，而是問：同樣面對世界，文字可以怎麼選擇鏡頭？</div>
-        <div class="think-question">讀完這段，你會帶走一個寫作方法：<b>先把鏡頭拉近，才看得見真正值得寫的細節。</b></div>
+        <div class="lead">李御寧在《日本人的「縮小」意識》中觀察到：日本文化常把龐大的自然、故事、生活，濃縮成一個小而精準的形式。</div>
+        <div class="formula-box">
+          <div class="formula-item fragment"><b>大世界</b><p>自然、季節、人生、旅行、記憶。</p></div>
+          <div class="formula-arrow fragment">→</div>
+          <div class="formula-item fragment"><b>小容器</b><p>俳句、便當、庭園、摺扇、小物。</p></div>
+          <div class="formula-arrow fragment">→</div>
+          <div class="formula-item fragment"><b>更清楚</b><p>範圍小了，細節、秩序和感受就浮出來。</p></div>
+        </div>
+        <div class="think-question fragment">今天只抓一個寫作方法：<b>先縮小鏡頭，再把細節寫清楚。</b></div>
       </div>
     </div>
-    <aside class="notes">⏱約3分鐘。一定先說明這不是民族性考題，也不是中日文學高低比較。今天是閱讀兩種「形式帶來的視角」：一種較強調結構與對稱，一種把注意力壓縮到一瞬。</aside>
+    <aside class="notes">⏱約3分鐘。這頁先把「縮小意識」講成學生能用的寫作方法。提醒：這是文化觀察，不是把所有日本人固定成同一種樣子。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip l">兩種鏡頭</span>
-    <h3>先看「形式」帶我們注意什麼</h3>
-    <div class="form-compare">
-      <div class="form-card china fragment">
-        <h4>中國古典近體詩</h4>
-        <p>常見五言、七言的整齊句式；律詩講究押韻、聲律，部分句聯也有對仗。</p>
-        <p class="poem-line">空山新雨後<br>天氣晚來秋<br>明月松間照<br>清泉石上流</p>
-        <p class="small">王維〈山居秋暝〉：一個山中夜景，能同時放進山、月、泉與人的心境。</p>
-      </div>
-      <div class="form-card japan fragment">
-        <h4>日本古典俳句</h4>
-        <p>常以三句、17 個日語音拍（on）為典型格式，並用季語與切字把一瞬間切出來。</p>
-        <p class="poem-line">古池や<br>蛙飛びこむ<br>水の音</p>
-        <p class="small">芭蕉：不是介紹整座山水，而是停在一個聲音出現的瞬間。</p>
+    <span class="chip l">例子一</span>
+    <h3>一寸法師：小，不等於弱</h3>
+    <div class="japan-example">
+      <img class="japan-art" src="assets/japanese-literature/issun-boshi-compact-world.png" alt="一寸法師與碗船的縮小世界插畫">
+      <div class="japan-copy">
+        <div class="lead">書中提到「一寸法師」這類小巨人：身體很小，卻能用針當刀、碗當船、筷子當槳，展開一場大冒險。</div>
+        <div class="simple-list">
+          <div class="simple-card fragment"><b>大的故事</b><p>冒險、勇氣、打敗困難。</p></div>
+          <div class="simple-card fragment"><b>小的道具</b><p>針、碗、筷子，都是日常裡看得見的東西。</p></div>
+          <div class="simple-card fragment"><b>寫作提醒</b><p>不用一開始就寫「我很勇敢」。先寫你握住的那支筆、那張通知單、那個小動作。</p></div>
+        </div>
       </div>
     </div>
-    <div class="think-question fragment"><b>注意：</b>這是形式上的傾向，不是規則。中國詩也能極小，日本文學也能宏大；好作品都在選擇「此刻最值得被看見的東西」。</div>
-    <aside class="notes">⏱約4分鐘。讀王維與芭蕉各一次。只問學生：你覺得兩首詩的鏡頭距離一樣嗎？不要要求背格律。</aside>
+    <aside class="notes">⏱約4分鐘。不要講太多故事細節，只抓「小物可以承載大冒險」。請學生說出畫面裡有哪些小東西被賦予新用途。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip g">俳句的規矩</span>
-    <h3>俳句不是把中文硬切成 5－7－5</h3>
-    <div class="thinking-steps">
-      <div class="card fragment"><h4>17 個音拍</h4><p>傳統俳句常見 5－7－5 的日語 <i>on</i>（音拍）。它不等於中文的字數，也不完全等於英文音節。</p></div>
-      <div class="card fragment"><h4>季語</h4><p>一個季節線索：櫻花、蟬、雪、蛙。它讓讀者立刻站進某個時令。</p></div>
-      <div class="card fragment"><h4>切字</h4><p>像「や」這樣的停頓，讓兩個畫面碰在一起，中間留一點空白給讀者。</p></div>
+    <span class="chip g">例子二</span>
+    <h3>生活裡也有「縮小」的語感</h3>
+    <div class="lead">書裡舉了「豆」「雛」這些字：它們常把東西變成小小的、可近看的版本。重點不是變迷你，而是變得更能被握住、收藏、細看。</div>
+    <div class="mini-examples">
+      <div class="simple-card fragment"><b>豆本</b><p>把一本書做得很小，讀者會忍不住靠近它。</p></div>
+      <div class="simple-card fragment"><b>豆燈</b><p>一點小光，不照亮整個世界，卻照亮眼前。</p></div>
+      <div class="simple-card fragment"><b>雛人形</b><p>把人物、節日與祝福，放進可以陳列的小場景。</p></div>
+      <div class="simple-card fragment"><b>盆栽</b><p>不是把樹縮小而已，而是把時間、修剪和自然放進一盆土。</p></div>
     </div>
-    <div class="think-question fragment"><b>對我們的寫作有什麼用？</b>不是照抄格式，而是學會：先挑一個季節、一個聲音、一個瞬間，其他的暫時不說。</div>
-    <aside class="notes">⏱約3分鐘。特別澄清「5－7－5」是日語音拍，不要求學生用中文硬湊字數。這堂課要學的是選擇與留白，不是考格式。</aside>
+    <div class="think-question fragment"><b>換成作文：</b>不要先寫「我的人生」，先寫「抽屜裡那張沒有丟掉的紙」。</div>
+    <aside class="notes">⏱約3分鐘。這頁可以快速帶過，用生活例子讓學生理解縮小不只存在於文學。最後把焦點拉回寫作的具體物件。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip g">文字鑒賞</span>
-    <h3>芭蕉只寫一隻蛙，為什麼畫面那麼大？</h3>
-    <div class="haiku-layout">
+    <span class="chip l">例子三</span>
+    <h3>便當盒：把一餐安排進小格子</h3>
+    <div class="japan-example reverse">
+      <div class="japan-copy">
+        <div class="lead">書中用「便當盒型」說明一種縮小方式：不是把食物隨便塞進去，而是把不同味道、顏色、份量，安排在有限空間裡。</div>
+        <div class="simple-list">
+          <div class="simple-card fragment"><b>有限空間</b><p>盒子不大，所以必須選擇：什麼放進去，什麼先不放。</p></div>
+          <div class="simple-card fragment"><b>清楚分格</b><p>飯、菜、蛋、魚各有位置，讀者一眼就看懂。</p></div>
+          <div class="simple-card fragment"><b>寫作提醒</b><p>一段文章也像便當：每一句都要有位置，不要全部擠成一團。</p></div>
+        </div>
+      </div>
+      <img class="japan-art" src="assets/japanese-literature/bento-compact-box.png" alt="便當盒把一餐安排進小格子的插畫">
+    </div>
+    <aside class="notes">⏱約4分鐘。請學生觀察便當圖片：為什麼看起來舒服？因為有限制、有分類、有順序。對應作文：段落也需要安排。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">例子四</span>
+    <h3>枯山水：沒有水，卻讓人想到水</h3>
+    <div class="japan-example">
+      <img class="japan-art" src="assets/japanese-literature/karesansui-compact-garden.png" alt="枯山水庭園用砂與石頭表現自然的插畫">
+      <div class="japan-copy">
+        <div class="lead">日本庭園常把巨大的自然拉到身邊。枯山水更極端：只留下白砂、石頭、苔，卻讓人看見山、河、海浪。</div>
+        <div class="simple-list">
+          <div class="simple-card fragment"><b>砂</b><p>不是真水，卻用紋路讓你想到水流。</p></div>
+          <div class="simple-card fragment"><b>石</b><p>不是高山，卻像一座縮小後的山。</p></div>
+          <div class="simple-card fragment"><b>寫作提醒</b><p>你不必把全部講完。有時候留下最準的證據，讀者就能自己補出感受。</p></div>
+        </div>
+      </div>
+    </div>
+    <aside class="notes">⏱約4分鐘。這頁重點是「省略不是空洞」。讓學生說說：圖片裡沒有水，為什麼我們還會想到水？</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">例子五</span>
+    <h3>俳句：把一個季節縮成一瞬間</h3>
+    <div class="haiku-simple">
       <img class="haiku-portrait" src="assets/japanese-literature/basho.jpg" alt="葛飾北齋筆下的松尾芭蕉肖像">
       <div class="haiku-paper">
         <div class="jp">古池や<br>蛙飛びこむ<br>水の音</div>
         <p class="zh">古老的池塘啊<br>青蛙跳了進去<br>水聲。</p>
         <div class="haiku-parts">
-          <div class="card fragment"><h4>先是靜</h4><p>「古池」讓時間慢下來。你幾乎聽得見周圍沒有聲音。</p></div>
-          <div class="card fragment"><h4>忽然一動</h4><p>不是大事件，只是一隻蛙跳進水裡。</p></div>
-          <div class="card fragment"><h4>最後只剩聲音</h4><p>詩沒有解釋心情，卻讓讀者自己感到那份安靜被碰了一下。</p></div>
+          <div class="card fragment"><h4>一個地方</h4><p>古池。畫面先安靜下來。</p></div>
+          <div class="card fragment"><h4>一個動作</h4><p>蛙跳進去。事情發生了。</p></div>
+          <div class="card fragment"><h4>一個聲音</h4><p>水聲。詩停在最準的一刻。</p></div>
         </div>
-        <p class="analysis">美不在形容詞很多，而在它選得很準：一座舊池、一隻蛙、一聲水響。其他的，交給你自己想像。</p>
+        <p class="analysis">它沒有解釋「我很平靜」，卻讓讀者自己感覺到安靜被碰了一下。</p>
       </div>
     </div>
-    <aside class="notes">⏱約5分鐘。第一遍只讀日文與中文，不解釋。第二遍依序出現「靜、動、聲音」。最後問：詩裡有沒有寫「我很平靜」？沒有，但我們為什麼感覺得到？</aside>
+    <aside class="notes">⏱約5分鐘。不要考俳句格式，只讓學生看見「地點、動作、聲音」三個選擇。問：如果改成「我很喜歡安靜的池塘」哪個比較有畫面？</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip l">俳句的優美</span>
-    <h3>它不把話說完，卻讓你自己走進去</h3>
-    <div class="wave-layout">
-      <img class="wave-art" src="assets/japanese-literature/great-wave.jpg" alt="葛飾北齋神奈川沖浪裏浮世繪">
-      <div class="wave-notes">
-        <div class="card fragment"><h4>留下空白</h4><p>俳句不急著補上「所以我很感動」。它相信讀者能把自己的記憶與感受放進來。</p></div>
-        <div class="card fragment"><h4>小處放大</h4><p>北齋畫很大的浪，卻把富士山留成遠方小小一點；俳句也常用極小的物件，讓世界自己長出來。</p></div>
-        <div class="card fragment"><h4>不是少，是準</h4><p>少寫一點，不是偷懶。是把不重要的先拿掉，留下真正會發亮的那一點。</p></div>
-      </div>
-    </div>
-    <aside class="notes">⏱約3分鐘。用浮世繪做跨藝術閱讀：請學生找一找富士山在哪裡。帶出「畫面很大，但焦點可以很小」。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip">閱讀鏡頭</span>
-    <h3>什麼是「日本的縮小意識」？</h3>
-    <div class="lead">這個說法來自韓國文化評論家<strong>李御寧</strong>的觀察。他在《縮小志向的日本人》（英譯本 <i>The Compact Culture</i>）裡，討論日本文化中常見的「把大世界濃縮到小形式」的傾向。</div>
-    <div class="thinking-steps">
-      <div class="card fragment"><h4>不是越小越好</h4><p>不是尺寸競賽，也不是說所有日本人都一樣。</p></div>
-      <div class="card fragment"><h4>是選一個容器</h4><p>把龐大的經驗放進一個小而能握住、能細看的形式。</p></div>
-      <div class="card fragment"><h4>讓細節變清楚</h4><p>當範圍縮小，眼睛反而會注意到手感、聲音、空白與變化。</p></div>
-    </div>
-    <div class="think-question fragment"><b>把它當成一副眼鏡：</b>不是用來定義一個國家，而是提醒我們，縮小鏡頭有時比放大音量更有力量。</div>
-    <aside class="notes">⏱約4分鐘。務必說明李御寧是提出一種「觀察」，不是科學定律。這頁的重點是讓學生取得一個好用的寫作概念：容器小，注意力會更集中。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip l">小，卻不簡單</span>
-    <h3>把一個世界，裝進可以近看的東西</h3>
-    <div class="compact-layout">
-      <img class="compact-art" src="assets/japanese-literature/netsuke.jpg" alt="日本江戶時代雷神根付小雕刻">
-      <div class="compact-copy">
-        <div class="lead">根付是和服腰帶上固定小物的扣件。它很小，卻能在幾公分裡刻出人物、動物、神話和幽默。李御寧用這類「小容器」來思考濃縮的美學。</div>
-        <div class="miniature-grid">
-          <div class="card fragment"><h4>根付</h4><p>小小一件，卻要讓人靠近看，才看見雕刻裡的故事。</p></div>
-          <div class="card fragment"><h4>俳句</h4><p>短短三句，不說大道理，卻能留住一個季節和一種氣氛。</p></div>
-          <div class="card fragment"><h4>你的文章</h4><p>不必先寫「我的國小生活」，可以先寫一支快沒水的筆或一張沒收走的座位表。</p></div>
-        </div>
-        <div class="think-question fragment"><b>小物不是配角：</b>當你把它看久一點，它可能就是整篇文章的入口。</div>
-      </div>
-    </div>
-    <aside class="notes">⏱約4分鐘。根付的材質與歷史不必細講。請學生看圖片：為什麼這麼小的東西還要刻得這麼細？轉回文章：一個小物也可以承擔一段記憶。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip g">寫作練習</span>
-    <h3>縮小，不是把字砍短，是把鏡頭拉近</h3>
-    <div class="shrink-path">
-      <div class="shrink-step fragment"><b>太大</b><p>「畢業典禮讓我很感動。」</p><p class="small">這是真的，但讀者還看不到什麼。</p></div>
-      <div class="shrink-arrow fragment">→</div>
-      <div class="shrink-step fragment"><b>拉近一點</b><p>「典禮結束後，我站在禮堂最後一排。」</p><p class="small">有了地點，還需要一個會發亮的細節。</p></div>
-      <div class="shrink-arrow fragment">→</div>
-      <div class="shrink-step fragment"><b>停在一瞬</b><p>「椅背上那張名字貼紙被風掀起一角，卻再也沒有人坐回來。」</p><p class="small">沒有直接說感動，但讀者可能感覺到了。</p></div>
-    </div>
-    <div class="think-question fragment"><b>輪到你：</b>把「下雨天放學」縮成一個人、一個物品、一個聲音；先不要急著寫心情。</div>
-    <aside class="notes">⏱約5分鐘。這是最重要的一張。請學生在心裡從大題目縮到一個畫面，不必立刻交作業。提醒：縮小不是把文章寫短，而是找到可供展開的精確入口。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip g">三行就夠</span>
-    <h3>不必寫成俳句，也能借用它的眼睛</h3>
-    <div class="form-compare">
-      <div class="form-card japan fragment">
-        <h4>先列三個看得見的東西</h4>
-        <p class="poem-line">校門口<br>透明雨傘<br>水滴落在鞋尖</p>
-        <p>先不要急著寫「我很難過」或「我很期待」。把鏡頭放好，情緒會慢慢出現。</p>
-      </div>
+    <span class="chip">跟中國文學比一點點</span>
+    <h3>不是誰比較好，而是鏡頭距離不同</h3>
+    <div class="compare-simple">
       <div class="form-card china fragment">
-        <h4>再決定要不要接成一段</h4>
-        <p>當你有了清楚的畫面，就可以像第三堂要學的那樣，用因果、轉折、遞進，把話說完整。</p>
-        <p class="small">俳句教我們選；文章教我們連。兩種能力可以一起用。</p>
+        <h4>中國古典詩常擅長鋪開</h4>
+        <p class="poem-line">空山新雨後<br>天氣晚來秋<br>明月松間照<br>清泉石上流</p>
+        <p>王維可以把山、月、泉、秋意一起放進一個寬廣的畫面。</p>
+      </div>
+      <div class="form-card japan fragment">
+        <h4>日本俳句常擅長收束</h4>
+        <p class="poem-line">古池や<br>蛙飛びこむ<br>水の音</p>
+        <p>芭蕉停在一個聲音。畫面很小，餘味卻很大。</p>
       </div>
     </div>
-    <aside class="notes">⏱約3分鐘。請學生用三行列出自己的畫面即可，不算作業。最後一句「俳句教我們選；文章教我們連」可以請學生一起念一次。</aside>
+    <div class="think-question fragment"><b>寫作上兩種都要：</b>先用小鏡頭抓到細節，再用文章把它鋪成完整想法。</div>
+    <aside class="notes">⏱約3分鐘。這頁不要講成中日高低比較。只講鏡頭距離：一個比較像遠景，一個像特寫。作文需要會切換。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">寫作怎麼用</span>
+    <h3>縮小，不是少寫，是先選準一個入口</h3>
+    <div class="compact-practice">
+      <div class="shrink-step fragment"><b>太大</b><p>「畢業典禮讓我很感動。」</p><p class="small">是真的，但讀者還看不到。</p></div>
+      <div class="shrink-arrow fragment">→</div>
+      <div class="shrink-step fragment"><b>放進場景</b><p>「典禮結束後，我站在禮堂最後一排。」</p><p class="small">有地點了，但還可以更準。</p></div>
+      <div class="shrink-arrow fragment">→</div>
+      <div class="shrink-step fragment"><b>停在細節</b><p>「椅背上的名字貼紙被風掀起一角，卻再也沒有人坐回來。」</p><p class="small">沒有說感動，感動卻出來了。</p></div>
+    </div>
+    <div class="think-question fragment"><b>重點：</b>抽象感受要靠具體證據站起來。你寫得越清楚，讀者越能自己感覺到。</div>
+    <aside class="notes">⏱約5分鐘。這是最重要的一張。先請學生比較三句，問哪一句最像「看得見」。不要急著要求優美，先要求具體。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">小練習</span>
+    <h3>先不要寫感想，先寫三個可看見的東西</h3>
+    <div class="thinking-steps">
+      <div class="card fragment"><h4>地點</h4><p>校門口、操場邊、禮堂門外、教室最後一排。</p></div>
+      <div class="card fragment"><h4>物品</h4><p>鞋尖的水、歪掉的名牌、摺起的講義、沒擦乾的黑板。</p></div>
+      <div class="card fragment"><h4>聲音</h4><p>鐘聲、椅腳拖過地板、雨打在棚子上、有人把門輕輕關上。</p></div>
+    </div>
+    <div class="think-question fragment"><b>句型：</b>「在＿＿，我看見＿＿，聽見＿＿。那一刻，我才發現＿＿。」</div>
+    <aside class="notes">⏱約4分鐘。讓學生口頭填一兩個即可。這是銜接第三堂的寫作肌肉：先選焦點，再把焦點說清楚。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
     <span class="chip">帶去下一堂</span>
-    <h3>先選準，再說清楚</h3>
+    <h3>今天帶走五個更好懂的例子</h3>
     <div class="thinking-steps">
-      <div class="card fragment"><h4>中國古典詩的提醒</h4><p>句子之間可以有結構、呼應與節奏。</p></div>
-      <div class="card fragment"><h4>日本俳句的提醒</h4><p>一個小細節，也能打開很大的感受。</p></div>
-      <div class="card fragment"><h4>你的寫作</h4><p>先把最重要的畫面選出來，再用清楚的話把它連起來。</p></div>
+      <div class="card fragment"><h4>一寸法師</h4><p>小道具，也能承載大冒險。</p></div>
+      <div class="card fragment"><h4>便當盒</h4><p>有限格子，讓內容更有秩序。</p></div>
+      <div class="card fragment"><h4>枯山水與俳句</h4><p>少寫一點，不是空洞；是留下最準的證據。</p></div>
     </div>
-    <div class="bridge-line fragment">下一堂，我們就來練：<strong>不用堆成語，也能把一句話說得準、說得有力量。</strong></div>
-    <aside class="notes">⏱約2分鐘。不要把這段變成文學史考試。收束在一個實作原則：選準焦點，再建立句子之間的關係，正好進第三堂。</aside>
+    <div class="bridge-line fragment">下一堂，我們就來練：<strong>把選好的小細節，寫成有順序、有力量的一段話。</strong></div>
+    <aside class="notes">⏱約2分鐘。收束在寫作，不要停留在文化介紹。提醒學生：這段不是考日本文學，而是學一種看世界的鏡頭。</aside>
   </section>
 </section>
 
