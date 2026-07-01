@@ -41,6 +41,8 @@
 .reveal em{ color:var(--gold); font-style:normal; font-weight:700; }
 .reveal strong{ color:var(--green); }
 .reveal a{ color:var(--green2); }
+.reveal a.image-link{ display:block; line-height:0; color:inherit; text-decoration:none; }
+.reveal a.image-link img{ display:block; }
 
 /* 固定品牌 Logo 左下角 */
 .brand{
@@ -490,6 +492,30 @@
 .poem-card p{ margin:.12em 0 0; color:#536058; font-size:.44em; line-height:1.36; }
 .poem-card.tang{ border-top:5px solid #c79a3e; }
 .poem-card.haiku{ border-top:5px solid #5a9e6f; }
+.lit-map{ display:grid; grid-template-columns:repeat(4,1fr); gap:.42em; margin-top:.48em; }
+.lit-map .card{ min-height:8.4em; padding:.42em .48em; }
+.lit-map .card h4{ font-size:.64em; }
+.lit-map .card p{ font-size:.48em; line-height:1.42; }
+.author-wall{ display:grid; grid-template-columns:repeat(5,1fr); gap:.32em; margin-top:.42em; }
+.author-tile{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; overflow:hidden; box-shadow:0 4px 14px rgba(3,73,45,.06); min-height:11em; }
+.author-tile img{ width:100%; height:6.3em; object-fit:cover; object-position:center top; display:block; margin:0; }
+.author-tile b{ display:block; color:var(--green); font-size:.52em; padding:.26em .34em 0; }
+.author-tile p{ margin:0; padding:.05em .34em .34em; color:#4b554f; font-size:.39em; line-height:1.32; }
+.lit-photo-layout{ display:grid; grid-template-columns:1.08fr .92fr; gap:.72em; align-items:stretch; margin-top:.34em; }
+.lit-photo-layout.reverse{ grid-template-columns:.92fr 1.08fr; }
+.lit-photo{ width:100%; height:448px; object-fit:cover; object-position:center; margin:0; border-radius:12px; border:1px solid #d7cab0; box-shadow:0 10px 26px rgba(3,73,45,.14); }
+.lit-photo.portrait{ object-position:center top; }
+.story-beats{ display:grid; grid-template-columns:repeat(4,1fr); gap:.34em; margin-top:.42em; }
+.story-beat{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.34em .42em; min-height:6.9em; }
+.story-beat b{ display:block; color:var(--green2); font-size:.54em; margin-bottom:.12em; }
+.story-beat p{ margin:0; color:#3f4a42; font-size:.42em; line-height:1.35; }
+.excerpt-board{ background:#fffdf6; border:1px solid #e7dec6; border-radius:14px; padding:.58em .7em; box-shadow:0 6px 18px rgba(3,73,45,.07); }
+.excerpt-board .jp{ font-family:"Noto Serif TC",serif; color:#20352b; font-size:.62em; line-height:1.68; margin:.08em 0; }
+.excerpt-board .zh{ color:#47554d; font-size:.51em; line-height:1.55; border-top:1px solid #ded6c5; padding-top:.35em; margin-top:.38em; }
+.reading-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.38em; margin-top:.42em; }
+.reading-card{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.38em .46em; min-height:7.4em; }
+.reading-card b{ display:block; color:var(--green2); font-size:.57em; margin-bottom:.1em; }
+.reading-card p{ margin:0; color:#3f4a42; font-size:.44em; line-height:1.38; }
 .haiku-simple{ display:grid; grid-template-columns:.84fr 1.16fr; gap:.72em; align-items:stretch; margin-top:.34em; }
 .haiku-simple .haiku-portrait{ height:430px; }
 .haiku-simple .haiku-paper{ min-height:430px; padding:.62em .78em; }
@@ -1221,110 +1247,40 @@
 <!-- ===================================================== 日本文學：第二、三堂之間 -->
 <section>
   <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#2e6b4a)">
-    <div class="num">換 一 種 鏡 頭</div>
-    <h2 style="color:#fff">日本的「縮小」意識</h2>
-    <span class="tag">從生活態度到藝術表現</span>
+    <div class="num">文 學 入 口</div>
+    <h2 style="color:#fff">日本文學入門</h2>
+    <span class="tag">一瞬間 ・ 羅生門 ・ 異世界 ・ 現代流行</span>
     <p class="nav-hint">按 <b>↓</b> 依序往下看</p>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip">先用一句話理解</span>
-    <h3>不是「越小越好」，而是把世界放進小容器</h3>
-    <div class="compact-idea">
-      <div class="compact-line">把太大的東西<br>縮到手中，<br><em>反而看得更清楚。</em></div>
-      <div>
-        <div class="lead">李御寧在《日本人的「縮小」意識》中觀察到：日本文化常把龐大的自然、故事、生活，濃縮成一個小而精準的形式。</div>
-        <div class="formula-box">
-          <div class="formula-item fragment"><b>大世界</b><p>自然、季節、人生、旅行、記憶。</p></div>
-          <div class="formula-arrow fragment">→</div>
-          <div class="formula-item fragment"><b>小容器</b><p>俳句、便當、庭園、摺扇、小物。</p></div>
-          <div class="formula-arrow fragment">→</div>
-          <div class="formula-item fragment"><b>更清楚</b><p>範圍小了，細節、秩序和感受就浮出來。</p></div>
-        </div>
-        <div class="think-question fragment">今天只抓一個寫作方法：<b>先縮小鏡頭，再把細節寫清楚。</b></div>
-      </div>
+    <span class="chip">先建立地圖</span>
+    <h3>今天不是背文學史，而是找幾個入口</h3>
+    <div class="lit-map">
+      <div class="card fragment"><h4>一瞬間</h4><p>俳句把季節、聲音、光線收進短短幾行。</p></div>
+      <div class="card fragment"><h4>小世界</h4><p>豆本、摺扇、盆栽、便當盒，把龐大的內容變成可近看的形式。</p></div>
+      <div class="card fragment"><h4>羅生門</h4><p>人在困境裡，會怎麼替自己的選擇找理由？</p></div>
+      <div class="card fragment"><h4>異世界</h4><p>貓、山貓餐廳、銀河鐵道，換一個角度看日常。</p></div>
     </div>
-    <aside class="notes">⏱約3分鐘。這頁先把「縮小意識」講成學生能用的寫作方法。提醒：這是文化觀察，不是把所有日本人固定成同一種樣子。</aside>
+    <div class="think-question fragment">這段課的目的：<b>讓你知道日本文學不只有動漫，也有很多能拿來練作文的觀察方式。</b></div>
+    <aside class="notes">⏱約3分鐘。開場定調：不要講成文學史年表。每個入口都要回到寫作：觀察、視角、理由、畫面。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip l">例子一</span>
-    <h3>一寸法師：小，不等於弱</h3>
-    <div class="japan-example">
-      <img class="japan-art" src="assets/japanese-literature/issun-boshi-compact-world.png" alt="一寸法師與碗船的縮小世界插畫">
-      <div class="japan-copy">
-        <div class="lead">書中提到「一寸法師」這類小巨人：身體很小，卻能用針當刀、碗當船、筷子當槳，展開一場大冒險。</div>
-        <div class="simple-list">
-          <div class="simple-card fragment"><b>大的故事</b><p>冒險、勇氣、打敗困難。</p></div>
-          <div class="simple-card fragment"><b>小的道具</b><p>針、碗、筷子，都是日常裡看得見的東西。</p></div>
-          <div class="simple-card fragment"><b>寫作提醒</b><p>不用一開始就寫「我很勇敢」。先寫你握住的那支筆、那張通知單、那個小動作。</p></div>
-        </div>
-      </div>
+    <span class="chip l">先認識幾位</span>
+    <h3>幾個適合國中生先知道的名字</h3>
+    <div class="author-wall">
+      <div class="author-tile fragment"><img src="assets/japanese-literature/basho.jpg" alt="松尾芭蕉肖像"><b>松尾芭蕉</b><p>俳句。用一聲水響寫出安靜。</p></div>
+      <div class="author-tile fragment"><img src="assets/japanese-literature/authors/akutagawa.jpg" alt="芥川龍之介照片"><b>芥川龍之介</b><p>短篇小說。故事常卡在選擇的瞬間。</p></div>
+      <div class="author-tile fragment"><img src="assets/japanese-literature/authors/natsume-soseki.jpg" alt="夏目漱石照片"><b>夏目漱石</b><p>《我是貓》。換一隻貓看人類。</p></div>
+      <div class="author-tile fragment"><img src="assets/japanese-literature/authors/miyazawa-kenji.jpg" alt="宮澤賢治照片"><b>宮澤賢治</b><p>童話與宇宙感。山裡也可能通往異世界。</p></div>
+      <div class="author-tile fragment"><img src="assets/covers/bookcover2.png" alt="現代小說入口示意"><b>現代入口</b><p>川端康成、村上春樹、東野圭吾、新海誠。</p></div>
     </div>
-    <aside class="notes">⏱約4分鐘。不要講太多故事細節，只抓「小物可以承載大冒險」。請學生說出畫面裡有哪些小東西被賦予新用途。</aside>
+    <aside class="notes">⏱約3分鐘。現代作家只介紹入口，不放長篇原文。川端、村上等仍受版權保護，課堂上可談作品特色與閱讀方向。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip g">例子二</span>
-    <h3>生活裡也有「縮小」的語感</h3>
-    <div class="lead">書裡從「豆」「雛」這些字，談到摺扇、盆栽等生活形式：重點不是變迷你，而是讓龐大的內容變得更能被握住、收藏、細看。</div>
-    <div class="mini-examples photo-grid">
-      <div class="simple-card fragment">
-        <img src="assets/japanese-literature/real-examples/miniature-book.jpg" alt="真實迷你書照片">
-        <b>豆本</b><p>把一本書做得很小，讀者會忍不住靠近它。</p>
-      </div>
-      <div class="simple-card fragment">
-        <img src="assets/japanese-literature/real-examples/folding-fan.jpg" alt="日本摺扇照片">
-        <b>摺扇</b><p>把一片風景摺起來，收進手掌，也能帶著走。</p>
-      </div>
-      <div class="simple-card fragment">
-        <img src="assets/japanese-literature/real-examples/hina-dolls.jpg" alt="日本雛人形照片">
-        <b>雛人形</b><p>把人物、節日與祝福，放進可以陳列的小場景。</p>
-      </div>
-      <div class="simple-card fragment">
-        <img src="assets/japanese-literature/real-examples/bonsai.jpg" alt="日本盆栽照片">
-        <b>盆栽</b><p>不是把樹縮小而已，而是把時間、修剪和自然放進一盆土。</p>
-      </div>
-    </div>
-    <aside class="notes">⏱約3分鐘。四張圖都是真實物件。重點不是背名詞，而是看見「小容器」如何讓內容更靠近、更可收藏、更可細看。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip l">例子三</span>
-    <h3>便當盒：把一餐安排進小格子</h3>
-    <div class="japan-example reverse">
-      <div class="japan-copy">
-        <div class="lead">書中用「便當盒型」說明一種縮小方式：不是把食物隨便塞進去，而是把不同味道、顏色、份量，安排在有限空間裡。</div>
-        <div class="simple-list">
-          <div class="simple-card fragment"><b>有限空間</b><p>盒子不大，所以必須選擇：什麼放進去，什麼先不放。</p></div>
-          <div class="simple-card fragment"><b>清楚分格</b><p>飯、菜、蛋、魚各有位置，讀者一眼就看懂。</p></div>
-          <div class="simple-card fragment"><b>寫作提醒</b><p>一段文章也像便當：每一句都要有位置，不要全部擠成一團。</p></div>
-        </div>
-      </div>
-      <img class="japan-art" src="assets/japanese-literature/bento-compact-box.png" alt="便當盒把一餐安排進小格子的插畫">
-    </div>
-    <aside class="notes">⏱約4分鐘。請學生觀察便當圖片：為什麼看起來舒服？因為有限制、有分類、有順序。對應作文：段落也需要安排。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip g">例子四</span>
-    <h3>枯山水：沒有水，卻讓人想到水</h3>
-    <div class="japan-example">
-      <img class="japan-art" src="assets/japanese-literature/karesansui-compact-garden.png" alt="枯山水庭園用砂與石頭表現自然的插畫">
-      <div class="japan-copy">
-        <div class="lead">日本庭園常把巨大的自然拉到身邊。枯山水更極端：只留下白砂、石頭、苔，卻讓人看見山、河、海浪。</div>
-        <div class="simple-list">
-          <div class="simple-card fragment"><b>砂</b><p>不是真水，卻用紋路讓你想到水流。</p></div>
-          <div class="simple-card fragment"><b>石</b><p>不是高山，卻像一座縮小後的山。</p></div>
-          <div class="simple-card fragment"><b>寫作提醒</b><p>你不必把全部講完。有時候留下最準的證據，讀者就能自己補出感受。</p></div>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">⏱約4分鐘。這頁重點是「省略不是空洞」。讓學生說說：圖片裡沒有水，為什麼我們還會想到水？</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip l">例子五</span>
+    <span class="chip g">入口一</span>
     <h3>俳句：把一個季節縮成一瞬間</h3>
     <div class="haiku-simple">
       <img class="haiku-portrait" src="assets/japanese-literature/basho.jpg" alt="葛飾北齋筆下的松尾芭蕉肖像">
@@ -1336,112 +1292,147 @@
           <div class="card fragment"><h4>一個動作</h4><p>蛙跳進去。事情發生了。</p></div>
           <div class="card fragment"><h4>一個聲音</h4><p>水聲。詩停在最準的一刻。</p></div>
         </div>
-        <p class="analysis">它沒有解釋「我很平靜」，卻讓讀者自己感覺到安靜被碰了一下。</p>
+        <p class="analysis">不需要先說「我很平靜」。把畫面選準，讀者自己會感覺到。</p>
       </div>
     </div>
-    <aside class="notes">⏱約5分鐘。不要考俳句格式，只讓學生看見「地點、動作、聲音」三個選擇。問：如果改成「我很喜歡安靜的池塘」哪個比較有畫面？</aside>
+    <aside class="notes">⏱約4分鐘。只抓「地點、動作、聲音」三個元素。不要考5-7-5格式。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip">跟中國文學比一點點</span>
-    <h3>不是誰比較好，而是鏡頭距離不同</h3>
-    <div class="compare-simple">
-      <div class="form-card china fragment">
-        <h4>中國古典詩常擅長鋪開</h4>
-        <p class="poem-line">空山新雨後<br>天氣晚來秋<br>明月松間照<br>清泉石上流</p>
-        <p>王維可以把山、月、泉、秋意一起放進一個寬廣的畫面。</p>
-      </div>
-      <div class="form-card japan fragment">
-        <h4>日本俳句常擅長收束</h4>
-        <p class="poem-line">古池や<br>蛙飛びこむ<br>水の音</p>
-        <p>芭蕉停在一個聲音。畫面很小，餘味卻很大。</p>
-      </div>
+    <span class="chip">入口二</span>
+    <h3>縮小意識：讓東西變得可以近看</h3>
+    <div class="lead">李御寧談日本文化時，常注意到「把大的內容放進小容器」的傾向。這不是日本文學的全部，但很適合拿來練描寫。</div>
+    <div class="mini-examples photo-grid">
+      <div class="simple-card fragment"><img src="assets/japanese-literature/real-examples/miniature-book.jpg" alt="真實迷你書照片"><b>豆本</b><p>一本書變小，讀者會忍不住靠近。</p></div>
+      <div class="simple-card fragment"><img src="assets/japanese-literature/real-examples/folding-fan.jpg" alt="日本摺扇照片"><b>摺扇</b><p>把風景摺起來，收進手掌。</p></div>
+      <div class="simple-card fragment"><img src="assets/japanese-literature/real-examples/hina-dolls.jpg" alt="日本雛人形照片"><b>雛人形</b><p>人物與節日變成可陳列的小場景。</p></div>
+      <div class="simple-card fragment"><img src="assets/japanese-literature/real-examples/bonsai.jpg" alt="日本盆栽照片"><b>盆栽</b><p>自然、修剪和時間放進一盆土。</p></div>
     </div>
-    <div class="think-question fragment"><b>寫作上兩種都要：</b>先用小鏡頭抓到細節，再用文章把它鋪成完整想法。</div>
-    <aside class="notes">⏱約3分鐘。這頁不要講成中日高低比較。只講鏡頭距離：一個比較像遠景，一個像特寫。作文需要會切換。</aside>
+    <aside class="notes">⏱約3分鐘。四張真實照片快速看。縮小意識只作為入口，不要讓整段課都停在文化評論。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip">再多看幾組</span>
-    <h3>唐詩常把天地打開，俳句常把一刻收住</h3>
-    <div class="poem-compare-grid">
-      <div class="poem-pair fragment">
-        <div class="poem-card tang">
-          <h4>王之渙〈登鸛雀樓〉</h4>
-          <p class="poem-line">白日依山盡<br>黃河入海流<br>欲窮千里目<br>更上一層樓</p>
-          <p>鏡頭從夕陽、群山、黃河一路推到千里之外。</p>
+    <span class="chip l">入口三</span>
+    <h3>羅生門：故事從一場雨開始</h3>
+    <div class="lit-photo-layout">
+      <img class="lit-photo" src="assets/japanese-literature/stories/rajomon-model.jpg" alt="羅城門模型照片">
+      <div class="japan-copy">
+        <div class="lead">芥川龍之介的〈羅生門〉，不是一開始就講大道理，而是先把人放進一個很糟的場景：黃昏、雨、破敗的城門、沒有工作的人。</div>
+        <div class="story-beats">
+          <div class="story-beat fragment"><b>地點</b><p>羅生門下，雨停不了。</p></div>
+          <div class="story-beat fragment"><b>人物</b><p>一個失去工作的下人。</p></div>
+          <div class="story-beat fragment"><b>問題</b><p>回不去，也不知道明天怎麼活。</p></div>
+          <div class="story-beat fragment"><b>懸念</b><p>他走上門樓，看見老婆婆。</p></div>
         </div>
-        <div class="poem-card haiku">
-          <h4>芭蕉〈古池〉</h4>
-          <p class="poem-line">古池や<br>蛙飛びこむ<br>水の音</p>
-          <p>鏡頭停在一池、一蛙、一聲水響。</p>
-        </div>
-      </div>
-      <div class="poem-pair fragment">
-        <div class="poem-card tang">
-          <h4>杜甫〈望岳〉</h4>
-          <p class="poem-line">岱宗夫如何<br>齊魯青未了<br>會當凌絕頂<br>一覽眾山小</p>
-          <p>站上高處，看見山勢、國土與胸襟一起變大。</p>
-        </div>
-        <div class="poem-card haiku">
-          <h4>芭蕉〈閑寂〉</h4>
-          <p class="poem-line">閑さや<br>岩にしみ入る<br>蝉の声</p>
-          <p>只寫蟬聲滲進岩石，安靜反而變得很深。</p>
-        </div>
-      </div>
-      <div class="poem-pair fragment">
-        <div class="poem-card tang">
-          <h4>李白〈望廬山瀑布〉</h4>
-          <p class="poem-line">飛流直下三千尺<br>疑是銀河落九天</p>
-          <p>瀑布被寫成從銀河落下，想像直接衝到天上。</p>
-        </div>
-        <div class="poem-card haiku">
-          <h4>小林一茶</h4>
-          <p class="poem-line">やせ蛙<br>負けるな一茶<br>これにあり</p>
-          <p>只看一隻瘦青蛙，卻看見一個人替弱小者加油。</p>
-        </div>
+        <div class="think-question fragment"><b>寫作提醒：</b>有趣的故事常先給「場景＋困境」，不是先講道理。</div>
       </div>
     </div>
-    <div class="think-question fragment"><b>給作文的提醒：</b>你可以先寫遠景，讓讀者知道世界有多大；也可以寫特寫，讓讀者感覺那一刻有多真。</div>
-    <aside class="notes">⏱約5分鐘。唐詩部分強調「浩大場景」：山河、千里、銀河。俳句部分強調「收束到一刻」：一聲水響、一陣蟬聲、一隻瘦蛙。提醒學生：兩種都不是高低，而是鏡頭不同。</aside>
+    <aside class="notes">⏱約5分鐘。這張建立故事氛圍。用「困境」與「選擇」講。請學生先想：這個人下一步可能怎麼做？</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip g">寫作怎麼用</span>
-    <h3>縮小，不是少寫，是先選準一個入口</h3>
-    <div class="compact-practice">
-      <div class="shrink-step fragment"><b>太大</b><p>「畢業典禮讓我很感動。」</p><p class="small">是真的，但讀者還看不到。</p></div>
-      <div class="shrink-arrow fragment">→</div>
-      <div class="shrink-step fragment"><b>放進場景</b><p>「典禮結束後，我站在禮堂最後一排。」</p><p class="small">有地點了，但還可以更準。</p></div>
-      <div class="shrink-arrow fragment">→</div>
-      <div class="shrink-step fragment"><b>停在細節</b><p>「椅背上的名字貼紙被風掀起一角，卻再也沒有人坐回來。」</p><p class="small">沒有說感動，感動卻出來了。</p></div>
+    <span class="chip g">讀一小段原文</span>
+    <h3>〈羅生門〉開頭：先讓畫面站起來</h3>
+    <div class="excerpt-board">
+      <p class="jp">ある日の暮方の事である。一人の下人が、羅生門の下で雨やみを待っていた。<br>広い門の下には、この男のほかに誰もいない。</p>
+      <p class="zh">白話導讀：某天傍晚，一個下人在羅生門下等雨停。寬大的門底下，除了他以外沒有任何人。</p>
     </div>
-    <div class="think-question fragment"><b>重點：</b>抽象感受要靠具體證據站起來。你寫得越清楚，讀者越能自己感覺到。</div>
-    <aside class="notes">⏱約5分鐘。這是最重要的一張。先請學生比較三句，問哪一句最像「看得見」。不要急著要求優美，先要求具體。</aside>
-  </section>
-
-  <section data-background-color="#faf7ef">
-    <span class="chip l">小練習</span>
-    <h3>先不要寫感想，先寫三個可看見的東西</h3>
     <div class="thinking-steps">
-      <div class="card fragment"><h4>地點</h4><p>校門口、操場邊、禮堂門外、教室最後一排。</p></div>
-      <div class="card fragment"><h4>物品</h4><p>鞋尖的水、歪掉的名牌、摺起的講義、沒擦乾的黑板。</p></div>
-      <div class="card fragment"><h4>聲音</h4><p>鐘聲、椅腳拖過地板、雨打在棚子上、有人把門輕輕關上。</p></div>
+      <div class="card fragment"><h4>時間</h4><p>傍晚。白天快結束，事情也像走到邊緣。</p></div>
+      <div class="card fragment"><h4>地點</h4><p>羅生門。大、舊、空，人物顯得更孤立。</p></div>
+      <div class="card fragment"><h4>狀態</h4><p>等雨停。人物暫時動不了，故事壓力慢慢出現。</p></div>
     </div>
-    <div class="think-question fragment"><b>句型：</b>「在＿＿，我看見＿＿，聽見＿＿。那一刻，我才發現＿＿。」</div>
-    <aside class="notes">⏱約4分鐘。讓學生口頭填一兩個即可。這是銜接第三堂的寫作肌肉：先選焦點，再把焦點說清楚。</aside>
+    <aside class="notes">⏱約4分鐘。讓學生看原文不必逐字翻譯。只抓三個元素：時間、地點、狀態。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip">帶去下一堂</span>
-    <h3>今天帶走五個更好懂的例子</h3>
-    <div class="thinking-steps">
-      <div class="card fragment"><h4>一寸法師</h4><p>小道具，也能承載大冒險。</p></div>
-      <div class="card fragment"><h4>便當盒</h4><p>有限格子，讓內容更有秩序。</p></div>
-      <div class="card fragment"><h4>枯山水與俳句</h4><p>少寫一點，不是空洞；是留下最準的證據。</p></div>
+    <span class="chip l">羅生門的轉折</span>
+    <h3>老婆婆也在替自己找理由</h3>
+    <div class="excerpt-board">
+      <p class="jp">「この髪を抜いてな、この髪を抜いてな、鬘にしようと思うたのじゃ。」<br>「じゃが、ここにいる死人どもは、皆、そのくらいな事を、されてもいい人間ばかりだぞよ。」</p>
+      <p class="zh">白話導讀：老婆婆說，她拔死人的頭髮，是想拿去做假髮。她接著替自己辯解：這些死人生前也做過不好的事，所以被這樣對待也不算過分。</p>
     </div>
-    <div class="bridge-line fragment">下一堂，我們就來練：<strong>把選好的小細節，寫成有順序、有力量的一段話。</strong></div>
-    <aside class="notes">⏱約2分鐘。收束在寫作，不要停留在文化介紹。提醒學生：這段不是考日本文學，而是學一種看世界的鏡頭。</aside>
+    <div class="thinking-steps">
+      <div class="card fragment"><h4>她做了什麼？</h4><p>拔死人的頭髮，準備拿去換生存的機會。</p></div>
+      <div class="card fragment"><h4>她怎麼說？</h4><p>她不是說「我沒做」，而是說「我有理由」。</p></div>
+      <div class="card fragment"><h4>故事為何有力？</h4><p>讀者開始思考：困境能不能成為理由？理由能不能抵消傷害？</p></div>
+    </div>
+    <aside class="notes">⏱約5分鐘。這張接第二章「替反派說話」。重點是理由與責任，不是把錯事洗白。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">羅生門最可怕的一步</span>
+    <h3>聽完理由後，他也學會替自己找理由</h3>
+    <div class="excerpt-board">
+      <p class="jp">「では、己が引剥をしようと恨むまいな。己もそうしなければ、饑死をする体なのだ。」<br>下人の行方は、誰も知らない。</p>
+      <p class="zh">白話導讀：下人說：那麼我搶你的衣服，你也不要怨我，因為我不這麼做就會餓死。故事最後只留下：沒有人知道下人去了哪裡。</p>
+    </div>
+    <div class="think-question fragment"><b>課堂討論：</b>下人是突然變壞，還是被老婆婆的理由推了一把？如果你要寫他的自白，第一句會怎麼寫？</div>
+    <aside class="notes">⏱約5分鐘。這張是羅生門核心。避免簡化成「壞人」。讓學生看見：一個人的理由可能會影響另一個人的選擇。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">換視角</span>
+    <h3>《我是貓》：讓一隻貓來看人類</h3>
+    <div class="lit-photo-layout reverse">
+      <div class="japan-copy">
+        <div class="excerpt-board">
+          <p class="jp">吾輩は猫である。名前はまだ無い。</p>
+          <p class="zh">白話導讀：我是貓，還沒有名字。這一句很短，但視角立刻成立：不是人看貓，而是貓看人。</p>
+        </div>
+        <div class="simple-list">
+          <div class="simple-card fragment"><b>好玩在哪？</b><p>貓不懂人類規矩，所以人類的動作看起來很荒謬。</p></div>
+          <div class="simple-card fragment"><b>作文可以學什麼？</b><p>換一個說話者，普通生活也會變新鮮。</p></div>
+        </div>
+      </div>
+      <img class="lit-photo portrait" src="assets/japanese-literature/authors/natsume-soseki.jpg" alt="夏目漱石照片">
+    </div>
+    <aside class="notes">⏱約4分鐘。可以讓學生試一句：「我是書包。我的主人今天又把我塞滿了。」</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">異世界入口</span>
+    <h3>《要求很多的餐廳》：越讀越不對勁</h3>
+    <div class="lit-photo-layout">
+      <img class="lit-photo" src="assets/japanese-literature/stories/miyazawa-birthplace.jpg" alt="宮澤賢治相關紀念地照片">
+      <div class="japan-copy">
+        <div class="excerpt-board">
+          <p class="jp">「どなたもどうかお入りください。決してご遠慮はありません」<br>「当軒は注文の多い料理店ですからどうかそこはご承知ください」</p>
+          <p class="zh">白話導讀：門上的字一開始像歡迎客人，後來卻越來越奇怪。讀者慢慢發現：這間餐廳可能不是給人吃飯的。</p>
+        </div>
+        <div class="think-question fragment"><b>寫作提醒：</b>不要急著揭曉答案。讓線索一個一個出現，讀者就會自己緊張。</div>
+      </div>
+    </div>
+    <aside class="notes">⏱約4分鐘。用門上文字的變化講懸念。這篇適合印給學生完整閱讀。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">現代入口</span>
+    <h3>現代日本文學可以先認作品氣味</h3>
+    <div class="reading-grid">
+      <div class="reading-card fragment"><b>川端康成</b><p>《伊豆的舞孃》《雪國》：美、距離、安靜的情緒。只介紹，不印原文。</p></div>
+      <div class="reading-card fragment"><b>村上春樹</b><p>《挪威的森林》《海邊的卡夫卡》：城市、音樂、孤獨與奇異感。只介紹，不印原文。</p></div>
+      <div class="reading-card fragment"><b>吉本芭娜娜</b><p>《廚房》：失去之後如何重新生活。只介紹，不印原文。</p></div>
+      <div class="reading-card fragment"><b>東野圭吾</b><p>《解憂雜貨店》《嫌疑犯X的獻身》：故事性強，適合當流行閱讀入口。</p></div>
+      <div class="reading-card fragment"><b>新海誠</b><p>《你的名字。》《鈴芽之旅》小說版：影像感強，適合連到場景描寫。</p></div>
+      <div class="reading-card fragment"><b>課堂規則</b><p>現代作品有版權：可以介紹、推薦、討論；不整理大量原文影印。</p></div>
+    </div>
+    <aside class="notes">⏱約3分鐘。讓學生知道現代入口，不做長篇摘錄。這頁處理版權界線。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip">閱讀本對應</span>
+    <h3>今天可以印的，是公版日本文學選文</h3>
+    <div class="reading-grid">
+      <div class="reading-card fragment"><b>重點閱讀</b><p>芥川龍之介〈羅生門〉：場景、困境、理由、選擇。</p></div>
+      <div class="reading-card fragment"><b>延伸閱讀</b><p>〈蜘蛛之絲〉〈鼻子〉：短篇、好讀、問題明確。</p></div>
+      <div class="reading-card fragment"><b>視角閱讀</b><p>夏目漱石《我是貓》：用非人視角重新看生活。</p></div>
+      <div class="reading-card fragment"><b>童話閱讀</b><p>宮澤賢治《要求很多的餐廳》：線索、反轉、異世界。</p></div>
+      <div class="reading-card fragment"><b>短詩閱讀</b><p>芭蕉、一茶俳句：一瞬間也能留下餘味。</p></div>
+      <div class="reading-card fragment"><b>寫作任務</b><p>選一篇，寫「我看見的困境、理由、轉折」。</p></div>
+    </div>
+    <div class="bridge-line fragment">下一步：<strong>把日本文學的閱讀入口，變成你自己的描寫與故事。</strong></div>
+    <aside class="notes">⏱約2分鐘。說明學生手上的閱讀本會比投影片更完整，羅生門會放較多內容。</aside>
   </section>
 </section>
 
@@ -1803,10 +1794,37 @@ document.querySelectorAll('.flip-card').forEach(function(card){
 
 /* ===== 圖片：點擊後以新分頁開啟大圖 ===== */
 (function(){
-  function openImage(img){
+  function imageUrl(img){
     var src = img.currentSrc || img.getAttribute('src');
+    return src ? new URL(src, window.location.href).href : '';
+  }
+
+  function openImage(img){
+    var src = imageUrl(img);
     if(!src) return;
-    window.open(new URL(src, window.location.href).href, '_blank', 'noopener');
+    window.open(src, '_blank', 'noopener');
+  }
+
+  function linkImage(img){
+    var href = imageUrl(img);
+    if(!href) return;
+    var parentLink = img.closest('a');
+    if(parentLink){
+      parentLink.classList.add('image-link');
+      parentLink.href = href;
+      parentLink.target = '_blank';
+      parentLink.rel = 'noopener noreferrer';
+      parentLink.title = parentLink.title || '開啟大圖';
+      return;
+    }
+    var link = document.createElement('a');
+    link.className = 'image-link';
+    link.href = href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.title = '開啟大圖';
+    img.parentNode.insertBefore(link, img);
+    link.appendChild(img);
   }
 
   Reveal.on('ready', function(){
@@ -1814,11 +1832,7 @@ document.querySelectorAll('.flip-card').forEach(function(card){
       img.style.cursor = 'zoom-in';
       img.title = img.title || '點擊開啟大圖';
       img.setAttribute('tabindex', '0');
-      img.addEventListener('click', function(event){
-        event.preventDefault();
-        event.stopPropagation();
-        openImage(img);
-      });
+      linkImage(img);
       img.addEventListener('keydown', function(event){
         if(event.key === 'Enter' || event.key === ' '){
           event.preventDefault();
