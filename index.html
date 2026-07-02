@@ -512,6 +512,40 @@
 .excerpt-board{ background:#fffdf6; border:1px solid #e7dec6; border-radius:14px; padding:.58em .7em; box-shadow:0 6px 18px rgba(3,73,45,.07); }
 .excerpt-board .jp{ font-family:"Noto Serif TC",serif; color:#20352b; font-size:.62em; line-height:1.68; margin:.08em 0; }
 .excerpt-board .zh{ color:#47554d; font-size:.51em; line-height:1.55; border-top:1px solid #ded6c5; padding-top:.35em; margin-top:.38em; }
+.rashomon-board{ display:grid; grid-template-columns:1.02fr .98fr; gap:.62em; align-items:stretch; margin-top:.35em; }
+.rashomon-board.reverse{ grid-template-columns:.92fr 1.08fr; }
+.rashomon-image{ width:100%; height:400px; object-fit:cover; object-position:center; margin:0; border-radius:12px; border:1px solid #d7cab0; box-shadow:0 10px 26px rgba(3,73,45,.14); }
+.rashomon-flow{ display:grid; grid-template-columns:repeat(4,1fr); gap:.34em; margin-top:.44em; }
+.rashomon-step{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.34em .42em; min-height:7.1em; }
+.rashomon-step b{ display:block; color:var(--green2); font-size:.54em; margin-bottom:.12em; }
+.rashomon-step p{ margin:0; color:#3f4a42; font-size:.42em; line-height:1.36; }
+.character-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.48em; margin-top:.46em; }
+.character-card{ background:#fff; border:1px solid #dfe7dc; border-radius:13px; padding:.48em .56em; min-height:10.2em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.character-card h4{ margin:.02em 0 .2em; color:var(--green); font-size:.68em; }
+.character-card p{ margin:.14em 0; color:#3f4a42; font-size:.49em; line-height:1.4; }
+.character-card .role{ display:inline-block; background:#eef3ec; color:#3f6a4f; border-radius:999px; padding:.08em .55em; font-size:.4em; font-weight:700; margin-bottom:.35em; }
+.angle-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.48em; margin-top:.45em; }
+.angle-card{ background:#fff; border:1px solid #dfe7dc; border-radius:13px; padding:.48em .56em; min-height:10.6em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.angle-card h4{ color:var(--green); font-size:.65em; margin:.02em 0 .22em; }
+.angle-card .seen{ color:#69766d; font-size:.43em; line-height:1.35; margin:.08em 0 .2em; }
+.angle-card .voice{ font-family:"LXGW WenKai TC","Noto Serif TC",serif; color:#34403a; font-size:.56em; line-height:1.5; margin:0; }
+.angle-card .judge{ border-top:1px solid #e2e8df; margin-top:.38em; padding-top:.28em; color:#3f4a42; font-size:.43em; line-height:1.35; }
+.reason-chain{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:.35em; align-items:stretch; margin-top:.55em; }
+.reason-node{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.42em .5em; min-height:7.4em; }
+.reason-node b{ display:block; color:var(--green2); font-size:.58em; margin-bottom:.12em; }
+.reason-node p{ color:#3f4a42; font-size:.47em; line-height:1.4; margin:0; }
+.reason-arrow{ color:var(--gold); font-size:1em; align-self:center; }
+.chapter-link{ display:grid; grid-template-columns:1fr 1fr; gap:.6em; align-items:stretch; margin-top:.45em; }
+.chapter-link .card{ min-height:9em; }
+.chapter-link .card h4{ font-size:.68em; }
+.chapter-link .card p{ font-size:.52em; }
+.rashomon-task{ display:grid; grid-template-columns:.72fr 1.28fr; gap:.62em; align-items:stretch; margin-top:.4em; }
+.rashomon-task .prompt-box{ background:#fffdf4; border:2px dashed var(--gold); border-radius:14px; padding:.55em .7em; color:#34403a; }
+.rashomon-task .prompt-box b{ color:var(--green); font-family:"Noto Serif TC",serif; font-size:.68em; }
+.rashomon-task .prompt-box p{ font-size:.52em; line-height:1.45; margin:.22em 0 0; }
+.rashomon-board .simple-card{ min-height:3.85em; padding:.32em .45em; }
+.rashomon-board .simple-card p{ font-size:.47em; line-height:1.36; }
+.rashomon-board .think-question{ font-size:.58em; line-height:1.42; margin-top:.25em; padding:.45em .65em; }
 .reading-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.38em; margin-top:.42em; }
 .reading-card{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.38em .46em; min-height:7.4em; }
 .reading-card b{ display:block; color:var(--green2); font-size:.57em; margin-bottom:.1em; }
@@ -1314,7 +1348,7 @@
     <span class="chip l">入口三</span>
     <h3>羅生門：故事從一場雨開始</h3>
     <div class="lit-photo-layout">
-      <img class="lit-photo" src="assets/japanese-literature/stories/rajomon-model.jpg" alt="羅城門模型照片">
+      <a class="image-link" href="assets/japanese-literature/stories/rajomon-model.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img class="lit-photo" src="assets/japanese-literature/stories/rajomon-model.jpg" alt="羅城門模型照片"></a>
       <div class="japan-copy">
         <div class="lead">芥川龍之介的〈羅生門〉，不是一開始就講大道理，而是先把人放進一個很糟的場景：黃昏、雨、破敗的城門、沒有工作的人。</div>
         <div class="story-beats">
@@ -1330,7 +1364,71 @@
   </section>
 
   <section data-background-color="#faf7ef">
-    <span class="chip g">讀一小段原文</span>
+    <span class="chip l">故事大綱</span>
+    <h3>羅生門不是在問誰最壞，而是在問理由會把人推到哪裡</h3>
+    <div class="rashomon-board">
+      <div>
+        <div class="lead">故事很短，真正重要的不是事件多複雜，而是每個人都在困境裡替自己找理由。理由一出現，讀者就不能只用「好人／壞人」判斷。</div>
+        <div class="rashomon-flow">
+          <div class="rashomon-step fragment"><b>雨夜</b><p>失業的下人在羅生門下避雨，不知道明天怎麼活。</p></div>
+          <div class="rashomon-step fragment"><b>上樓</b><p>他看見老婆婆正在拔死人頭髮，第一反應是厭惡。</p></div>
+          <div class="rashomon-step fragment"><b>辯解</b><p>老婆婆說自己也是為了活下去，死人生前也曾騙人。</p></div>
+          <div class="rashomon-step fragment"><b>選擇</b><p>下人接受了這套理由，搶走老婆婆的衣服，消失在夜裡。</p></div>
+        </div>
+      </div>
+      <a class="image-link" href="assets/japanese-literature/authors/akutagawa.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img class="rashomon-image" src="assets/japanese-literature/authors/akutagawa.jpg" alt="芥川龍之介照片"></a>
+    </div>
+    <aside class="notes">⏱約4分鐘。先用四步講完，不急著評斷。提醒學生：這篇的可怕在於理由會傳染，老婆婆的辯解變成下人的辯解。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">人物介紹</span>
+    <h3>三個角色，讓同一件事有三種讀法</h3>
+    <div class="character-grid">
+      <div class="character-card fragment">
+        <span class="role">站在門下的人</span>
+        <h4>下人</h4>
+        <p><b>表面：</b>失業、避雨、還沒有做決定。</p>
+        <p><b>心裡：</b>怕餓死，也怕自己真的走向偷搶。</p>
+        <p><b>寫作重點：</b>他不是一開始就壞，而是在聽見理由後跨過界線。</p>
+      </div>
+      <div class="character-card fragment">
+        <span class="role">被看見的壞事</span>
+        <h4>老婆婆</h4>
+        <p><b>表面：</b>拔死人的頭髮，準備拿去做假髮。</p>
+        <p><b>心裡：</b>想活下去，所以替自己的行為找理由。</p>
+        <p><b>寫作重點：</b>她的理由不能讓錯事消失，卻讓故事變得難判斷。</p>
+      </div>
+      <div class="character-card fragment">
+        <span class="role">沉默的證據</span>
+        <h4>死去的女人</h4>
+        <p><b>表面：</b>沒有開口，只被別人拿來說明理由。</p>
+        <p><b>心裡：</b>她的故事已經沒人完整知道。</p>
+        <p><b>寫作重點：</b>當一個人不能說話，別人的說法就可能決定她被怎麼記住。</p>
+      </div>
+    </div>
+    <div class="think-question fragment"><b>這就是第二章的核心：</b>替一個人說話，不是幫他洗白，而是把「別人看見的行為」和「他沒有說出口的理由」同時放上來。</div>
+    <aside class="notes">⏱約5分鐘。人物介紹不要變成背誦。每個人物都要回到「別人看到什麼／自己怎麼解釋／讀者如何判斷」。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">場景解析</span>
+    <h3>場景先把人推到邊界，選擇才會變得尖銳</h3>
+    <div class="rashomon-board reverse">
+      <a class="image-link" href="assets/japanese-literature/stories/rajomon-model.jpg" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img class="rashomon-image" src="assets/japanese-literature/stories/rajomon-model.jpg" alt="羅城門模型照片"></a>
+      <div class="japan-copy">
+        <div class="simple-card fragment"><b>黃昏</b><p>一天快結束，人物也像走到人生的邊緣。</p></div>
+        <div class="simple-card fragment"><b>大雨</b><p>雨讓他暫時不能離開，故事把他困在原地。</p></div>
+        <div class="simple-card fragment"><b>破敗城門</b><p>城門本來保護城市，現在卻變成屍體與窮人的地方。</p></div>
+        <div class="simple-card fragment"><b>空蕩</b><p>沒有旁人提醒他，選擇只剩自己面對自己。</p></div>
+        <div class="think-question fragment"><b>作文可以學：</b>不要急著寫「他很絕望」。先寫天色、雨、空城門，讀者會自己感覺到絕望。</div>
+      </div>
+    </div>
+    <aside class="notes">⏱約4分鐘。把第一章的描寫能力接進來：場景不是背景板，場景會替人物加壓。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">讀一小段譯文</span>
     <h3>〈羅生門〉開頭：先讓畫面站起來</h3>
     <div class="excerpt-board">
       <p class="jp">某天傍晚，一個下人在羅生門下等雨停。<br>寬大的門底下，除了他以外沒有任何人。</p>
@@ -1341,7 +1439,7 @@
       <div class="card fragment"><h4>地點</h4><p>羅生門。大、舊、空，人物顯得更孤立。</p></div>
       <div class="card fragment"><h4>狀態</h4><p>等雨停。人物暫時動不了，故事壓力慢慢出現。</p></div>
     </div>
-    <aside class="notes">⏱約4分鐘。讓學生看原文不必逐字翻譯。只抓三個元素：時間、地點、狀態。</aside>
+    <aside class="notes">⏱約4分鐘。讓學生看譯文不必逐字分析。只抓三個元素：時間、地點、狀態。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
@@ -1360,6 +1458,32 @@
   </section>
 
   <section data-background-color="#faf7ef">
+    <span class="chip">不同角度</span>
+    <h3>同一件事，換一個說話者，讀者的判斷就會改變</h3>
+    <div class="angle-grid">
+      <div class="angle-card fragment">
+        <h4>如果老婆婆說</h4>
+        <p class="seen">別人看見：她在拔死人的頭髮。</p>
+        <p class="voice">「我不是不知道這樣難看。可是再不想辦法，明天被丟在這裡的人，也可能就是我。」</p>
+        <p class="judge"><b>讀者會想：</b>她做錯了，但她的恐懼是真的。</p>
+      </div>
+      <div class="angle-card fragment">
+        <h4>如果下人說</h4>
+        <p class="seen">別人看見：他搶走老婆婆的衣服。</p>
+        <p class="voice">「我原本還在猶豫。可是她親口教我：活下去的人，會替自己的手找理由。」</p>
+        <p class="judge"><b>讀者會想：</b>他不是沒有選擇，而是選了最傷人的那一種。</p>
+      </div>
+      <div class="angle-card fragment">
+        <h4>如果死者能說</h4>
+        <p class="seen">別人看見：她已經不能反駁任何人。</p>
+        <p class="voice">「我生前也許做過錯事，但我的身體不該變成別人替自己脫罪的證據。」</p>
+        <p class="judge"><b>讀者會想：</b>沒有聲音的人，也需要被寫進故事。</p>
+      </div>
+    </div>
+    <aside class="notes">⏱約5分鐘。這頁直接示範「不同視角說同一件事」。請學生注意：三個版本都沒有改掉事件，只改變了焦點和語氣。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
     <span class="chip g">羅生門最可怕的一步</span>
     <h3>聽完理由後，他也學會替自己找理由</h3>
     <div class="excerpt-board">
@@ -1368,6 +1492,58 @@
     </div>
     <div class="think-question fragment"><b>課堂討論：</b>下人是突然變壞，還是被老婆婆的理由推了一把？如果你要寫他的自白，第一句會怎麼寫？</div>
     <aside class="notes">⏱約5分鐘。這張是羅生門核心。避免簡化成「壞人」。讓學生看見：一個人的理由可能會影響另一個人的選擇。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">理由的傳染</span>
+    <h3>老婆婆的辯解，變成下人犯罪的範本</h3>
+    <div class="reason-chain">
+      <div class="reason-node fragment"><b>第一步：看見錯事</b><p>下人看見老婆婆拔死人頭髮，原本覺得憤怒、噁心。</p></div>
+      <div class="reason-arrow fragment">→</div>
+      <div class="reason-node fragment"><b>第二步：聽見理由</b><p>老婆婆說自己只是為了活下去，還把死者說成不值得同情。</p></div>
+      <div class="reason-arrow fragment">→</div>
+      <div class="reason-node fragment"><b>第三步：拿來使用</b><p>下人把同一套理由套到自己身上：既然都為了活，我也可以搶你。</p></div>
+    </div>
+    <div class="think-question fragment"><b>這篇小說可怕的地方：</b>它不是說「人本來就壞」，而是讓我們看到，當理由只剩下自保，人很容易把別人也推進黑暗裡。</div>
+    <aside class="notes">⏱約4分鐘。這張做因果整理。讓學生看懂故事不是單一壞人，而是理由如何一步步改變人的界線。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">接回第二章</span>
+    <h3>替反派說話，真正要練的是「理解，但不取消責任」</h3>
+    <div class="chapter-link">
+      <div class="card fragment">
+        <h4>第二章練過的童話</h4>
+        <p>後母、狼、皇后都可以有自己的害怕和壓力。換視角後，故事不再只有「主角受害、反派很壞」。</p>
+        <p><b>但重點是：</b>理解動機，不等於原諒傷害。</p>
+      </div>
+      <div class="card fragment">
+        <h4>羅生門把這件事推得更深</h4>
+        <p>老婆婆和下人都說自己是為了活下去。理由聽起來像是真的，可是他們仍然傷害了別人。</p>
+        <p><b>所以作文要寫：</b>他為什麼那樣做，以及他還能不能有更好的選擇。</p>
+      </div>
+    </div>
+    <div class="bridge-line fragment">會寫不同角度的人，不是比較會替自己找藉口；而是比較能看見一件事裡，還有哪些聲音沒有被寫出來。</div>
+    <aside class="notes">⏱約4分鐘。這張是課程邏輯的證明：第二章不是單純玩反派，而是在訓練敘事角度、責任感與思考深度。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">小練習</span>
+    <h3>用羅生門的方法，替一個角色寫一段自白</h3>
+    <div class="rashomon-task">
+      <div class="prompt-box">
+        <b>請選一個角度</b>
+        <p>下人、老婆婆、死去的女人，三選一。不要改掉故事事件，只改變說話的人。</p>
+      </div>
+      <div class="method-strip">
+        <div class="card fragment"><h4>我做了什麼</h4><p>先誠實寫出被別人看見的行為。</p></div>
+        <div class="card fragment"><h4>我怕什麼</h4><p>寫出行為背後的壓力、恐懼或渴望。</p></div>
+        <div class="card fragment"><h4>我怎麼辯解</h4><p>讓讀者聽見角色替自己說話的方式。</p></div>
+        <div class="card fragment"><h4>我還能怎麼做</h4><p>最後保留責任：如果重來，有沒有不傷人的選擇？</p></div>
+      </div>
+    </div>
+    <div class="think-question fragment"><b>寫作句型：</b>「我知道我做的事很難看，可是那一刻，我真正害怕的是……」</div>
+    <aside class="notes">⏱約8分鐘。這頁可以口頭練，也可以接學生閱讀本。提醒學生不要把錯事寫成沒關係，要把理由和責任都寫出來。</aside>
   </section>
 
   <section data-background-color="#faf7ef">
