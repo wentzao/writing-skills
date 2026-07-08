@@ -546,6 +546,42 @@
 .rashomon-board .simple-card{ min-height:3.85em; padding:.32em .45em; }
 .rashomon-board .simple-card p{ font-size:.47em; line-height:1.36; }
 .rashomon-board .think-question{ font-size:.58em; line-height:1.42; margin-top:.25em; padding:.45em .65em; }
+.book-hero{ display:grid; grid-template-columns:1.02fr .98fr; gap:.72em; align-items:center; margin-top:.3em; }
+.book-prompt-img{ width:100%; max-height:450px; object-fit:contain; object-position:center; margin:0; background:#fff; border:1px solid #d7cab0; border-radius:12px; box-shadow:0 10px 26px rgba(3,73,45,.14); }
+.prompt-keys{ display:flex; flex-direction:column; gap:.4em; }
+.prompt-key{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.42em .55em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.prompt-key b{ display:block; color:var(--green2); font-size:.62em; margin-bottom:.1em; }
+.prompt-key p{ margin:0; color:#3f4a42; font-size:.5em; line-height:1.42; }
+.book-layer-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.5em; margin-top:.5em; }
+.book-layer{ background:#fff; border:1px solid #dfe7dc; border-radius:13px; padding:.5em .58em; min-height:10.2em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.book-layer h4{ color:var(--green); font-size:.68em; margin:.02em 0 .22em; }
+.book-layer p{ color:#3f4a42; font-size:.49em; line-height:1.43; margin:.12em 0; }
+.book-layer .sample{ margin-top:.35em; padding:.32em .42em; background:#fffdf4; border:1px solid #e6c878; border-radius:9px; font-size:.9em; }
+.essay-compare{ display:grid; grid-template-columns:1fr 1fr; gap:.58em; align-items:stretch; margin-top:.42em; }
+.essay-side{ background:#fff; border:1px solid #dfe7dc; border-radius:13px; padding:.5em .62em; min-height:12em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.essay-side.good{ background:#fffdf4; border-color:#e6c878; }
+.essay-side h4{ margin:.02em 0 .28em; color:var(--green); font-size:.68em; }
+.essay-side p{ color:#3f4a42; font-size:.5em; line-height:1.45; margin:.14em 0; }
+.essay-side .mark{ display:inline-block; background:#eef3ec; color:#3f6a4f; border-radius:999px; padding:.08em .55em; font-size:.42em; font-weight:700; margin-bottom:.28em; }
+.pair-compare{ display:grid; grid-template-columns:1fr 1fr; gap:.55em; align-items:stretch; margin-top:.42em; }
+.pair-box{ background:#fff; border:1px solid #dfe7dc; border-radius:13px; padding:.5em .62em; min-height:8.8em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.pair-box.good{ background:#fffdf4; border-color:#e6c878; }
+.pair-box h4{ font-size:.62em; color:var(--green2); margin:.02em 0 .25em; }
+.pair-box p{ font-family:"LXGW WenKai TC","Noto Serif TC",serif; color:#34403a; font-size:.62em; line-height:1.58; margin:0; }
+.pair-analysis{ margin-top:.45em; display:grid; grid-template-columns:.7fr 1.3fr; gap:.45em; align-items:stretch; }
+.pair-analysis .tagbox{ background:#eef3ec; border-left:6px solid var(--green); border-radius:0 12px 12px 0; padding:.42em .58em; }
+.pair-analysis .tagbox b{ display:block; color:var(--green); font-size:.58em; }
+.pair-analysis .tagbox p{ font-size:.46em; color:#3f4a42; line-height:1.38; margin:.1em 0 0; }
+.pair-analysis .why{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.42em .58em; color:#3f4a42; font-size:.52em; line-height:1.45; }
+.upgrade-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.5em; margin-top:.46em; }
+.upgrade-card{ background:#fff; border:1px solid #dfe7dc; border-radius:13px; padding:.48em .56em; min-height:11.2em; box-shadow:0 4px 14px rgba(3,73,45,.06); }
+.upgrade-card h4{ color:var(--green); font-size:.66em; margin:.02em 0 .22em; }
+.upgrade-card p{ color:#3f4a42; font-size:.48em; line-height:1.42; margin:.14em 0; }
+.upgrade-card .try{ margin-top:.32em; background:#fffdf4; border:1px solid #e6c878; border-radius:9px; padding:.3em .36em; font-size:.9em; }
+.rewrite-lab{ display:grid; grid-template-columns:.85fr 1.15fr; gap:.62em; align-items:stretch; margin-top:.42em; }
+.rewrite-lab .prompt-box{ background:#fffdf4; border:2px dashed var(--gold); border-radius:14px; padding:.55em .7em; color:#34403a; }
+.rewrite-lab .prompt-box b{ color:var(--green); font-family:"Noto Serif TC",serif; font-size:.68em; }
+.rewrite-lab .prompt-box p{ font-size:.52em; line-height:1.45; margin:.22em 0 0; }
 .reading-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.38em; margin-top:.42em; }
 .reading-card{ background:#fff; border:1px solid #dfe7dc; border-radius:12px; padding:.38em .46em; min-height:7.4em; }
 .reading-card b{ display:block; color:var(--green2); font-size:.57em; margin-bottom:.1em; }
@@ -1669,6 +1705,179 @@
       <p class="small">寫完和同學互相圈出對方用得好的連接詞。→ 工作本第 3 課。</p>
     </div>
     <div class="foot">第 3 堂 ・ 把話寫清楚</div>
+  </section>
+</section>
+
+<!-- ===================================================== 第 3 堂後：範文對照講評 -->
+<section>
+  <section class="divider" data-background-color="#03492d" data-background-gradient="linear-gradient(135deg,#03492d,#5a9e6f)">
+    <div class="num">範 文 講 評</div>
+    <h2 style="color:#fff">隨身帶的一本書</h2>
+    <span class="tag">題目拆解 ・ 優劣範文對照 ・ 升級練習</span>
+    <p class="nav-hint">按 <b>↓</b> 依序往下看</p>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">先讀題目</span>
+    <h3>這題不是問你「讀過什麼」，而是問這本書為什麼跟著你</h3>
+    <div class="book-hero">
+      <a class="image-link" href="assets/book-essay/book-prompt-crop.png" target="_blank" rel="noopener noreferrer" title="開啟大圖"><img class="book-prompt-img" src="assets/book-essay/book-prompt-crop.png" alt="隨身帶的一本書題目與寫作指導"></a>
+      <div class="prompt-keys">
+        <div class="prompt-key fragment"><b>關鍵字一：隨身</b><p>不是家裡書櫃裡的一本書，而是你願意常常帶著、拿出來翻的書。</p></div>
+        <div class="prompt-key fragment"><b>關鍵字二：一本書</b><p>要聚焦在一本具體的書，不要寫成「我喜歡閱讀」的泛泛心得。</p></div>
+        <div class="prompt-key fragment"><b>關鍵字三：不時翻閱</b><p>要說清楚：什麼時候會拿出來？它幫你解開什麼心情或困惑？</p></div>
+        <div class="prompt-key fragment"><b>注意事項</b><p>不要寫成詩歌體，也不要抄題目。題目文字要變成自己的生活經驗。</p></div>
+      </div>
+    </div>
+    <aside class="notes">⏱約4分鐘。先讓學生看題目。重點不是介紹書本內容，而是「我為什麼把它帶在身邊」。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">審題方向</span>
+    <h3>一篇好文章，要從「書名」走到「我和它的關係」</h3>
+    <div class="book-layer-grid">
+      <div class="book-layer fragment">
+        <h4>第一層：物件</h4>
+        <p>先讓讀者看見這本書。封面、書角、紙張、夾著的書籤，都是證據。</p>
+        <p class="sample">例：邊角略顯磨損、封面有些褪色。</p>
+      </div>
+      <div class="book-layer fragment">
+        <h4>第二層：生活</h4>
+        <p>寫出你在哪裡、什麼時候翻開它。下課、公車站、考不好後，都比空泛心得更有力。</p>
+        <p class="sample">例：等公車時翻開，讀到狐狸的那一章。</p>
+      </div>
+      <div class="book-layer fragment">
+        <h4>第三層：體悟</h4>
+        <p>最後要說明這本書讓你怎麼改變。不是「很好看」，而是它如何影響你看世界。</p>
+        <p class="sample">例：我不該只看見自己的委屈。</p>
+      </div>
+    </div>
+    <div class="think-question fragment"><b>寫作路線：</b>外觀細節 → 具體閱讀場景 → 生活中的改變。這樣才會從「介紹一本書」變成「寫出我與書的關係」。</div>
+    <aside class="notes">⏱約5分鐘。把 PDF 寫作指導整理成三層，讓學生知道下筆順序。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">先看整體差異</span>
+    <h3>四級分寫得清楚，六級分寫得更有證據</h3>
+    <div class="essay-compare">
+      <div class="essay-side fragment">
+        <span class="mark">四級分</span>
+        <h4>有交代，但常停在「我很喜歡」</h4>
+        <p>四級分範文能說出書名、內容、喜歡原因，也有生活例子。</p>
+        <p>問題是句子常直接說感受：心情變好、很重要、像好朋友。</p>
+        <p><b>讀者知道你喜歡，卻還沒有清楚看見你為什麼被打動。</b></p>
+      </div>
+      <div class="essay-side good fragment">
+        <span class="mark">六級分</span>
+        <h4>不只說喜歡，還拿出細節證明</h4>
+        <p>六級分範文會寫書的外觀、翻閱場景、與朋友吵架的具體經驗。</p>
+        <p>它也會把書中句子接回生活，讓閱讀變成情緒和想法的轉折。</p>
+        <p><b>讀者不只聽見結論，也看見結論是怎麼發生的。</b></p>
+      </div>
+    </div>
+    <aside class="notes">⏱約4分鐘。先不要逐字講。讓學生抓大差異：四級有內容，六級有證據、有場景、有主旨提升。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">比較一：立意取材</span>
+    <h3>不要只交代來源，要讓物件本身說話</h3>
+    <div class="pair-compare">
+      <div class="pair-box fragment">
+        <h4>原句</h4>
+        <p>這本書是去年我生日的時候，爸爸送給我的禮物。</p>
+      </div>
+      <div class="pair-box good fragment">
+        <h4>優化句</h4>
+        <p>這本書的封面已經因為頻繁的翻閱而有些褪色，但對我而言，它卻比任何簇新的故事書都要珍貴。</p>
+      </div>
+    </div>
+    <div class="pair-analysis">
+      <div class="tagbox fragment"><b>向度</b><p>立意取材<br>物件細節與情感深度</p></div>
+      <div class="why fragment">四級分只說「誰送的」，資訊清楚但畫面薄。六級分加入「褪色」與「簇新」的對比，讓讀者看見這本書被反覆翻閱，也感覺到它在生活中留下的重量。</div>
+    </div>
+    <aside class="notes">⏱約5分鐘。提醒學生：舊不是缺點，舊是時間的證據。物件細節能讓感情可信。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">比較二：遣詞造句</span>
+    <h3>不要只說心情變好，要寫出情緒怎麼被改變</h3>
+    <div class="pair-compare">
+      <div class="pair-box fragment">
+        <h4>原句</h4>
+        <p>每當我覺得心情不好的時候，只要拿出來翻一翻，我就會覺得心情變好很多。</p>
+      </div>
+      <div class="pair-box good fragment">
+        <h4>優化句</h4>
+        <p>這句話像是一場及時雨，澆熄了我頭頂的怒火。</p>
+      </div>
+    </div>
+    <div class="pair-analysis">
+      <div class="tagbox fragment"><b>向度</b><p>遣詞造句<br>修辭運用與精準度</p></div>
+      <div class="why fragment">原句直接講結果，讀者只能相信作者說的。優化句把抽象情緒變成可感覺的畫面：怒火被及時雨澆熄，讀者就能跟著感到情緒降下來。</div>
+    </div>
+    <aside class="notes">⏱約5分鐘。不要叫學生亂堆譬喻。譬喻要精準對應情緒變化：怒火需要被澆熄，焦慮需要被安放。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">比較三：組織結構</span>
+    <h3>好的結尾不是重複題目，而是把主旨往上推一層</h3>
+    <div class="pair-compare">
+      <div class="pair-box fragment">
+        <h4>原句</h4>
+        <p>這就是為什麼我一定要隨身帶著這本書的原因，它是我生活中不可缺少的重要夥伴。</p>
+      </div>
+      <div class="pair-box good fragment">
+        <h4>優化句</h4>
+        <p>它不僅是跨越有限經驗的橋樑，更是一份溫柔的陪伴。</p>
+      </div>
+    </div>
+    <div class="pair-analysis">
+      <div class="tagbox fragment"><b>向度</b><p>組織結構<br>主旨昇華與首尾呼應</p></div>
+      <div class="why fragment">四級分結尾把題目再說一次，沒有錯，但停在個人喜愛。六級分呼應題目說明中的「跨越有限經驗」，把閱讀從陪伴提升到成長，文章就有收束感。</div>
+    </div>
+    <aside class="notes">⏱約5分鐘。讓學生知道結尾不是喊口號。最好的結尾要回到題目說明，讓文章像扣回題目的答案。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip l">升級攻略</span>
+    <h3>從四級往六級走，靠三件事</h3>
+    <div class="upgrade-grid">
+      <div class="upgrade-card fragment">
+        <h4>1. 賦予物件靈魂</h4>
+        <p>不要只說「這本書很舊」，改寫書角摺痕、泛黃紙張、書頁氣味。</p>
+        <p class="try">練習：把「我的書很舊」改成一個看得見的畫面。</p>
+      </div>
+      <div class="upgrade-card fragment">
+        <h4>2. 接上生活實例</h4>
+        <p>不要只介紹劇情。挑一個片段，寫它如何幫你解決問題或改變心情。</p>
+        <p class="try">練習：寫出「我在哪裡翻開它，那時我遇到什麼事」。</p>
+      </div>
+      <div class="upgrade-card fragment">
+        <h4>3. 善用精準譬喻</h4>
+        <p>把書比成避風港、鏡子、橋樑，但要和你的經驗真的相合。</p>
+        <p class="try">練習：這本書像什麼？為什麼不是別的東西？</p>
+      </div>
+    </div>
+    <aside class="notes">⏱約4分鐘。這頁是 PDF 升級攻略重排。上課時可讓學生各挑一招，先口頭改寫一句。</aside>
+  </section>
+
+  <section data-background-color="#faf7ef">
+    <span class="chip g">換你改寫</span>
+    <h3>把平淡句，改成能放進作文的句子</h3>
+    <div class="rewrite-lab">
+      <div class="prompt-box">
+        <b>原句</b>
+        <p>這本書很好看，所以我常常帶著它。</p>
+      </div>
+      <div class="method-strip">
+        <div class="card fragment"><h4>加物件細節</h4><p>它長什麼樣？哪裡被翻舊了？</p></div>
+        <div class="card fragment"><h4>加生活場景</h4><p>你在哪個時刻拿出它？</p></div>
+        <div class="card fragment"><h4>加情緒變化</h4><p>它讓你從什麼心情變成什麼心情？</p></div>
+        <div class="card fragment"><h4>加主旨</h4><p>它讓你更懂自己、別人，還是世界？</p></div>
+      </div>
+    </div>
+    <div class="think-question fragment"><b>參考句型：</b>「每當我在＿＿＿時翻開它，書頁上的＿＿＿就像＿＿＿，提醒我＿＿＿。」</div>
+    <aside class="notes">⏱約8分鐘。這頁可以直接練改寫。請學生先不要寫整篇，只把一句話升級成有畫面、有情緒、有主旨的句子。</aside>
   </section>
 </section>
 
